@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Login and Signup">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Login, Signup, Sports Club">
+
+    <meta name="author"
+          content="Stackly Sport Club">
+
+    <title>Stackly | Sport Club — Login</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="login.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         LOGIN / SIGNUP PAGE
+    ====================================================== -->
+
+    <main class="stackly-sport-auth-page">
+
+
+        <!-- =================================================
+             BACKGROUND DECORATION
+        ================================================== -->
+
+        <div class="stackly-sport-auth-bg">
+
+            <div class="stackly-sport-auth-orb stackly-sport-auth-orb-one"></div>
+
+            <div class="stackly-sport-auth-orb stackly-sport-auth-orb-two"></div>
+
+            <div class="stackly-sport-auth-grid"></div>
+
+            <span class="stackly-sport-auth-watermark">
+                SPORT
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             TOP NAVIGATION
+        ================================================== -->
+
+        <div class="stackly-sport-auth-topbar">
+
+            <!-- Logo -->
+
+            <a href="index.html"
+               class="stackly-sport-auth-logo"
+               aria-label="Stackly Sport Club Home">
+
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Sport Club Logo">
+
+            </a>
+
+
+            <!-- Back Home -->
+
+            <a href="index.html"
+               class="stackly-sport-auth-back-home">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                <span>Back to Home</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             AUTH CONTAINER
+        ================================================== -->
+
+        <div class="stackly-sport-auth-container">
+
+
+            <!-- =================================================
+                 LEFT VISUAL PANEL
+            ================================================== -->
+
+            <section class="stackly-sport-auth-visual"
+                     data-aos="fade-right"
+                     data-aos-duration="1000">
+
+
+                <div class="stackly-sport-auth-visual-image">
+
+                    <img src="login-img.webp"
+                         alt="Stackly Sport Club">
+
+                </div>
+
+
+                <div class="stackly-sport-auth-visual-overlay"></div>
+
+
+                <div class="stackly-sport-auth-visual-content">
+
+                    <span class="stackly-sport-auth-visual-label">
+
+                        <span></span>
+
+                        STACKLY SPORT CLUB
+
+                    </span>
+
+
+                    <h1>
+                        Train Hard.
+                        <span>Play Strong.</span>
+                    </h1>
+
+
+                    <p>
+                        Your goals deserve a place built for movement,
+                        performance, discipline, and progress.
+                    </p>
+
+
+                    <div class="stackly-sport-auth-visual-stats">
+
+                        <div class="stackly-sport-auth-stat">
+
+                            <strong>24/7</strong>
+
+                            <span>
+                                Community
+                            </span>
+
+                        </div>
+
+
+                        <div class="stackly-sport-auth-stat">
+
+                            <strong>50+</strong>
+
+                            <span>
+                                Programs
+                            </span>
+
+                        </div>
+
+
+                        <div class="stackly-sport-auth-stat">
+
+                            <strong>10K+</strong>
+
+                            <span>
+                                Members
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-auth-visual-number">
+                    01
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RIGHT AUTH PANEL
+            ================================================== -->
+
+            <section class="stackly-sport-auth-panel"
+                     data-aos="fade-left"
+                     data-aos-duration="1000">
+
+
+                <!-- =================================================
+                     AUTH HEADER
+                ================================================== -->
+
+                <div class="stackly-sport-auth-header">
+
+                    <span class="stackly-sport-auth-eyebrow">
+
+                        <span></span>
+
+                        MEMBER ACCESS
+
+                    </span>
+
+
+                    <h2 id="sportAuthTitle">
+                        Welcome <span>Back.</span>
+                    </h2>
+
+
+                    <p id="sportAuthSubtitle">
+                        Sign in to continue your Stackly Sport Club journey.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     AUTH SWITCH
+                ================================================== -->
+
+                <div class="stackly-sport-auth-switch"
+                     role="tablist"
+                     aria-label="Authentication">
+
+                    <button class="stackly-sport-auth-tab active"
+                            id="sportLoginTab"
+                            type="button"
+                            role="tab"
+                            aria-selected="true">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Login
+
+                    </button>
+
+
+                    <button class="stackly-sport-auth-tab"
+                            id="sportSignupTab"
+                            type="button"
+                            role="tab"
+                            aria-selected="false">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Sign Up
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     LOGIN FORM
+                ================================================== -->
+
+                <form class="stackly-sport-auth-form active"
+                      id="sportLoginForm"
+                      novalidate>
+
+
+                    <!-- ROLE -->
+
+                    <div class="stackly-sport-auth-field">
+
+                        <label for="sportLoginRole">
+                            Account Role
+                        </label>
+
+
+                        <div class="stackly-sport-auth-custom-select"
+                             id="sportLoginRoleDropdown">
+
+
+                            <button type="button"
+                                    class="stackly-sport-auth-select-trigger"
+                                    id="sportLoginRoleTrigger"
+                                    aria-haspopup="listbox"
+                                    aria-expanded="false">
+
+                                <span class="stackly-sport-auth-select-icon">
+
+                                    <i class="fa-solid fa-user-shield"></i>
+
+                                </span>
+
+
+                                <span id="sportLoginRoleValue">
+                                    Select Role
+                                </span>
+
+
+                                <i class="fa-solid fa-chevron-down stackly-sport-auth-select-arrow"></i>
+
+                            </button>
+
+
+                            <div class="stackly-sport-auth-select-menu"
+                                 id="sportLoginRoleMenu"
+                                 role="listbox">
+
+
+                                <button type="button"
+                                        class="stackly-sport-auth-select-option"
+                                        data-value="admin"
+                                        role="option">
+
+                                    <span class="stackly-sport-auth-option-icon">
+                                        <i class="fa-solid fa-user-shield"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Admin</strong>
+                                        <small>Administrator Account</small>
+                                    </span>
+
+                                </button>
+
+
+                                <button type="button"
+                                        class="stackly-sport-auth-select-option"
+                                        data-value="client"
+                                        role="option">
+
+                                    <span class="stackly-sport-auth-option-icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Client</strong>
+                                        <small>Member Account</small>
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                            <input type="hidden"
+                                   id="sportLoginRole"
+                                   name="role"
+                                   value="">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="stackly-sport-auth-field">
+
+                        <label for="sportLoginEmail">
+                            Email Address
+                        </label>
+
+
+                        <div class="stackly-sport-auth-input-wrap">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input type="email"
+                                   id="sportLoginEmail"
+                                   name="email"
+                                   placeholder="Enter your email address"
+                                   autocomplete="email"
+                                   required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="stackly-sport-auth-field">
+
+                        <div class="stackly-sport-auth-label-row">
+
+                            <label for="sportLoginPassword">
+                                Password
+                            </label>
+
+
+                            <a href="404.html"
+                               class="stackly-sport-auth-forgot">
+
+                                Forgot Password?
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-sport-auth-input-wrap">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password"
+                                   id="sportLoginPassword"
+                                   name="password"
+                                   placeholder="Enter your password"
+                                   autocomplete="current-password"
+                                   required>
+
+
+                            <button type="button"
+                                    class="stackly-sport-auth-eye"
+                                    data-password-toggle="sportLoginPassword"
+                                    aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REMEMBER -->
+
+                    <div class="stackly-sport-auth-options">
+
+                        <label class="stackly-sport-auth-checkbox">
+
+                            <input type="checkbox"
+                                   id="sportRememberMe"
+                                   name="remember">
+
+                            <span class="stackly-sport-auth-checkmark">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button type="submit"
+                            class="stackly-sport-auth-submit">
+
+                        <span>Login to Account</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <!-- STATUS -->
+
+                    <div class="stackly-sport-auth-status"
+                         id="sportLoginStatus"
+                         aria-live="polite">
+                    </div>
+
+
+                    <!-- BOTTOM SWITCH -->
+
+                    <p class="stackly-sport-auth-bottom-text">
+
+                        Don't have an account?
+
+                        <button type="button"
+                                class="stackly-sport-auth-inline-switch"
+                                id="sportGoSignup">
+
+                            Create Account
+
+                        </button>
+
+                    </p>
+
+                </form>
+
+
+
+                <!-- =================================================
+                     SIGNUP FORM
+                ================================================== -->
+
+                <form class="stackly-sport-auth-form"
+                      id="sportSignupForm"
+                      novalidate>
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="stackly-sport-auth-field">
+
+                        <label for="sportSignupName">
+                            Full Name
+                        </label>
+
+
+                        <div class="stackly-sport-auth-input-wrap">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input type="text"
+                                   id="sportSignupName"
+                                   name="name"
+                                   placeholder="Enter your full name"
+                                   autocomplete="name"
+                                   required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="stackly-sport-auth-field">
+
+                        <label for="sportSignupEmail">
+                            Email Address
+                        </label>
+
+
+                        <div class="stackly-sport-auth-input-wrap">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input type="email"
+                                   id="sportSignupEmail"
+                                   name="email"
+                                   placeholder="Enter your email address"
+                                   autocomplete="email"
+                                   required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ROLE -->
+
+                    <div class="stackly-sport-auth-field">
+
+                        <label for="sportSignupRole">
+                            Account Role
+                        </label>
+
+
+                        <div class="stackly-sport-auth-custom-select"
+                             id="sportSignupRoleDropdown">
+
+
+                            <button type="button"
+                                    class="stackly-sport-auth-select-trigger"
+                                    id="sportSignupRoleTrigger"
+                                    aria-haspopup="listbox"
+                                    aria-expanded="false">
+
+                                <span class="stackly-sport-auth-select-icon">
+
+                                    <i class="fa-solid fa-user-shield"></i>
+
+                                </span>
+
+
+                                <span id="sportSignupRoleValue">
+                                    Select Role
+                                </span>
+
+
+                                <i class="fa-solid fa-chevron-down stackly-sport-auth-select-arrow"></i>
+
+                            </button>
+
+
+                            <div class="stackly-sport-auth-select-menu"
+                                 id="sportSignupRoleMenu"
+                                 role="listbox">
+
+
+                                <button type="button"
+                                        class="stackly-sport-auth-select-option"
+                                        data-value="admin"
+                                        role="option">
+
+                                    <span class="stackly-sport-auth-option-icon">
+                                        <i class="fa-solid fa-user-shield"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Admin</strong>
+                                        <small>Administrator Account</small>
+                                    </span>
+
+                                </button>
+
+
+                                <button type="button"
+                                        class="stackly-sport-auth-select-option"
+                                        data-value="client"
+                                        role="option">
+
+                                    <span class="stackly-sport-auth-option-icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Client</strong>
+                                        <small>Member Account</small>
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                            <input type="hidden"
+                                   id="sportSignupRole"
+                                   name="role"
+                                   value="">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="stackly-sport-auth-field">
+
+                        <label for="sportSignupPassword">
+                            Password
+                        </label>
+
+
+                        <div class="stackly-sport-auth-input-wrap">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password"
+                                   id="sportSignupPassword"
+                                   name="password"
+                                   placeholder="Create a password"
+                                   autocomplete="new-password"
+                                   required>
+
+
+                            <button type="button"
+                                    class="stackly-sport-auth-eye"
+                                    data-password-toggle="sportSignupPassword"
+                                    aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="stackly-sport-auth-field">
+
+                        <label for="sportSignupConfirmPassword">
+                            Confirm Password
+                        </label>
+
+
+                        <div class="stackly-sport-auth-input-wrap">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password"
+                                   id="sportSignupConfirmPassword"
+                                   name="confirmPassword"
+                                   placeholder="Confirm your password"
+                                   autocomplete="new-password"
+                                   required>
+
+
+                            <button type="button"
+                                    class="stackly-sport-auth-eye"
+                                    data-password-toggle="sportSignupConfirmPassword"
+                                    aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TERMS -->
+
+                    <div class="stackly-sport-auth-options">
+
+                        <label class="stackly-sport-auth-checkbox">
+
+                            <input type="checkbox"
+                                   id="sportSignupTerms"
+                                   name="terms"
+                                   required>
+
+                            <span class="stackly-sport-auth-checkmark">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <span>
+                                I agree to the
+                                <a href="404.html">
+                                    Terms & Conditions
+                                </a>
+                                and
+                                <a href="404.html">
+                                    Privacy Policy
+                                </a>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button type="submit"
+                            class="stackly-sport-auth-submit">
+
+                        <span>Create My Account</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <!-- STATUS -->
+
+                    <div class="stackly-sport-auth-status"
+                         id="sportSignupStatus"
+                         aria-live="polite">
+                    </div>
+
+
+                    <!-- BOTTOM SWITCH -->
+
+                    <p class="stackly-sport-auth-bottom-text">
+
+                        Already have an account?
+
+                        <button type="button"
+                                class="stackly-sport-auth-inline-switch"
+                                id="sportGoLogin">
+
+                            Login Here
+
+                        </button>
+
+                    </p>
+
+                </form>
+
+
+
+                <!-- =================================================
+                     SECURITY NOTE
+                ================================================== -->
+
+                <div class="stackly-sport-auth-security">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Your account information is kept secure.
+                    </span>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
+             PAGE FOOTER
+        ================================================== -->
+
+        <div class="stackly-sport-auth-footer">
+
+            <span>
+                © 2026 Stackly Sport Club
+            </span>
+
+            <span class="stackly-sport-auth-footer-dot"></span>
+
+            <span>
+                Train · Perform · Progress
+            </span>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         AOS JS
+    ====================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =====================================================
+         PAGE JS
+    ====================================================== -->
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

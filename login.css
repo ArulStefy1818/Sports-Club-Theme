@@ -1,0 +1,2085 @@
+/* =========================================================
+   STACKLY SPORT CLUB
+   LOGIN + SIGNUP PAGE
+   PREMIUM RESPONSIVE AUTH CSS
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --sport-auth-lime: #efff35;
+    --sport-auth-lime-soft: rgba(239, 255, 53, 0.08);
+    --sport-auth-lime-medium: rgba(239, 255, 53, 0.16);
+    --sport-auth-lime-strong: rgba(239, 255, 53, 0.28);
+
+    --sport-auth-black: #050705;
+    --sport-auth-dark: #090c09;
+    --sport-auth-dark-two: #0d110d;
+    --sport-auth-card: #111611;
+    --sport-auth-card-two: #151a15;
+
+    --sport-auth-white: #ffffff;
+    --sport-auth-text: #e8ece7;
+    --sport-auth-muted: #929a92;
+
+    --sport-auth-border: rgba(255, 255, 255, 0.09);
+    --sport-auth-border-light: rgba(255, 255, 255, 0.14);
+
+    --sport-auth-danger: #ff6565;
+    --sport-auth-success: #9cf25b;
+
+    --sport-auth-font-body: "DM Sans", sans-serif;
+    --sport-auth-font-heading: "Space Grotesk", sans-serif;
+
+    --sport-auth-transition:
+        0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: var(--sport-auth-font-body);
+    background: var(--sport-auth-black);
+    color: var(--sport-auth-white);
+    overflow-x: hidden;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    border: 0;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   MAIN AUTH PAGE
+========================================================= */
+
+.stackly-sport-auth-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 30px 45px 28px;
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(239, 255, 53, 0.055),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(239, 255, 53, 0.045),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #050705 0%,
+            #090d09 48%,
+            #060806 100%
+        );
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.stackly-sport-auth-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+.stackly-sport-auth-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(3px);
+    animation:
+        sportAuthOrbFloat 8s ease-in-out infinite;
+}
+
+
+.stackly-sport-auth-orb-one {
+    width: 380px;
+    height: 380px;
+    top: -160px;
+    right: -120px;
+    background:
+        radial-gradient(
+            circle,
+            rgba(239, 255, 53, 0.14) 0%,
+            rgba(239, 255, 53, 0.04) 40%,
+            transparent 72%
+        );
+}
+
+
+.stackly-sport-auth-orb-two {
+    width: 320px;
+    height: 320px;
+    bottom: -150px;
+    left: -110px;
+    background:
+        radial-gradient(
+            circle,
+            rgba(239, 255, 53, 0.12) 0%,
+            rgba(239, 255, 53, 0.025) 42%,
+            transparent 72%
+        );
+    animation-delay: -3s;
+}
+
+
+@keyframes sportAuthOrbFloat {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(18px, -22px, 0) scale(1.06);
+    }
+
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.stackly-sport-auth-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.18;
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        );
+    background-size: 70px 70px;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 85%
+        );
+}
+
+
+/* =========================================================
+   WATERMARK
+========================================================= */
+
+.stackly-sport-auth-watermark {
+    position: absolute;
+    right: -20px;
+    bottom: 3%;
+    font-family: var(--sport-auth-font-heading);
+    font-size: clamp(130px, 18vw, 310px);
+    font-weight: 700;
+    line-height: 0.7;
+    letter-spacing: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(239, 255, 53, 0.045);
+    user-select: none;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.stackly-sport-auth-topbar {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    max-width: 1540px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.stackly-sport-auth-logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 150px;
+    height: 64px;
+    transition:
+        transform var(--sport-auth-transition),
+        filter var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-logo::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    width: 42px;
+    height: 2px;
+    background: var(--sport-auth-lime);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-logo:hover {
+    transform: translateY(-3px);
+}
+
+
+.stackly-sport-auth-logo:hover::after {
+    transform: scaleX(1);
+}
+
+
+.stackly-sport-auth-logo img {
+    width: 145px;
+    height: 60px;
+    object-fit: contain;
+    object-position: left center;
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(91%)
+        sepia(99%)
+        saturate(1180%)
+        hue-rotate(18deg)
+        brightness(106%)
+        contrast(106%);
+
+    transition: transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-logo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   BACK HOME
+========================================================= */
+
+.stackly-sport-auth-back-home {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 48px;
+    padding: 0 20px;
+    border: 1px solid var(--sport-auth-border);
+    border-radius: 999px;
+    color: var(--sport-auth-text);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    background: rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    transition:
+        color var(--sport-auth-transition),
+        border-color var(--sport-auth-transition),
+        background var(--sport-auth-transition),
+        transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-back-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--sport-auth-lime);
+    transform: translateX(-105%);
+    transition: transform var(--sport-auth-transition);
+    z-index: -1;
+}
+
+
+.stackly-sport-auth-back-home i {
+    font-size: 13px;
+    transition: transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-back-home:hover {
+    color: var(--sport-auth-black);
+    border-color: var(--sport-auth-lime);
+    transform: translateY(-3px);
+}
+
+
+.stackly-sport-auth-back-home:hover::before {
+    transform: translateX(0);
+}
+
+
+.stackly-sport-auth-back-home:hover i {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   AUTH CONTAINER
+========================================================= */
+
+.stackly-sport-auth-container {
+    position: relative;
+    z-index: 5;
+    width: min(1380px, 100%);
+    min-height: 710px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(420px, 0.9fr) minmax(480px, 1.1fr);
+    border: 1px solid var(--sport-auth-border);
+    border-radius: 32px;
+    overflow: hidden;
+    background: rgba(11, 14, 11, 0.84);
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.48),
+        0 0 0 1px rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(22px);
+}
+
+
+/* =========================================================
+   LEFT VISUAL PANEL
+========================================================= */
+
+.stackly-sport-auth-visual {
+    position: relative;
+    min-height: 710px;
+    overflow: hidden;
+    background: #0a0d0a;
+}
+
+
+.stackly-sport-auth-visual-image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+
+.stackly-sport-auth-visual-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.72;
+    transform: scale(1.04);
+    transition:
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.stackly-sport-auth-visual:hover
+.stackly-sport-auth-visual-image img {
+    transform: scale(1.10);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.stackly-sport-auth-visual-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4, 7, 4, 0.10) 0%,
+            rgba(4, 7, 4, 0.25) 28%,
+            rgba(4, 7, 4, 0.88) 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(4, 7, 4, 0.22),
+            transparent 65%
+        );
+}
+
+
+/* =========================================================
+   VISUAL ACCENT LINE
+========================================================= */
+
+.stackly-sport-auth-visual::before {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    left: 34px;
+    top: 34px;
+    bottom: 34px;
+    width: 1px;
+    background:
+        linear-gradient(
+            to bottom,
+            var(--sport-auth-lime),
+            transparent 55%
+        );
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   VISUAL CONTENT
+========================================================= */
+
+.stackly-sport-auth-visual-content {
+    position: absolute;
+    z-index: 5;
+    left: 70px;
+    right: 55px;
+    bottom: 62px;
+}
+
+
+.stackly-sport-auth-visual-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    color: var(--sport-auth-lime);
+    font-family: var(--sport-auth-font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+.stackly-sport-auth-visual-label > span {
+    width: 28px;
+    height: 2px;
+    background: var(--sport-auth-lime);
+}
+
+
+.stackly-sport-auth-visual-content h1 {
+    max-width: 590px;
+    margin-bottom: 20px;
+    font-family: var(--sport-auth-font-heading);
+    font-size: clamp(48px, 5vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    font-weight: 700;
+}
+
+
+.stackly-sport-auth-visual-content h1 span {
+    display: block;
+    color: var(--sport-auth-lime);
+}
+
+
+.stackly-sport-auth-visual-content p {
+    max-width: 500px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   VISUAL STATS
+========================================================= */
+
+.stackly-sport-auth-visual-stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 38px;
+}
+
+
+.stackly-sport-auth-stat {
+    min-width: 105px;
+    padding-right: 24px;
+    margin-right: 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.stackly-sport-auth-stat:last-child {
+    border-right: 0;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+
+.stackly-sport-auth-stat strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--sport-auth-white);
+    font-family: var(--sport-auth-font-heading);
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+.stackly-sport-auth-stat span {
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   VISUAL NUMBER
+========================================================= */
+
+.stackly-sport-auth-visual-number {
+    position: absolute;
+    z-index: 5;
+    top: 35px;
+    right: 40px;
+    color: var(--sport-auth-lime);
+    font-family: var(--sport-auth-font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   RIGHT AUTH PANEL
+========================================================= */
+
+.stackly-sport-auth-panel {
+    position: relative;
+    padding: 64px clamp(45px, 5vw, 82px) 48px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 23, 18, 0.98),
+            rgba(9, 12, 9, 0.98)
+        );
+    overflow: visible;
+}
+
+
+/* =========================================================
+   AUTH HEADER
+========================================================= */
+
+.stackly-sport-auth-header {
+    margin-bottom: 28px;
+}
+
+
+.stackly-sport-auth-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--sport-auth-lime);
+    font-family: var(--sport-auth-font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+.stackly-sport-auth-eyebrow > span {
+    width: 26px;
+    height: 2px;
+    background: var(--sport-auth-lime);
+}
+
+
+.stackly-sport-auth-header h2 {
+    margin-bottom: 9px;
+    color: var(--sport-auth-white);
+    font-family: var(--sport-auth-font-heading);
+    font-size: clamp(42px, 4vw, 62px);
+    line-height: 1;
+    letter-spacing: -2.5px;
+}
+
+
+.stackly-sport-auth-header h2 span {
+    color: var(--sport-auth-lime);
+}
+
+
+.stackly-sport-auth-header p {
+    max-width: 560px;
+    color: var(--sport-auth-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LOGIN / SIGNUP TABS
+========================================================= */
+
+.stackly-sport-auth-switch {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 28px;
+    border: 1px solid var(--sport-auth-border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+
+.stackly-sport-auth-tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 50px;
+    border-radius: 10px;
+    color: var(--sport-auth-muted);
+    background: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        color var(--sport-auth-transition),
+        background var(--sport-auth-transition),
+        transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-tab i {
+    font-size: 13px;
+}
+
+
+.stackly-sport-auth-tab:hover {
+    color: var(--sport-auth-white);
+}
+
+
+.stackly-sport-auth-tab.active {
+    color: var(--sport-auth-black);
+    background: var(--sport-auth-lime);
+    box-shadow:
+        0 8px 25px rgba(239, 255, 53, 0.12);
+}
+
+
+.stackly-sport-auth-tab.active:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   AUTH FORMS
+========================================================= */
+
+.stackly-sport-auth-form {
+    display: none;
+    animation: sportAuthFormIn 0.45s ease both;
+}
+
+
+.stackly-sport-auth-form.active {
+    display: block;
+}
+
+
+@keyframes sportAuthFormIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.stackly-sport-auth-field {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+
+.stackly-sport-auth-field > label,
+.stackly-sport-auth-label-row label {
+    display: block;
+    margin-bottom: 9px;
+    color: #d9ded8;
+    font-family: var(--sport-auth-font-heading);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.stackly-sport-auth-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+.stackly-sport-auth-forgot {
+    margin-bottom: 9px;
+    color: var(--sport-auth-lime);
+    font-size: 12px;
+    font-weight: 700;
+    transition:
+        color var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-forgot:hover {
+    color: var(--sport-auth-white);
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.stackly-sport-auth-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.stackly-sport-auth-input-wrap > i {
+    position: absolute;
+    left: 19px;
+    z-index: 2;
+    color: #737b73;
+    font-size: 15px;
+    pointer-events: none;
+    transition: color var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-input-wrap input {
+    width: 100%;
+    min-height: 58px;
+    padding: 0 52px 0 50px;
+    border: 1px solid var(--sport-auth-border);
+    outline: none;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--sport-auth-white);
+    font-size: 14px;
+    transition:
+        border-color var(--sport-auth-transition),
+        background var(--sport-auth-transition),
+        box-shadow var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-input-wrap input::placeholder {
+    color: #626a62;
+}
+
+
+.stackly-sport-auth-input-wrap input:hover {
+    border-color: rgba(239, 255, 53, 0.25);
+    background: rgba(255, 255, 255, 0.045);
+}
+
+
+.stackly-sport-auth-input-wrap input:focus {
+    border-color: var(--sport-auth-lime);
+    background: rgba(239, 255, 53, 0.025);
+    box-shadow:
+        0 0 0 4px rgba(239, 255, 53, 0.07);
+}
+
+
+.stackly-sport-auth-input-wrap:focus-within > i {
+    color: var(--sport-auth-lime);
+}
+
+
+/* =========================================================
+   PASSWORD EYE
+========================================================= */
+
+.stackly-sport-auth-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    z-index: 3;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    transform: translateY(-50%);
+    border-radius: 9px;
+    color: #7c857c;
+    background: transparent;
+    cursor: pointer;
+    transition:
+        color var(--sport-auth-transition),
+        background var(--sport-auth-transition),
+        transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-eye:hover {
+    color: var(--sport-auth-lime);
+    background: var(--sport-auth-lime-soft);
+    transform: translateY(-50%) scale(1.05);
+}
+
+
+.stackly-sport-auth-eye i {
+    position: static;
+    color: inherit;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CUSTOM ROLE DROPDOWN
+========================================================= */
+
+.stackly-sport-auth-custom-select {
+    position: relative;
+    z-index: 30;
+}
+
+
+.stackly-sport-auth-custom-select.is-open {
+    z-index: 100;
+}
+
+
+.stackly-sport-auth-select-trigger {
+    position: relative;
+    width: 100%;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 0 48px 0 50px;
+    border: 1px solid var(--sport-auth-border);
+    border-radius: 13px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.035);
+    color: #8d958d;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    transition:
+        border-color var(--sport-auth-transition),
+        background var(--sport-auth-transition),
+        box-shadow var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-select-trigger:hover {
+    border-color: rgba(239, 255, 53, 0.28);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+.stackly-sport-auth-custom-select.is-open
+.stackly-sport-auth-select-trigger {
+    border-color: var(--sport-auth-lime);
+    background: rgba(239, 255, 53, 0.035);
+    box-shadow:
+        0 0 0 4px rgba(239, 255, 53, 0.06);
+}
+
+
+.stackly-sport-auth-select-icon {
+    position: absolute;
+    left: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #737b73;
+    transition: color var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-custom-select.is-open
+.stackly-sport-auth-select-icon {
+    color: var(--sport-auth-lime);
+}
+
+
+.stackly-sport-auth-select-arrow {
+    position: absolute;
+    right: 19px;
+    color: #777f77;
+    font-size: 12px;
+    transition:
+        color var(--sport-auth-transition),
+        transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-custom-select.is-open
+.stackly-sport-auth-select-arrow {
+    color: var(--sport-auth-lime);
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
+
+.stackly-sport-auth-select-menu {
+    position: absolute;
+    top: calc(100% + 9px);
+    left: 0;
+    right: 0;
+    max-height: 230px;
+    padding: 7px;
+    border: 1px solid rgba(239, 255, 53, 0.14);
+    border-radius: 14px;
+    background: #101410;
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.48);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px) scale(0.98);
+    transform-origin: top center;
+    overflow-y: auto;
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.stackly-sport-auth-custom-select.is-open
+.stackly-sport-auth-select-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================================================
+   DROPDOWN SCROLLBAR
+========================================================= */
+
+.stackly-sport-auth-select-menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.stackly-sport-auth-select-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.stackly-sport-auth-select-menu::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: rgba(239, 255, 53, 0.35);
+}
+
+
+/* =========================================================
+   DROPDOWN OPTION
+========================================================= */
+
+.stackly-sport-auth-select-option {
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 11px;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--sport-auth-text);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background var(--sport-auth-transition),
+        transform var(--sport-auth-transition),
+        color var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-select-option:hover {
+    color: var(--sport-auth-black);
+    background: var(--sport-auth-lime);
+    transform: translateX(3px);
+}
+
+
+.stackly-sport-auth-option-icon {
+    flex: 0 0 37px;
+    width: 37px;
+    height: 37px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    color: var(--sport-auth-lime);
+    background: var(--sport-auth-lime-soft);
+    transition:
+        background var(--sport-auth-transition),
+        color var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-select-option:hover
+.stackly-sport-auth-option-icon {
+    color: var(--sport-auth-black);
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+.stackly-sport-auth-select-option strong {
+    display: block;
+    margin-bottom: 2px;
+    font-family: var(--sport-auth-font-heading);
+    font-size: 13px;
+}
+
+
+.stackly-sport-auth-select-option small {
+    display: block;
+    color: #727a72;
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+
+.stackly-sport-auth-select-option:hover small {
+    color: rgba(0, 0, 0, 0.62);
+}
+
+
+/* =========================================================
+   AUTH OPTIONS
+========================================================= */
+
+.stackly-sport-auth-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 30px;
+    margin: 2px 0 20px;
+}
+
+
+.stackly-sport-auth-checkbox {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #8f978f;
+    font-size: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+
+.stackly-sport-auth-checkbox input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.stackly-sport-auth-checkmark {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #505850;
+    border-radius: 5px;
+    color: var(--sport-auth-black);
+    background: transparent;
+    transition:
+        background var(--sport-auth-transition),
+        border-color var(--sport-auth-transition),
+        transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-checkmark i {
+    font-size: 9px;
+    opacity: 0;
+    transform: scale(0.4);
+    transition:
+        opacity var(--sport-auth-transition),
+        transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-checkbox input:checked
++ .stackly-sport-auth-checkmark {
+    border-color: var(--sport-auth-lime);
+    background: var(--sport-auth-lime);
+    transform: scale(1.05);
+}
+
+
+.stackly-sport-auth-checkbox input:checked
++ .stackly-sport-auth-checkmark i {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.stackly-sport-auth-checkbox:hover
+.stackly-sport-auth-checkmark {
+    border-color: var(--sport-auth-lime);
+}
+
+
+.stackly-sport-auth-checkbox a {
+    color: var(--sport-auth-lime);
+    font-weight: 700;
+    transition: color var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-checkbox a:hover {
+    color: var(--sport-auth-white);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.stackly-sport-auth-submit {
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 23px;
+    border-radius: 13px;
+    overflow: hidden;
+    color: var(--sport-auth-black);
+    background: var(--sport-auth-lime);
+    font-family: var(--sport-auth-font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    isolation: isolate;
+    transition:
+        transform var(--sport-auth-transition),
+        box-shadow var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-submit::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #ffffff;
+    transform: translateX(-105%);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.stackly-sport-auth-submit:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 15px 35px rgba(239, 255, 53, 0.15);
+}
+
+
+.stackly-sport-auth-submit:hover::before {
+    transform: translateX(0);
+}
+
+
+.stackly-sport-auth-submit i {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.10);
+    transition:
+        transform var(--sport-auth-transition),
+        background var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-submit:hover i {
+    transform: translateX(4px);
+    background: rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   STATUS MESSAGE
+========================================================= */
+
+.stackly-sport-auth-status {
+    min-height: 22px;
+    margin-top: 11px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+.stackly-sport-auth-status.success {
+    color: var(--sport-auth-success);
+}
+
+
+.stackly-sport-auth-status.error {
+    color: var(--sport-auth-danger);
+}
+
+
+/* =========================================================
+   BOTTOM SWITCH TEXT
+========================================================= */
+
+.stackly-sport-auth-bottom-text {
+    margin-top: 19px;
+    color: #737b73;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+.stackly-sport-auth-inline-switch {
+    position: relative;
+    margin-left: 4px;
+    padding: 0;
+    color: var(--sport-auth-lime);
+    background: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.stackly-sport-auth-inline-switch::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background: var(--sport-auth-lime);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--sport-auth-transition);
+}
+
+
+.stackly-sport-auth-inline-switch:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* =========================================================
+   SECURITY NOTE
+========================================================= */
+
+.stackly-sport-auth-security {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 27px;
+    padding-top: 20px;
+    border-top: 1px solid var(--sport-auth-border);
+    color: #626a62;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+}
+
+
+.stackly-sport-auth-security i {
+    color: var(--sport-auth-lime);
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.stackly-sport-auth-footer {
+    position: relative;
+    z-index: 5;
+    width: min(1380px, 100%);
+    margin: 22px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    color: #535b53;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.stackly-sport-auth-footer-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--sport-auth-lime);
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+========================================================= */
+
+.stackly-sport-auth-tab:focus-visible,
+.stackly-sport-auth-submit:focus-visible,
+.stackly-sport-auth-eye:focus-visible,
+.stackly-sport-auth-back-home:focus-visible,
+.stackly-sport-auth-inline-switch:focus-visible,
+.stackly-sport-auth-select-trigger:focus-visible,
+.stackly-sport-auth-select-option:focus-visible {
+    outline: 2px solid var(--sport-auth-lime);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+
+    .stackly-sport-auth-page {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+
+    .stackly-sport-auth-container {
+        min-height: 750px;
+    }
+
+    .stackly-sport-auth-visual {
+        min-height: 750px;
+    }
+
+    .stackly-sport-auth-panel {
+        padding-left: 95px;
+        padding-right: 95px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / LAPTOP
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .stackly-sport-auth-page {
+        padding: 25px;
+    }
+
+    .stackly-sport-auth-container {
+        grid-template-columns: 0.82fr 1.18fr;
+        min-height: 680px;
+    }
+
+    .stackly-sport-auth-visual {
+        min-height: 680px;
+    }
+
+    .stackly-sport-auth-panel {
+        padding: 50px 42px 40px;
+    }
+
+    .stackly-sport-auth-visual-content {
+        left: 55px;
+        right: 35px;
+        bottom: 45px;
+    }
+
+    .stackly-sport-auth-visual-content h1 {
+        font-size: clamp(42px, 5vw, 62px);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .stackly-sport-auth-page {
+        padding: 22px;
+    }
+
+    .stackly-sport-auth-container {
+        grid-template-columns: 1fr;
+        max-width: 680px;
+        min-height: auto;
+    }
+
+    .stackly-sport-auth-visual {
+        min-height: 430px;
+    }
+
+    .stackly-sport-auth-panel {
+        padding: 50px 45px 42px;
+    }
+
+    .stackly-sport-auth-visual-content {
+        left: 65px;
+        right: 50px;
+        bottom: 45px;
+    }
+
+    .stackly-sport-auth-visual-content h1 {
+        font-size: clamp(45px, 8vw, 65px);
+    }
+
+    .stackly-sport-auth-visual-content p {
+        max-width: 580px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE — 767PX
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .stackly-sport-auth-page {
+        min-height: 100svh;
+        padding: 17px 15px 20px;
+    }
+
+
+    /* Topbar */
+
+    .stackly-sport-auth-topbar {
+        margin-bottom: 18px;
+    }
+
+
+    .stackly-sport-auth-logo {
+        width: 125px;
+        height: 54px;
+    }
+
+
+    .stackly-sport-auth-logo img {
+        width: 120px;
+        height: 52px;
+    }
+
+
+    .stackly-sport-auth-back-home {
+        min-height: 42px;
+        padding: 0 15px;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+
+    /* Container */
+
+    .stackly-sport-auth-container {
+        width: 100%;
+        border-radius: 23px;
+    }
+
+
+    /* Visual */
+
+    .stackly-sport-auth-visual {
+        min-height: 350px;
+    }
+
+
+    .stackly-sport-auth-visual::before {
+        left: 22px;
+        top: 22px;
+        bottom: 22px;
+    }
+
+
+    .stackly-sport-auth-visual-content {
+        left: 48px;
+        right: 25px;
+        bottom: 34px;
+    }
+
+
+    .stackly-sport-auth-visual-label {
+        margin-bottom: 14px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+
+    .stackly-sport-auth-visual-label > span {
+        width: 20px;
+    }
+
+
+    .stackly-sport-auth-visual-content h1 {
+        margin-bottom: 13px;
+        font-size: clamp(39px, 11vw, 54px);
+        letter-spacing: -2px;
+    }
+
+
+    .stackly-sport-auth-visual-content p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    .stackly-sport-auth-visual-stats {
+        margin-top: 24px;
+    }
+
+
+    .stackly-sport-auth-stat {
+        min-width: 75px;
+        padding-right: 13px;
+        margin-right: 13px;
+    }
+
+
+    .stackly-sport-auth-stat strong {
+        font-size: 18px;
+    }
+
+
+    .stackly-sport-auth-stat span {
+        font-size: 9px;
+    }
+
+
+    .stackly-sport-auth-visual-number {
+        top: 25px;
+        right: 25px;
+        font-size: 10px;
+    }
+
+
+    /* Panel */
+
+    .stackly-sport-auth-panel {
+        padding: 38px 22px 30px;
+    }
+
+
+    .stackly-sport-auth-header {
+        margin-bottom: 22px;
+    }
+
+
+    .stackly-sport-auth-eyebrow {
+        margin-bottom: 12px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+
+    .stackly-sport-auth-header h2 {
+        font-size: clamp(38px, 10vw, 48px);
+        letter-spacing: -2px;
+    }
+
+
+    .stackly-sport-auth-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* Tabs */
+
+    .stackly-sport-auth-switch {
+        margin-bottom: 23px;
+    }
+
+
+    .stackly-sport-auth-tab {
+        min-height: 47px;
+        font-size: 13px;
+    }
+
+
+    /* Fields */
+
+    .stackly-sport-auth-field {
+        margin-bottom: 16px;
+    }
+
+
+    .stackly-sport-auth-field > label,
+    .stackly-sport-auth-label-row label {
+        font-size: 12px;
+    }
+
+
+    .stackly-sport-auth-input-wrap input,
+    .stackly-sport-auth-select-trigger {
+        min-height: 56px;
+        font-size: 13px;
+    }
+
+
+    .stackly-sport-auth-input-wrap input {
+        padding-left: 47px;
+        padding-right: 48px;
+    }
+
+
+    .stackly-sport-auth-input-wrap > i {
+        left: 17px;
+    }
+
+
+    .stackly-sport-auth-select-trigger {
+        padding-left: 47px;
+    }
+
+
+    .stackly-sport-auth-select-icon {
+        left: 17px;
+    }
+
+
+    .stackly-sport-auth-select-arrow {
+        right: 17px;
+    }
+
+
+    /* Dropdown */
+
+    .stackly-sport-auth-select-menu {
+        max-height: 210px;
+    }
+
+
+    .stackly-sport-auth-select-option {
+        min-height: 53px;
+    }
+
+
+    /* Forgot */
+
+    .stackly-sport-auth-forgot {
+        font-size: 11px;
+    }
+
+
+    /* Remember */
+
+    .stackly-sport-auth-checkbox {
+        font-size: 11px;
+    }
+
+
+    /* Submit */
+
+    .stackly-sport-auth-submit {
+        min-height: 58px;
+        font-size: 13px;
+    }
+
+
+    /* Bottom */
+
+    .stackly-sport-auth-bottom-text {
+        font-size: 12px;
+    }
+
+
+    .stackly-sport-auth-security {
+        margin-top: 22px;
+        padding-top: 17px;
+        font-size: 9px;
+    }
+
+
+    /* Footer */
+
+    .stackly-sport-auth-footer {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 17px;
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 480PX
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .stackly-sport-auth-page {
+        padding: 13px 11px 17px;
+    }
+
+
+    .stackly-sport-auth-topbar {
+        margin-bottom: 13px;
+    }
+
+
+    .stackly-sport-auth-logo {
+        width: 108px;
+        height: 48px;
+    }
+
+
+    .stackly-sport-auth-logo img {
+        width: 105px;
+        height: 46px;
+    }
+
+
+    .stackly-sport-auth-back-home {
+        min-height: 39px;
+        padding: 0 12px;
+        font-size: 10px;
+    }
+
+
+    .stackly-sport-auth-back-home i {
+        font-size: 10px;
+    }
+
+
+    .stackly-sport-auth-container {
+        border-radius: 19px;
+    }
+
+
+    .stackly-sport-auth-visual {
+        min-height: 315px;
+    }
+
+
+    .stackly-sport-auth-visual-content {
+        left: 41px;
+        right: 19px;
+        bottom: 26px;
+    }
+
+
+    .stackly-sport-auth-visual-content h1 {
+        font-size: 36px;
+        letter-spacing: -1.5px;
+    }
+
+
+    .stackly-sport-auth-visual-content p {
+        font-size: 11px;
+    }
+
+
+    .stackly-sport-auth-visual-stats {
+        margin-top: 20px;
+    }
+
+
+    .stackly-sport-auth-stat {
+        min-width: 62px;
+        padding-right: 9px;
+        margin-right: 9px;
+    }
+
+
+    .stackly-sport-auth-stat strong {
+        font-size: 15px;
+    }
+
+
+    .stackly-sport-auth-stat span {
+        font-size: 8px;
+    }
+
+
+    .stackly-sport-auth-panel {
+        padding: 32px 17px 25px;
+    }
+
+
+    .stackly-sport-auth-header h2 {
+        font-size: 35px;
+    }
+
+
+    .stackly-sport-auth-header p {
+        font-size: 12px;
+    }
+
+
+    .stackly-sport-auth-tab {
+        min-height: 45px;
+        font-size: 12px;
+    }
+
+
+    .stackly-sport-auth-tab i {
+        font-size: 11px;
+    }
+
+
+    .stackly-sport-auth-input-wrap input,
+    .stackly-sport-auth-select-trigger {
+        min-height: 54px;
+        border-radius: 11px;
+    }
+
+
+    .stackly-sport-auth-input-wrap input {
+        font-size: 12px;
+    }
+
+
+    .stackly-sport-auth-select-trigger {
+        font-size: 12px;
+    }
+
+
+    .stackly-sport-auth-select-option strong {
+        font-size: 12px;
+    }
+
+
+    .stackly-sport-auth-select-option small {
+        font-size: 9px;
+    }
+
+
+    .stackly-sport-auth-submit {
+        min-height: 55px;
+        padding-left: 18px;
+        padding-right: 14px;
+        font-size: 12px;
+    }
+
+
+    .stackly-sport-auth-submit i {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .stackly-sport-auth-bottom-text {
+        font-size: 11px;
+    }
+
+
+    .stackly-sport-auth-security {
+        font-size: 8px;
+    }
+
+
+    .stackly-sport-auth-footer {
+        font-size: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .stackly-sport-auth-back-home span {
+        display: none;
+    }
+
+
+    .stackly-sport-auth-back-home {
+        width: 39px;
+        padding: 0;
+        justify-content: center;
+    }
+
+
+    .stackly-sport-auth-visual {
+        min-height: 295px;
+    }
+
+
+    .stackly-sport-auth-visual-content {
+        left: 36px;
+        bottom: 23px;
+    }
+
+
+    .stackly-sport-auth-visual-content h1 {
+        font-size: 32px;
+    }
+
+
+    .stackly-sport-auth-stat {
+        min-width: 57px;
+        padding-right: 7px;
+        margin-right: 7px;
+    }
+
+
+    .stackly-sport-auth-stat strong {
+        font-size: 14px;
+    }
+
+
+    .stackly-sport-auth-panel {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   REDUCE HOVER MOVEMENT
+========================================================= */
+
+@media (hover: none) {
+
+    .stackly-sport-auth-visual:hover
+    .stackly-sport-auth-visual-image img {
+        transform: scale(1.04);
+    }
+
+    .stackly-sport-auth-submit:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .stackly-sport-auth-back-home:hover {
+        transform: none;
+    }
+
+    .stackly-sport-auth-logo:hover {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

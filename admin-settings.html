@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Admin Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Sports Dashboard, Admin Dashboard">
+
+    <title>Stackly Sport Club | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+
+<body class="stackly-sport-admin-body">
+
+
+<!-- =========================================================
+     MOBILE OVERLAY
+========================================================= -->
+
+<div class="stackly-sport-admin-overlay"
+     id="sportAdminOverlay">
+</div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="stackly-sport-admin-sidebar"
+       id="sportAdminSidebar">
+
+
+    <!-- =====================================================
+         SIDEBAR TOP
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-top">
+
+        <a href="admin.html"
+           class="stackly-sport-admin-logo"
+           aria-label="Stackly Sport Club Home">
+
+            <img src="Stackly-logo-Blue.webp"
+                 alt="Stackly Sport Club Logo">
+
+        </a>
+
+
+        <!-- MOBILE CLOSE BUTTON -->
+
+        <button type="button"
+                class="stackly-sport-admin-close"
+                id="sportAdminClose"
+                aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN PROFILE
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-profile">
+
+        <div class="stackly-sport-admin-avatar">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+        <div class="stackly-sport-admin-profile-info">
+
+            <strong>Administrator</strong>
+
+            <span>Sports Club Admin</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR NAVIGATION
+    ====================================================== -->
+
+    <nav class="stackly-sport-admin-nav"
+         aria-label="Admin Dashboard Navigation">
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MAIN MENU
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="admin.html"
+           class="stackly-sport-admin-nav-link active">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- MEMBERS -->
+
+        <a href="admin-members.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Members
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                248
+            </span>
+
+        </a>
+
+
+        <!-- TRAINERS -->
+
+        <a href="admin-trainers.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Trainers
+            </span>
+
+        </a>
+
+
+        <!-- PROGRAMS -->
+
+        <a href="admin-programs.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Programs
+            </span>
+
+        </a>
+
+
+        <!-- BOOKINGS -->
+
+        <a href="admin-bookings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Bookings
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                18
+            </span>
+
+        </a>
+
+
+        <!-- PAYMENTS -->
+
+        <a href="admin-payments.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Payments
+            </span>
+
+        </a>
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MANAGEMENT
+        </div>
+
+
+        <!-- SPORTS -->
+
+        <a href="admin-sports.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Sports
+            </span>
+
+        </a>
+
+
+        <!-- EVENTS -->
+
+        <a href="admin-events.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-flag-checkered"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Events
+            </span>
+
+        </a>
+
+ 
+        <!-- SETTINGS -->
+
+        <a href="admin-settings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         SIDEBAR BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-bottom">
+
+        <button type="button"
+                class="stackly-sport-admin-logout"
+                id="sportAdminLogout">
+
+            <span>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </span>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN AREA
+========================================================= -->
+
+<main class="stackly-sport-admin-main">
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <header class="stackly-sport-admin-header">
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button type="button"
+                class="stackly-sport-admin-menu"
+                id="sportAdminMenu"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="stackly-sport-admin-header-title">
+
+            <span class="stackly-sport-admin-header-eyebrow">
+                STACKLY SPORT CLUB
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+        </div>
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="stackly-sport-admin-header-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <a href="404-admin.html"><button type="button"
+                    class="stackly-sport-admin-notification"
+                    aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button></a>
+
+
+            <!-- EMAIL DISPLAY -->
+
+            <div class="stackly-sport-admin-email-box">
+
+                <div class="stackly-sport-admin-email-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-sport-admin-email-content">
+
+                    <span>
+                        Signed in as
+                    </span>
+
+                    <strong id="sportAdminEmail">
+                        admin@stacklysport.com
+                    </strong>
+
+                </div>
+
+            </div>
+ 
+
+        </div>
+
+    </header>
+
+<!-- =========================================================
+     STACKLY SPORT CLUB
+     ADMIN SETTINGS PAGE
+========================================================= -->
+
+<section class="stackly-sport-settings-page" id="sport-settings">
+
+    <!-- =====================================================
+         SETTINGS HERO
+    ====================================================== -->
+
+    <div class="stackly-sport-settings-hero"
+         data-aos="fade-up">
+
+        <div class="stackly-sport-settings-hero-copy">
+
+            <span class="stackly-sport-settings-kicker">
+                <i class="fa-solid fa-sliders"></i>
+                CONTROL CENTER
+            </span>
+
+            <h2>
+                Manage Your
+                <span>Club Settings.</span>
+            </h2>
+
+            <p>
+                Configure your sports club preferences, account,
+                notifications and system experience from one place.
+            </p>
+
+        </div>
+
+        <div class="stackly-sport-settings-hero-icon">
+
+            <div class="stackly-sport-settings-icon-orbit">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SETTINGS OVERVIEW
+    ====================================================== -->
+
+    <div class="stackly-sport-settings-overview"
+         data-aos="fade-up"
+         data-aos-delay="100">
+
+        <div class="stackly-sport-settings-overview-card">
+
+            <span class="stackly-sport-settings-overview-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </span>
+
+            <div>
+                <strong>All Systems</strong>
+                <small>Operational</small>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-settings-overview-card">
+
+            <span class="stackly-sport-settings-overview-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </span>
+
+            <div>
+                <strong>Security</strong>
+                <small>Protected</small>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-settings-overview-card">
+
+            <span class="stackly-sport-settings-overview-icon">
+                <i class="fa-solid fa-database"></i>
+            </span>
+
+            <div>
+                <strong>Data Sync</strong>
+                <small>Up to date</small>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-settings-overview-card">
+
+            <span class="stackly-sport-settings-overview-icon">
+                <i class="fa-solid fa-clock"></i>
+            </span>
+
+            <div>
+                <strong>Last Sync</strong>
+                <small>2 minutes ago</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SETTINGS CONTENT
+    ====================================================== -->
+
+    <div class="stackly-sport-settings-layout">
+
+
+        <!-- =================================================
+             LEFT SETTINGS NAVIGATION
+        ================================================== -->
+
+        <aside class="stackly-sport-settings-menu"
+               data-aos="fade-right">
+
+            <div class="stackly-sport-settings-menu-heading">
+                SETTINGS
+            </div>
+
+
+            <a href="#club-preferences"
+               class="stackly-sport-settings-menu-link active">
+
+                <span>
+                    <i class="fa-solid fa-building"></i>
+                </span>
+
+                Club Preferences
+
+            </a>
+
+
+            <a href="#account-settings"
+               class="stackly-sport-settings-menu-link">
+
+                <span>
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                Account
+
+            </a>
+
+
+            <a href="#notifications-settings"
+               class="stackly-sport-settings-menu-link">
+
+                <span>
+                    <i class="fa-regular fa-bell"></i>
+                </span>
+
+                Notifications
+
+            </a>
+
+
+            <a href="#security-settings"
+               class="stackly-sport-settings-menu-link">
+
+                <span>
+                    <i class="fa-solid fa-lock"></i>
+                </span>
+
+                Security
+
+            </a>
+
+ 
+
+
+            <a href="#system-settings"
+               class="stackly-sport-settings-menu-link">
+
+                <span>
+                    <i class="fa-solid fa-server"></i>
+                </span>
+
+                System
+
+            </a>
+
+
+            <div class="stackly-sport-settings-help-box">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                <strong>Need Help?</strong>
+
+                <p>
+                    Review your club configuration
+                    or contact support.
+                </p>
+
+                <a href="404-admin.html">
+                    Support Center
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             RIGHT SETTINGS CONTENT
+        ================================================== -->
+
+        <div class="stackly-sport-settings-content">
+
+
+            <!-- =============================================
+                 CLUB PREFERENCES
+            ============================================== -->
+
+            <section class="stackly-sport-setting-panel"
+                     id="club-preferences"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-setting-panel-heading">
+
+                    <div class="stackly-sport-setting-panel-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <div>
+
+                        <span>GENERAL</span>
+
+                        <h3>
+                            Club Preferences
+                        </h3>
+
+                        <p>
+                            Manage the basic information
+                            used across your sports club.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-setting-form-grid">
+
+                    <div class="stackly-sport-setting-field">
+
+                        <label>
+                            Club Name
+                        </label>
+
+                        <div class="stackly-sport-setting-input">
+
+                            <i class="fa-solid fa-trophy"></i>
+
+                            <input type="text"
+                                   value="Stackly Sport Club">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-sport-setting-field">
+
+                        <label>
+                            Club Email
+                        </label>
+
+                        <div class="stackly-sport-setting-input">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input type="email"
+                                   value="admin@stacklysport.com">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-sport-setting-field">
+
+                        <label>
+                            Contact Number
+                        </label>
+
+                        <div class="stackly-sport-setting-input">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input type="tel"
+                                   value="+91 98765 43210">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-sport-setting-field">
+
+                        <label>
+                            Time Zone
+                        </label>
+
+                        <div class="stackly-sport-setting-input">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                            <select>
+
+                                <option>
+                                    India Standard Time
+                                </option>
+
+                                <option>
+                                    UTC
+                                </option>
+
+                                <option>
+                                    Eastern Time
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-sport-setting-field full">
+
+                        <label>
+                            Club Address
+                        </label>
+
+                        <div class="stackly-sport-setting-input">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input type="text"
+                                   value="Stackly Sports Arena, Chennai">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-setting-actions">
+
+                    <button type="button"
+                            class="stackly-sport-settings-save-btn">
+
+                        Save Changes
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 ACCOUNT SETTINGS
+            ============================================== -->
+
+            <section class="stackly-sport-setting-panel"
+                     id="account-settings"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-setting-panel-heading">
+
+                    <div class="stackly-sport-setting-panel-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+
+                        <span>PROFILE</span>
+
+                        <h3>
+                            Account Settings
+                        </h3>
+
+                        <p>
+                            Update administrator profile details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-account-profile">
+
+                    <div class="stackly-sport-account-avatar">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <div class="stackly-sport-account-info">
+
+                        <strong>
+                            Club Administrator
+                        </strong>
+
+                        <span id="sportAccountEmail">
+                            admin@stacklysport.com
+                        </span>
+
+                    </div>
+
+                    <a href="404-admin.html"
+                       class="stackly-sport-account-edit">
+
+                        Edit Profile
+
+                        <i class="fa-solid fa-pen"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 NOTIFICATION SETTINGS
+            ============================================== -->
+
+            <section class="stackly-sport-setting-panel"
+                     id="notifications-settings"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-setting-panel-heading">
+
+                    <div class="stackly-sport-setting-panel-icon">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+
+                    <div>
+
+                        <span>ALERTS</span>
+
+                        <h3>
+                            Notification Preferences
+                        </h3>
+
+                        <p>
+                            Choose which club activities
+                            should generate notifications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-settings-toggle-list">
+
+                    <div class="stackly-sport-settings-toggle-row">
+
+                        <div>
+
+                            <strong>
+                                New Member Registration
+                            </strong>
+
+                            <span>
+                                Get notified when a new member joins.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-sport-switch">
+
+                            <input type="checkbox"
+                                   checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-sport-settings-toggle-row">
+
+                        <div>
+
+                            <strong>
+                                New Bookings
+                            </strong>
+
+                            <span>
+                                Receive alerts for new bookings.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-sport-switch">
+
+                            <input type="checkbox"
+                                   checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-sport-settings-toggle-row">
+
+                        <div>
+
+                            <strong>
+                                Payment Updates
+                            </strong>
+
+                            <span>
+                                Receive payment status notifications.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-sport-switch">
+
+                            <input type="checkbox">
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-sport-settings-toggle-row">
+
+                        <div>
+
+                            <strong>
+                                Event Reminders
+                            </strong>
+
+                            <span>
+                                Get reminders before upcoming events.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-sport-switch">
+
+                            <input type="checkbox"
+                                   checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SECURITY
+            ============================================== -->
+
+            <section class="stackly-sport-setting-panel"
+                     id="security-settings"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-setting-panel-heading">
+
+                    <div class="stackly-sport-setting-panel-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+
+                        <span>PROTECTION</span>
+
+                        <h3>
+                            Security & Access
+                        </h3>
+
+                        <p>
+                            Manage account security and login protection.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-security-grid">
+
+                    <div class="stackly-sport-security-card">
+
+                        <div class="stackly-sport-security-card-icon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Password
+                            </strong>
+
+                            <span>
+                                Last changed 30 days ago
+                            </span>
+
+                        </div>
+
+                        <a href="404-admin.html">
+                            Change
+                        </a>
+
+                    </div>
+
+
+                    <div class="stackly-sport-security-card">
+
+                        <div class="stackly-sport-security-card-icon">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Two-Factor Authentication
+                            </strong>
+
+                            <span>
+                                Additional login protection
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-sport-switch">
+
+                            <input type="checkbox"
+                                   checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 APPEARANCE
+            ============================================== -->
+
+            <section class="stackly-sport-setting-panel"
+                     id="appearance-settings"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-setting-panel-heading">
+
+                    <div class="stackly-sport-setting-panel-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+
+                    <div>
+
+                        <span>INTERFACE</span>
+
+                        <h3>
+                            Appearance
+                        </h3>
+
+                        <p>
+                            Customize how the dashboard looks.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-appearance-grid">
+
+                    <div class="stackly-sport-appearance-option active">
+
+                        <div class="stackly-sport-preview-light">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <strong>
+                            Light Mode
+                        </strong>
+
+                        <small>
+                            Clean dashboard interface
+                        </small>
+
+                    </div>
+
+
+                    <div class="stackly-sport-appearance-option">
+
+                        <div class="stackly-sport-preview-dark">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <strong>
+                            Dark Mode
+                        </strong>
+
+                        <small>
+                            Low-light interface
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SYSTEM
+            ============================================== -->
+
+            <section class="stackly-sport-setting-panel"
+                     id="system-settings"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-setting-panel-heading">
+
+                    <div class="stackly-sport-setting-panel-icon">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+
+                    <div>
+
+                        <span>SYSTEM</span>
+
+                        <h3>
+                            System Information
+                        </h3>
+
+                        <p>
+                            View your current dashboard environment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-system-list">
+
+                    <div>
+                        <span>Platform</span>
+                        <strong>Stackly Sport Club</strong>
+                    </div>
+
+                    <div>
+                        <span>Dashboard Version</span>
+                        <strong>2.4.0</strong>
+                    </div>
+
+                    <div>
+                        <span>Database Status</span>
+                        <strong class="online">
+                            Online
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Last Backup</span>
+                        <strong>
+                            Today, 09:42 AM
+                        </strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 FINAL SETTINGS ACTION
+            ============================================== -->
+
+            <div class="stackly-sport-settings-bottom"
+                 data-aos="zoom-in">
+
+                <div>
+
+                    <span>
+                        <i class="fa-solid fa-circle-info"></i>
+                        SETTINGS STATUS
+                    </span>
+
+                    <h3>
+                        Your club configuration is up to date.
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-settings-dashboard-btn">
+
+                    Back to Dashboard
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     AOS JS
+========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JS
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+ 

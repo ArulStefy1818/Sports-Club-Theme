@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Admin Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Sports Dashboard, Admin Dashboard">
+
+    <title>Stackly Sport Club | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+
+<body class="stackly-sport-admin-body">
+
+
+<!-- =========================================================
+     MOBILE OVERLAY
+========================================================= -->
+
+<div class="stackly-sport-admin-overlay"
+     id="sportAdminOverlay">
+</div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="stackly-sport-admin-sidebar"
+       id="sportAdminSidebar">
+
+
+    <!-- =====================================================
+         SIDEBAR TOP
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-top">
+
+        <a href="admin.html"
+           class="stackly-sport-admin-logo"
+           aria-label="Stackly Sport Club Home">
+
+            <img src="Stackly-logo-Blue.webp"
+                 alt="Stackly Sport Club Logo">
+
+        </a>
+
+
+        <!-- MOBILE CLOSE BUTTON -->
+
+        <button type="button"
+                class="stackly-sport-admin-close"
+                id="sportAdminClose"
+                aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN PROFILE
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-profile">
+
+        <div class="stackly-sport-admin-avatar">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+        <div class="stackly-sport-admin-profile-info">
+
+            <strong>Administrator</strong>
+
+            <span>Sports Club Admin</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR NAVIGATION
+    ====================================================== -->
+
+    <nav class="stackly-sport-admin-nav"
+         aria-label="Admin Dashboard Navigation">
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MAIN MENU
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="admin.html"
+           class="stackly-sport-admin-nav-link active">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- MEMBERS -->
+
+        <a href="admin-members.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Members
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                248
+            </span>
+
+        </a>
+
+
+        <!-- TRAINERS -->
+
+        <a href="admin-trainers.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Trainers
+            </span>
+
+        </a>
+
+
+        <!-- PROGRAMS -->
+
+        <a href="admin-programs.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Programs
+            </span>
+
+        </a>
+
+
+        <!-- BOOKINGS -->
+
+        <a href="admin-bookings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Bookings
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                18
+            </span>
+
+        </a>
+
+
+        <!-- PAYMENTS -->
+
+        <a href="admin-payments.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Payments
+            </span>
+
+        </a>
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MANAGEMENT
+        </div>
+
+
+        <!-- SPORTS -->
+
+        <a href="admin-sports.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Sports
+            </span>
+
+        </a>
+
+
+        <!-- EVENTS -->
+
+        <a href="admin-events.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-flag-checkered"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Events
+            </span>
+
+        </a>
+
+ 
+        <!-- SETTINGS -->
+
+        <a href="admin-settings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         SIDEBAR BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-bottom">
+
+        <button type="button"
+                class="stackly-sport-admin-logout"
+                id="sportAdminLogout">
+
+            <span>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </span>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN AREA
+========================================================= -->
+
+<main class="stackly-sport-admin-main">
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <header class="stackly-sport-admin-header">
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button type="button"
+                class="stackly-sport-admin-menu"
+                id="sportAdminMenu"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="stackly-sport-admin-header-title">
+
+            <span class="stackly-sport-admin-header-eyebrow">
+                STACKLY SPORT CLUB
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+        </div>
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="stackly-sport-admin-header-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <a href="404-admin.html"><button type="button"
+                    class="stackly-sport-admin-notification"
+                    aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button></a>
+
+
+            <!-- EMAIL DISPLAY -->
+
+            <div class="stackly-sport-admin-email-box">
+
+                <div class="stackly-sport-admin-email-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-sport-admin-email-content">
+
+                    <span>
+                        Signed in as
+                    </span>
+
+                    <strong id="sportAdminEmail">
+                        admin@stacklysport.com
+                    </strong>
+
+                </div>
+
+            </div>
+ 
+
+        </div>
+
+    </header>
+
+<!-- =========================================================
+     STACKLY SPORT CLUB
+     EVENTS MANAGEMENT PAGE
+========================================================= -->
+
+<section class="stackly-sport-events-page">
+
+    <!-- =====================================================
+         EVENTS HERO
+    ====================================================== -->
+
+    <section class="stackly-sport-events-hero"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-events-hero-bg"></div>
+
+        <div class="stackly-sport-events-hero-content">
+
+            <div class="stackly-sport-events-hero-copy"
+                 data-aos="fade-right"
+                 data-aos-delay="100">
+
+                <span class="stackly-sport-events-eyebrow">
+                    <i class="fa-solid fa-flag-checkered"></i>
+                    EVENTS MANAGEMENT
+                </span>
+
+                <h2>
+                    Plan. Compete.
+                    <span>Celebrate.</span>
+                </h2>
+
+                <p>
+                    Manage tournaments, competitions, club activities
+                    and sporting events from one powerful workspace.
+                </p>
+
+                <div class="stackly-sport-events-hero-buttons">
+
+                    <a href="404-admin.html"
+                       class="stackly-sport-events-create-btn">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Create Event
+
+                    </a>
+
+                    <a href="404.html"
+                       class="stackly-sport-events-view-btn">
+
+                        View Events
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="stackly-sport-events-hero-visual"
+                 data-aos="zoom-in"
+                 data-aos-delay="250">
+
+                <div class="stackly-sport-events-orbit-ring stackly-sport-events-ring-one"></div>
+
+                <div class="stackly-sport-events-orbit-ring stackly-sport-events-ring-two"></div>
+
+                <div class="stackly-sport-events-center">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+                <div class="stackly-sport-events-floating-card stackly-sport-events-float-one">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+                        <strong>248</strong>
+                        <span>Registrations</span>
+                    </div>
+
+                </div>
+
+                <div class="stackly-sport-events-floating-card stackly-sport-events-float-two">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <div>
+                        <strong>18</strong>
+                        <span>Active Events</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EVENT PERFORMANCE
+    ====================================================== -->
+
+    <section class="stackly-sport-events-performance">
+
+        <div class="stackly-sport-events-heading"
+             data-aos="fade-up">
+
+            <div>
+
+                <span class="stackly-sport-events-label">
+                    EVENT OVERVIEW
+                </span>
+
+                <h3>
+                    Your Club In Motion
+                </h3>
+
+            </div>
+
+            <p>
+                A quick view of current event activity and
+                participation across the club.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-sport-events-stat-grid">
+
+
+            <!-- STAT 01 -->
+
+            <article class="stackly-sport-events-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="50">
+
+                <div class="stackly-sport-events-stat-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div class="stackly-sport-events-stat-content">
+
+                    <span>Total Events</span>
+
+                    <strong>42</strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12.5% this month
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- STAT 02 -->
+
+            <article class="stackly-sport-events-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-events-stat-icon">
+
+                    <i class="fa-solid fa-hourglass-half"></i>
+
+                </div>
+
+                <div class="stackly-sport-events-stat-content">
+
+                    <span>Upcoming</span>
+
+                    <strong>18</strong>
+
+                    <small>
+                        Next 30 days
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- STAT 03 -->
+
+            <article class="stackly-sport-events-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="150">
+
+                <div class="stackly-sport-events-stat-icon">
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                </div>
+
+                <div class="stackly-sport-events-stat-content">
+
+                    <span>Participants</span>
+
+                    <strong>1,284</strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        8.4% growth
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- STAT 04 -->
+
+            <article class="stackly-sport-events-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+
+                <div class="stackly-sport-events-stat-icon">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                </div>
+
+                <div class="stackly-sport-events-stat-content">
+
+                    <span>Completed</span>
+
+                    <strong>24</strong>
+
+                    <small>
+                        This season
+                    </small>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FEATURED EVENT
+    ====================================================== -->
+
+    <section class="stackly-sport-events-feature">
+
+        <div class="stackly-sport-events-feature-image"
+             data-aos="fade-right">
+
+            <img src="events-feature.webp"
+                 alt="Featured Sports Event">
+
+            <div class="stackly-sport-events-feature-badge">
+
+                <span>FEATURED</span>
+
+                <i class="fa-solid fa-star"></i>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-events-feature-content"
+             data-aos="fade-left">
+
+            <span class="stackly-sport-events-feature-label">
+                NEXT BIG EVENT
+            </span>
+
+            <h3>
+                Stackly Championship
+                <span>2026</span>
+            </h3>
+
+            <p>
+                A multi-sport championship bringing together
+                athletes, teams and supporters for an unforgettable
+                club experience.
+            </p>
+
+
+            <div class="stackly-sport-events-feature-details">
+
+                <div>
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span>
+                        <small>Date</small>
+                        18 October 2026
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        <small>Venue</small>
+                        Stackly Sports Arena
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>
+                        <small>Capacity</small>
+                        500 Athletes
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-sport-events-feature-footer">
+
+                <div class="stackly-sport-events-registration">
+
+                    <span>Registration</span>
+
+                    <strong>78%</strong>
+
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-events-feature-btn">
+
+                    Manage Event
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EVENT JOURNEY / TIMELINE
+    ====================================================== -->
+
+    <section class="stackly-sport-events-journey">
+
+        <div class="stackly-sport-events-heading"
+             data-aos="fade-up">
+
+            <div>
+
+                <span class="stackly-sport-events-label">
+                    EVENT JOURNEY
+                </span>
+
+                <h3>
+                    From Planning To Podium
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-events-timeline">
+
+
+            <div class="stackly-sport-events-timeline-line"></div>
+
+
+            <!-- STEP 01 -->
+
+            <article class="stackly-sport-events-timeline-item"
+                     data-aos="fade-right">
+
+                <div class="stackly-sport-events-timeline-number">
+                    01
+                </div>
+
+                <div class="stackly-sport-events-timeline-card">
+
+                    <span>
+                        PLAN
+                    </span>
+
+                    <h4>
+                        Build Your Next Event
+                    </h4>
+
+                    <p>
+                        Define the sport, venue, schedule,
+                        capacity and competition format.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- STEP 02 -->
+
+            <article class="stackly-sport-events-timeline-item"
+                     data-aos="fade-left">
+
+                <div class="stackly-sport-events-timeline-number">
+                    02
+                </div>
+
+                <div class="stackly-sport-events-timeline-card">
+
+                    <span>
+                        REGISTER
+                    </span>
+
+                    <h4>
+                        Bring Athletes Together
+                    </h4>
+
+                    <p>
+                        Open registrations and monitor participant
+                        numbers in real time.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- STEP 03 -->
+
+            <article class="stackly-sport-events-timeline-item"
+                     data-aos="fade-right">
+
+                <div class="stackly-sport-events-timeline-number">
+                    03
+                </div>
+
+                <div class="stackly-sport-events-timeline-card">
+
+                    <span>
+                        COMPETE
+                    </span>
+
+                    <h4>
+                        Run The Competition
+                    </h4>
+
+                    <p>
+                        Track schedules, matches, teams and
+                        event-day operations.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- STEP 04 -->
+
+            <article class="stackly-sport-events-timeline-item"
+                     data-aos="fade-left">
+
+                <div class="stackly-sport-events-timeline-number">
+                    04
+                </div>
+
+                <div class="stackly-sport-events-timeline-card">
+
+                    <span>
+                        CELEBRATE
+                    </span>
+
+                    <h4>
+                        Recognize Champions
+                    </h4>
+
+                    <p>
+                        Record results, celebrate winners and
+                        close the event with confidence.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SPORTS EVENT CATEGORIES
+    ====================================================== -->
+
+    <section class="stackly-sport-events-categories">
+
+        <div class="stackly-sport-events-heading"
+             data-aos="fade-up">
+
+            <div>
+
+                <span class="stackly-sport-events-label">
+                    EVENT TYPES
+                </span>
+
+                <h3>
+                    Every Sport. Every Challenge.
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-events-category-grid">
+
+
+            <!-- FOOTBALL -->
+
+            <article class="stackly-sport-events-category-card"
+                     data-aos="zoom-in"
+                     data-aos-delay="50">
+
+                <div class="stackly-sport-events-category-top">
+
+                    <span class="stackly-sport-events-category-number">
+                        01
+                    </span>
+
+                    <div class="stackly-sport-events-category-icon">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+
+                </div>
+
+                <h4>
+                    Football
+                </h4>
+
+                <p>
+                    League matches, tournaments and
+                    club championships.
+                </p>
+
+                <a href="404-admin.html">
+                    Explore Events
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- CRICKET -->
+
+            <article class="stackly-sport-events-category-card"
+                     data-aos="zoom-in"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-events-category-top">
+
+                    <span class="stackly-sport-events-category-number">
+                        02
+                    </span>
+
+                    <div class="stackly-sport-events-category-icon">
+                        <i class="fa-solid fa-baseball-bat-ball"></i>
+                    </div>
+
+                </div>
+
+                <h4>
+                    Cricket
+                </h4>
+
+                <p>
+                    Competitive matches, practice games
+                    and seasonal cups.
+                </p>
+
+                <a href="404-admin.html">
+                    Explore Events
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- BASKETBALL -->
+
+            <article class="stackly-sport-events-category-card"
+                     data-aos="zoom-in"
+                     data-aos-delay="150">
+
+                <div class="stackly-sport-events-category-top">
+
+                    <span class="stackly-sport-events-category-number">
+                        03
+                    </span>
+
+                    <div class="stackly-sport-events-category-icon">
+                        <i class="fa-solid fa-basketball"></i>
+                    </div>
+
+                </div>
+
+                <h4>
+                    Basketball
+                </h4>
+
+                <p>
+                    Fast-paced competitions designed
+                    for teams and players.
+                </p>
+
+                <a href="404-admin.html">
+                    Explore Events
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- ATHLETICS -->
+
+            <article class="stackly-sport-events-category-card"
+                     data-aos="zoom-in"
+                     data-aos-delay="200">
+
+                <div class="stackly-sport-events-category-top">
+
+                    <span class="stackly-sport-events-category-number">
+                        04
+                    </span>
+
+                    <div class="stackly-sport-events-category-icon">
+                        <i class="fa-solid fa-person-running"></i>
+                    </div>
+
+                </div>
+
+                <h4>
+                    Athletics
+                </h4>
+
+                <p>
+                    Track, field, endurance and individual
+                    performance events.
+                </p>
+
+                <a href="404-admin.html">
+                    Explore Events
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EVENT REGISTRATION
+    ====================================================== -->
+
+    <section class="stackly-sport-events-registration-panel">
+
+        <div class="stackly-sport-events-registration-copy"
+             data-aos="fade-right">
+
+            <span class="stackly-sport-events-label">
+                REGISTRATION STATUS
+            </span>
+
+            <h3>
+                Know Your Numbers
+            </h3>
+
+            <p>
+                Keep an eye on event registrations and understand
+                how quickly each competition is filling up.
+            </p>
+
+            <a href="404-admin.html"
+               class="stackly-sport-events-secondary-btn">
+
+                View Registrations
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-sport-events-registration-bars"
+             data-aos="fade-left">
+
+
+            <!-- EVENT BAR -->
+
+            <div class="stackly-sport-events-progress-item">
+
+                <div class="stackly-sport-events-progress-heading">
+
+                    <span>
+                        Stackly Championship
+                    </span>
+
+                    <strong>
+                        78%
+                    </strong>
+
+                </div>
+
+                <div class="stackly-sport-events-progress-track">
+
+                    <span style="width:78%"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT BAR -->
+
+            <div class="stackly-sport-events-progress-item">
+
+                <div class="stackly-sport-events-progress-heading">
+
+                    <span>
+                        Weekend Football Cup
+                    </span>
+
+                    <strong>
+                        64%
+                    </strong>
+
+                </div>
+
+                <div class="stackly-sport-events-progress-track">
+
+                    <span style="width:64%"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT BAR -->
+
+            <div class="stackly-sport-events-progress-item">
+
+                <div class="stackly-sport-events-progress-heading">
+
+                    <span>
+                        Junior Athletics Meet
+                    </span>
+
+                    <strong>
+                        52%
+                    </strong>
+
+                </div>
+
+                <div class="stackly-sport-events-progress-track">
+
+                    <span style="width:52%"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT BAR -->
+
+            <div class="stackly-sport-events-progress-item">
+
+                <div class="stackly-sport-events-progress-heading">
+
+                    <span>
+                        Basketball League
+                    </span>
+
+                    <strong>
+                        41%
+                    </strong>
+
+                </div>
+
+                <div class="stackly-sport-events-progress-track">
+
+                    <span style="width:41%"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         UPCOMING EVENTS
+    ====================================================== -->
+
+    <section class="stackly-sport-events-list-section"
+             id="stackly-sport-events-list">
+
+        <div class="stackly-sport-events-heading"
+             data-aos="fade-up">
+
+            <div>
+
+                <span class="stackly-sport-events-label">
+                    SCHEDULE
+                </span>
+
+                <h3>
+                    Upcoming Events
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html"
+               class="stackly-sport-events-heading-link">
+
+                View All
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-sport-events-list">
+
+
+            <!-- EVENT 01 -->
+
+            <article class="stackly-sport-events-list-card"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-events-date">
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <span>
+                        OCT
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-icon">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-info">
+
+                    <span>
+                        CHAMPIONSHIP
+                    </span>
+
+                    <h4>
+                        Stackly Championship 2026
+                    </h4>
+
+                    <p>
+                        Stackly Sports Arena
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-status active">
+                    Registration Open
+                </div>
+
+
+                <a href="404-admin.html"
+                   class="stackly-sport-events-list-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- EVENT 02 -->
+
+            <article class="stackly-sport-events-list-card"
+                     data-aos="fade-up"
+                     data-aos-delay="80">
+
+                <div class="stackly-sport-events-date">
+
+                    <strong>
+                        24
+                    </strong>
+
+                    <span>
+                        OCT
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-icon">
+
+                    <i class="fa-solid fa-futbol"></i>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-info">
+
+                    <span>
+                        FOOTBALL
+                    </span>
+
+                    <h4>
+                        Weekend Football Cup
+                    </h4>
+
+                    <p>
+                        North Ground Arena
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-status active">
+                    Registration Open
+                </div>
+
+
+                <a href="404-admin.html"
+                   class="stackly-sport-events-list-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- EVENT 03 -->
+
+            <article class="stackly-sport-events-list-card"
+                     data-aos="fade-up"
+                     data-aos-delay="160">
+
+                <div class="stackly-sport-events-date">
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <span>
+                        NOV
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-icon">
+
+                    <i class="fa-solid fa-person-running"></i>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-info">
+
+                    <span>
+                        ATHLETICS
+                    </span>
+
+                    <h4>
+                        Junior Athletics Meet
+                    </h4>
+
+                    <p>
+                        Central Sports Track
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-status upcoming">
+                    Upcoming
+                </div>
+
+
+                <a href="404-admin.html"
+                   class="stackly-sport-events-list-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- EVENT 04 -->
+
+            <article class="stackly-sport-events-list-card"
+                     data-aos="fade-up"
+                     data-aos-delay="240">
+
+                <div class="stackly-sport-events-date">
+
+                    <strong>
+                        09
+                    </strong>
+
+                    <span>
+                        NOV
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-icon">
+
+                    <i class="fa-solid fa-basketball"></i>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-info">
+
+                    <span>
+                        BASKETBALL
+                    </span>
+
+                    <h4>
+                        Stackly Basketball League
+                    </h4>
+
+                    <p>
+                        Indoor Sports Complex
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-events-list-status upcoming">
+                    Upcoming
+                </div>
+
+
+                <a href="404-admin.html"
+                   class="stackly-sport-events-list-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EVENT ACTIVITY
+    ====================================================== -->
+
+    <section class="stackly-sport-events-activity">
+
+        <div class="stackly-sport-events-heading"
+             data-aos="fade-up">
+
+            <div>
+
+                <span class="stackly-sport-events-label">
+                    LIVE ACTIVITY
+                </span>
+
+                <h3>
+                    Recent Event Updates
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-events-activity-grid">
+
+
+            <article class="stackly-sport-events-activity-card"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-events-activity-icon">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        24 new registrations
+                    </strong>
+
+                    <p>
+                        Stackly Championship
+                    </p>
+
+                    <small>
+                        12 minutes ago
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="stackly-sport-events-activity-card"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-events-activity-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Venue confirmed
+                    </strong>
+
+                    <p>
+                        Weekend Football Cup
+                    </p>
+
+                    <small>
+                        46 minutes ago
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="stackly-sport-events-activity-card"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+
+                <div class="stackly-sport-events-activity-icon">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Event announcement published
+                    </strong>
+
+                    <p>
+                        Junior Athletics Meet
+                    </p>
+
+                    <small>
+                        2 hours ago
+                    </small>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK ACTIONS
+    ====================================================== -->
+
+    <section class="stackly-sport-events-quick">
+
+        <div class="stackly-sport-events-quick-copy"
+             data-aos="fade-right">
+
+            <span class="stackly-sport-events-label">
+                QUICK TOOLS
+            </span>
+
+            <h3>
+                What Would You Like To Do?
+            </h3>
+
+            <p>
+                Jump directly into the most common event
+                management tasks.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-sport-events-quick-grid"
+             data-aos="fade-left">
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-events-quick-card">
+
+                <div>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+                <span>
+                    Create Event
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-events-quick-card">
+
+                <div>
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <span>
+                    Registrations
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-events-quick-card">
+
+                <div>
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+
+                <span>
+                    Event Calendar
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-events-quick-card">
+
+                <div>
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+
+                <span>
+                    Event Reports
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
+
+    <section class="stackly-sport-events-final"
+             data-aos="zoom-in">
+
+        <div class="stackly-sport-events-final-icon">
+
+            <i class="fa-solid fa-flag-checkered"></i>
+
+        </div>
+
+        <div class="stackly-sport-events-final-copy">
+
+            <span>
+                READY FOR THE NEXT CHALLENGE?
+            </span>
+
+            <h3>
+                Create Your Next Sporting Event
+            </h3>
+
+            <p>
+                Turn your next competition into an experience
+                athletes will remember.
+            </p>
+
+        </div>
+
+        <a href="404-admin.html"
+           class="stackly-sport-events-final-btn">
+
+            Create Event
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     AOS JS
+========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JS
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+ 

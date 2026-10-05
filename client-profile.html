@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Client Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Client Dashboard, Sports Club, Fitness Dashboard">
+
+    <meta name="author"
+          content="Stackly Sport Club">
+
+    <title>Stackly Sport Club | Client Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="client.css">
+
+</head>
+
+
+<body class="stackly-sport-client-body">
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="stackly-sport-client-overlay"
+         id="clientSidebarOverlay"></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="stackly-sport-client-sidebar"
+           id="clientSidebar">
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-top">
+
+
+            <!-- LOGO -->
+            <a href="client.html"
+               class="stackly-sport-client-logo"
+               aria-label="Stackly Sport Club Home">
+
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Sport Club">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+            <button type="button"
+                    class="stackly-sport-client-sidebar-close"
+                    id="clientSidebarClose"
+                    aria-label="Close navigation">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR PROFILE
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-profile">
+
+            <div class="stackly-sport-client-profile-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-sport-client-profile-info">
+
+                <strong id="clientSidebarName">
+                    Sport Member
+                </strong>
+
+                <span>
+                    Active Member
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="stackly-sport-client-navigation"
+             aria-label="Client Dashboard Navigation">
+
+
+            <p class="stackly-sport-client-nav-label">
+                MAIN MENU
+            </p>
+
+
+            <!-- DASHBOARD -->
+            <a href="client.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- MY MEMBERSHIP -->
+            <a href="client-membership.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <span>My Membership</span>
+
+            </a>
+
+
+            <!-- PROGRAMS -->
+            <a href="client-programs.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+                <span>Programs</span>
+
+            </a>
+
+
+            <!-- BOOKINGS -->
+            <a href="client-bookings.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>My Bookings</span>
+
+            </a>
+
+
+            <!-- TRAINERS -->
+            <a href="client-trainers.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-person-running"></i>
+
+                <span>Trainers</span>
+
+            </a>
+
+
+            <!-- PAYMENTS -->
+            <a href="client-payments.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Payments</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 ACCOUNT
+            ================================================== -->
+
+            <p class="stackly-sport-client-nav-label account-label">
+                ACCOUNT
+            </p>
+
+
+            <!-- PROFILE -->
+            <a href="client-profile.html"
+               class="stackly-sport-client-nav-link active">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-bottom">
+
+ 
+            <!-- LOGOUT -->
+            <button type="button"
+                    class="stackly-sport-client-logout"
+                    id="clientLogoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="stackly-sport-client-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-sport-client-header">
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button type="button"
+                    class="stackly-sport-client-menu-toggle"
+                    id="clientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-sport-client-header-title">
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-sport-client-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-client.html"><button type="button"
+                        class="stackly-sport-client-notification"
+                        aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="stackly-sport-client-notification-dot"></span>
+
+                </button></a>
+
+
+                <!-- EMAIL -->
+
+                <div class="stackly-sport-client-email-box">
+
+                    <div class="stackly-sport-client-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-sport-client-email-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong id="clientEmailDisplay">
+                            client@stacklysport.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =====================================================
+             PROFILE PAGE CONTENT
+        ====================================================== -->
+
+        <div class="stackly-sport-client-profile-content">
+
+
+            <!-- =================================================
+                 PROFILE HERO
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-hero"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-client-profile-hero-bg"></div>
+
+                <div class="stackly-sport-client-profile-cover">
+
+                    <div class="stackly-sport-client-profile-cover-shape"></div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-profile-hero-body">
+
+
+                    <!-- PROFILE AVATAR -->
+
+                    <div class="stackly-sport-client-profile-main-avatar">
+
+                        <div class="stackly-sport-client-profile-avatar-ring">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <span class="stackly-sport-client-profile-online">
+                            <i class="fa-solid fa-circle"></i>
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <!-- PROFILE IDENTITY -->
+
+                    <div class="stackly-sport-client-profile-identity">
+
+                        <span class="stackly-sport-client-profile-kicker">
+                            <i class="fa-solid fa-shield-heart"></i>
+                            VERIFIED MEMBER
+                        </span>
+
+                        <h2 id="profileMemberName">
+                            Sport Member
+                        </h2>
+
+                        <p>
+                            Performance Plus Member
+                            <span>•</span>
+                            Member Since January 2025
+                        </p>
+
+                    </div>
+
+
+                    <!-- PROFILE ACTION -->
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-profile-edit-btn">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Edit Profile
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFILE QUICK STATS
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-stats">
+
+
+                <div class="stackly-sport-client-profile-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                    <div class="stackly-sport-client-profile-stat-icon">
+
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TRAINING DAYS
+                        </span>
+
+                        <strong>
+                            86
+                        </strong>
+
+                        <small>
+                            This year
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+
+                    <div class="stackly-sport-client-profile-stat-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            WORKOUT HOURS
+                        </span>
+
+                        <strong>
+                            124h
+                        </strong>
+
+                        <small>
+                            Total training
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="300">
+
+                    <div class="stackly-sport-client-profile-stat-icon">
+
+                        <i class="fa-solid fa-trophy"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ACHIEVEMENTS
+                        </span>
+
+                        <strong>
+                            12
+                        </strong>
+
+                        <small>
+                            Milestones earned
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="400">
+
+                    <div class="stackly-sport-client-profile-stat-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ATTENDANCE
+                        </span>
+
+                        <strong>
+                            91%
+                        </strong>
+
+                        <small>
+                            Club attendance
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PERSONAL INFORMATION
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-information">
+
+
+                <div class="stackly-sport-client-profile-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            MEMBER DETAILS
+                        </span>
+
+                        <h2>
+                            Personal Information
+                        </h2>
+
+                    </div>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-profile-small-action">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Update
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-info-grid">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="stackly-sport-client-profile-info-card"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                        <div class="stackly-sport-client-profile-info-icon">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                FULL NAME
+                            </span>
+
+                            <strong id="profileFullName">
+                                Sport Member
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="stackly-sport-client-profile-info-card"
+                         data-aos="fade-up"
+                         data-aos-delay="150">
+
+                        <div class="stackly-sport-client-profile-info-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                EMAIL ADDRESS
+                            </span>
+
+                            <strong id="profileEmail">
+                                client@stacklysport.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="stackly-sport-client-profile-info-card"
+                         data-aos="fade-up"
+                         data-aos-delay="200">
+
+                        <div class="stackly-sport-client-profile-info-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PHONE NUMBER
+                            </span>
+
+                            <strong>
+                                +91 98765 43210
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DATE OF BIRTH -->
+
+                    <div class="stackly-sport-client-profile-info-card"
+                         data-aos="fade-up"
+                         data-aos-delay="250">
+
+                        <div class="stackly-sport-client-profile-info-icon">
+
+                            <i class="fa-solid fa-cake-candles"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                DATE OF BIRTH
+                            </span>
+
+                            <strong>
+                                18 August 2001
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LOCATION -->
+
+                    <div class="stackly-sport-client-profile-info-card"
+                         data-aos="fade-up"
+                         data-aos-delay="300">
+
+                        <div class="stackly-sport-client-profile-info-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                LOCATION
+                            </span>
+
+                            <strong>
+                                Chennai, Tamil Nadu
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MEMBER ID -->
+
+                    <div class="stackly-sport-client-profile-info-card"
+                         data-aos="fade-up"
+                         data-aos-delay="350">
+
+                        <div class="stackly-sport-client-profile-info-icon">
+
+                            <i class="fa-solid fa-id-badge"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                MEMBER ID
+                            </span>
+
+                            <strong>
+                                SPC-2025-248
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FITNESS IDENTITY
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-fitness">
+
+
+                <div class="stackly-sport-client-profile-fitness-content"
+                     data-aos="fade-right">
+
+                    <span class="stackly-sport-client-profile-section-kicker">
+                        FITNESS IDENTITY
+                    </span>
+
+                    <h2>
+                        Train With A
+                        <span>Clear Purpose.</span>
+                    </h2>
+
+                    <p>
+                        Your fitness profile helps our coaches understand
+                        your interests, training preferences, and personal
+                        performance goals.
+                    </p>
+
+
+                    <div class="stackly-sport-client-profile-fitness-tags">
+
+                        <span>
+                            Strength Training
+                        </span>
+
+                        <span>
+                            Football
+                        </span>
+
+                        <span>
+                            Endurance
+                        </span>
+
+                        <span>
+                            Functional Fitness
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-fitness-card"
+                     data-aos="fade-left">
+
+
+                    <div class="stackly-sport-client-profile-fitness-card-top">
+
+                        <span>
+                            CURRENT LEVEL
+                        </span>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+
+                    <strong>
+                        Advanced
+                    </strong>
+
+
+                    <div class="stackly-sport-client-profile-level">
+
+                        <div>
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                78%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-client-profile-level-bar">
+
+                            <span style="width: 78%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Keep training consistently to reach your next
+                        performance milestone.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FITNESS GOALS
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-goals">
+
+
+                <div class="stackly-sport-client-profile-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            PERSONAL TARGETS
+                        </span>
+
+                        <h2>
+                            My Fitness Goals
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-goal-grid">
+
+
+                    <article class="stackly-sport-client-profile-goal-card"
+                             data-aos="zoom-in"
+                             data-aos-delay="100">
+
+                        <div class="stackly-sport-client-profile-goal-icon">
+
+                            <i class="fa-solid fa-dumbbell"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                STRENGTH
+                            </span>
+
+                            <h3>
+                                Build Overall Strength
+                            </h3>
+
+                            <p>
+                                Improve functional strength and lifting
+                                performance through structured training.
+                            </p>
+
+                        </div>
+
+                        <div class="stackly-sport-client-profile-goal-status">
+
+                            <span></span>
+
+                            On Track
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="stackly-sport-client-profile-goal-card"
+                             data-aos="zoom-in"
+                             data-aos-delay="200">
+
+                        <div class="stackly-sport-client-profile-goal-icon">
+
+                            <i class="fa-solid fa-person-running"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                ENDURANCE
+                            </span>
+
+                            <h3>
+                                Improve more Stamina
+                            </h3>
+
+                            <p>
+                                Increase endurance and maintain consistent
+                                energy during longer training sessions.
+                            </p>
+
+                        </div>
+
+                        <div class="stackly-sport-client-profile-goal-status">
+
+                            <span></span>
+
+                            Improving
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="stackly-sport-client-profile-goal-card"
+                             data-aos="zoom-in"
+                             data-aos-delay="300">
+
+                        <div class="stackly-sport-client-profile-goal-icon">
+
+                            <i class="fa-solid fa-bullseye"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Become More Athletic
+                            </h3>
+
+                            <p>
+                                Develop speed, functional strength, mobility, balance, and
+                                sport-specific performance.
+                            </p>
+
+                        </div>
+
+                        <div class="stackly-sport-client-profile-goal-status">
+
+                            <span></span>
+
+                            Active
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACHIEVEMENTS
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-achievements">
+
+
+                <div class="stackly-sport-client-profile-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            PERFORMANCE MILESTONES
+                        </span>
+
+                        <h2>
+                            Recent Achievements
+                        </h2>
+
+                    </div>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-profile-small-action">
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-achievement-grid">
+
+
+                    <article class="stackly-sport-client-profile-achievement-card"
+                             data-aos="fade-up"
+                             data-aos-delay="100">
+
+                        <div class="stackly-sport-client-profile-achievement-badge">
+
+                            <i class="fa-solid fa-fire"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                30 DAY STREAK
+                            </span>
+
+                            <h3>
+                                Consistency Champion
+                            </h3>
+
+                            <p>
+                                Completed 30 consecutive training days.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="stackly-sport-client-profile-achievement-card"
+                             data-aos="fade-up"
+                             data-aos-delay="200">
+
+                        <div class="stackly-sport-client-profile-achievement-badge">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Speed Builder
+                            </h3>
+
+                            <p>
+                                Improved sprint performance through
+                                dedicated speed sessions.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="stackly-sport-client-profile-achievement-card"
+                             data-aos="fade-up"
+                             data-aos-delay="300">
+
+                        <div class="stackly-sport-client-profile-achievement-badge">
+
+                            <i class="fa-solid fa-medal"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                COMMUNITY
+                            </span>
+
+                            <h3>
+                                Active Club Member
+                            </h3>
+
+                            <p>
+                                Participated regularly in club activities
+                                and group sessions.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRAINING PREFERENCES
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-preferences">
+
+
+                <div class="stackly-sport-client-profile-preference-content"
+                     data-aos="fade-right">
+
+                    <span class="stackly-sport-client-profile-section-kicker">
+                        TRAINING STYLE
+                    </span>
+
+                    <h2>
+                        Your Training
+                        <span>Preferences.</span>
+                    </h2>
+
+                    <p>
+                        Keep your preferred training style visible so your
+                        sessions can stay aligned with your routine.
+                    </p>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-preference-grid"
+                     data-aos="fade-left">
+
+
+                    <div class="stackly-sport-client-profile-preference">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <div>
+
+                            <span>
+                                PREFERRED TIME
+                            </span>
+
+                            <strong>
+                                Evening
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stackly-sport-client-profile-preference">
+
+                        <i class="fa-solid fa-calendar-week"></i>
+
+                        <div>
+
+                            <span>
+                                TRAINING DAYS
+                            </span>
+
+                            <strong>
+                                Mon · Wed · Fri
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stackly-sport-client-profile-preference">
+
+                        <i class="fa-solid fa-person-running"></i>
+
+                        <div>
+
+                            <span>
+                                SESSION STYLE
+                            </span>
+
+                            <strong>
+                                High Intensity
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stackly-sport-client-profile-preference">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <div>
+
+                            <span>
+                                TRAINING TYPE
+                            </span>
+
+                            <strong>
+                                Group + Personal
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EMERGENCY CONTACT
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-emergency"
+                     data-aos="fade-up">
+
+
+                <div class="stackly-sport-client-profile-emergency-icon">
+
+                    <i class="fa-solid fa-phone-volume"></i>
+
+                </div>
+
+
+                <div class="stackly-sport-client-profile-emergency-content">
+
+                    <span>
+                        EMERGENCY INFORMATION
+                    </span>
+
+                    <h2>
+                        Emergency Contact
+                    </h2>
+
+                    <p>
+                        Keep a trusted contact available for important
+                        situations during club activities.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-client-profile-emergency-details">
+
+                    <div>
+
+                        <span>
+                            CONTACT NAME
+                        </span>
+
+                        <strong>
+                            Arun Kumar
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            RELATIONSHIP
+                        </span>
+
+                        <strong>
+                            Family
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            PHONE
+                        </span>
+
+                        <strong>
+                            +91 98765 12345
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-sport-client-profile-emergency-btn">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Update
+
+                </a>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACCOUNT ACTIVITY
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-activity">
+
+
+                <div class="stackly-sport-client-profile-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            SECURITY & ACTIVITY
+                        </span>
+
+                        <h2>
+                            Recent Account Activity
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stackly-sport-client-profile-activity-list">
+
+
+                    <div class="stackly-sport-client-profile-activity-item"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                        <div class="stackly-sport-client-profile-activity-icon">
+
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Successful Login
+                            </strong>
+
+                            <span>
+                                Today · Client Dashboard
+                            </span>
+
+                        </div>
+
+                        <small>
+                            Just now
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="stackly-sport-client-profile-activity-item"
+                         data-aos="fade-up"
+                         data-aos-delay="200">
+
+                        <div class="stackly-sport-client-profile-activity-icon">
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Payment Method Updated
+                            </strong>
+
+                            <span>
+                                Visa ending in 4826
+                            </span>
+
+                        </div>
+
+                        <small>
+                            2 days ago
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="stackly-sport-client-profile-activity-item"
+                         data-aos="fade-up"
+                         data-aos-delay="300">
+
+                        <div class="stackly-sport-client-profile-activity-icon">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Training Session Booked
+                            </strong>
+
+                            <span>
+                                Performance Training · 6:30 PM
+                            </span>
+
+                        </div>
+
+                        <small>
+                            4 days ago
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFILE CTA
+            ================================================== -->
+
+            <section class="stackly-sport-client-profile-cta"
+                     data-aos="zoom-in">
+
+                <div class="stackly-sport-client-profile-cta-shape"></div>
+
+                <div class="stackly-sport-client-profile-cta-content">
+
+                    <span>
+                        KEEP MOVING FORWARD
+                    </span>
+
+                    <h2>
+                        Your Profile.
+                        Your Progress.
+                        Your Game.
+                    </h2>
+
+                    <p>
+                        Keep your information updated and stay focused
+                        on building your strongest version.
+                    </p>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-profile-cta-btn">
+
+                        <span>
+                            Update My Profile
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD JAVASCRIPT
+    ====================================================== -->
+
+    <script src="client.js"></script>
+
+
+
+</body>
+
+</html>
+

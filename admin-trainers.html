@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Admin Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Sports Dashboard, Admin Dashboard">
+
+    <title>Stackly Sport Club | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+
+<body class="stackly-sport-admin-body">
+
+
+<!-- =========================================================
+     MOBILE OVERLAY
+========================================================= -->
+
+<div class="stackly-sport-admin-overlay"
+     id="sportAdminOverlay">
+</div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="stackly-sport-admin-sidebar"
+       id="sportAdminSidebar">
+
+
+    <!-- =====================================================
+         SIDEBAR TOP
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-top">
+
+        <a href="admin.html"
+           class="stackly-sport-admin-logo"
+           aria-label="Stackly Sport Club Home">
+
+            <img src="Stackly-logo-Blue.webp"
+                 alt="Stackly Sport Club Logo">
+
+        </a>
+
+
+        <!-- MOBILE CLOSE BUTTON -->
+
+        <button type="button"
+                class="stackly-sport-admin-close"
+                id="sportAdminClose"
+                aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN PROFILE
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-profile">
+
+        <div class="stackly-sport-admin-avatar">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+        <div class="stackly-sport-admin-profile-info">
+
+            <strong>Administrator</strong>
+
+            <span>Sports Club Admin</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR NAVIGATION
+    ====================================================== -->
+
+    <nav class="stackly-sport-admin-nav"
+         aria-label="Admin Dashboard Navigation">
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MAIN MENU
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="admin.html"
+           class="stackly-sport-admin-nav-link active">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- MEMBERS -->
+
+        <a href="admin-members.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Members
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                248
+            </span>
+
+        </a>
+
+
+        <!-- TRAINERS -->
+
+        <a href="admin-trainers.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Trainers
+            </span>
+
+        </a>
+
+
+        <!-- PROGRAMS -->
+
+        <a href="admin-programs.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Programs
+            </span>
+
+        </a>
+
+
+        <!-- BOOKINGS -->
+
+        <a href="admin-bookings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Bookings
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                18
+            </span>
+
+        </a>
+
+
+        <!-- PAYMENTS -->
+
+        <a href="admin-payments.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Payments
+            </span>
+
+        </a>
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MANAGEMENT
+        </div>
+
+
+        <!-- SPORTS -->
+
+        <a href="admin-sports.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Sports
+            </span>
+
+        </a>
+
+
+        <!-- EVENTS -->
+
+        <a href="admin-events.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-flag-checkered"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Events
+            </span>
+
+        </a>
+
+ 
+        <!-- SETTINGS -->
+
+        <a href="admin-settings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         SIDEBAR BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-bottom">
+
+        <button type="button"
+                class="stackly-sport-admin-logout"
+                id="sportAdminLogout">
+
+            <span>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </span>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN AREA
+========================================================= -->
+
+<main class="stackly-sport-admin-main">
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <header class="stackly-sport-admin-header">
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button type="button"
+                class="stackly-sport-admin-menu"
+                id="sportAdminMenu"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="stackly-sport-admin-header-title">
+
+            <span class="stackly-sport-admin-header-eyebrow">
+                STACKLY SPORT CLUB
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+        </div>
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="stackly-sport-admin-header-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <a href="404-admin.html"><button type="button"
+                    class="stackly-sport-admin-notification"
+                    aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button></a>
+
+
+            <!-- EMAIL DISPLAY -->
+
+            <div class="stackly-sport-admin-email-box">
+
+                <div class="stackly-sport-admin-email-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-sport-admin-email-content">
+
+                    <span>
+                        Signed in as
+                    </span>
+
+                    <strong id="sportAdminEmail">
+                        admin@stacklysport.com
+                    </strong>
+
+                </div>
+
+            </div>
+ 
+
+        </div>
+
+    </header>
+
+<!-- =========================================================
+     STACKLY SPORT CLUB
+     TRAINERS PAGE CONTENT
+     UNIQUE COACHHUB CLASS NAMES
+========================================================= -->
+
+<section class="stackly-sport-coachhub-page"
+         id="coachhub-page">
+
+
+    <!-- =====================================================
+         TRAINER HERO
+    ====================================================== -->
+
+    <section class="stackly-sport-coachhub-hero"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-coachhub-hero-content">
+
+            <span class="stackly-sport-coachhub-eyebrow">
+                <i class="fa-solid fa-dumbbell"></i>
+                COACHING TEAM
+            </span>
+
+            <h2>
+                Meet The People
+                <span>Behind Performance.</span>
+            </h2>
+
+            <p>
+                Manage your coaching team, track trainer availability,
+                monitor expertise and discover the people helping
+                members achieve their goals.
+            </p>
+
+            <div class="stackly-sport-coachhub-hero-actions">
+
+                <a href="404-admin.html"
+                   class="stackly-sport-coachhub-btn coachhub-primary">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Add Trainer
+
+                </a>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-coachhub-btn coachhub-outline">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    View Schedules
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-coachhub-hero-visual">
+
+            <div class="stackly-sport-coachhub-hero-image">
+
+                <img src="trainer-hero.webp"
+                     alt="Sports Club Trainer Coaching Athletes">
+
+            </div>
+
+            <div class="stackly-sport-coachhub-floating-card">
+
+                <div class="stackly-sport-coachhub-floating-icon">
+
+                    <i class="fa-solid fa-award"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        12+
+                    </strong>
+
+                    <span>
+                        Expert Coaches
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRAINER OVERVIEW STATS
+    ====================================================== -->
+
+    <section class="stackly-sport-coachhub-stat-section"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-coachhub-stat-grid">
+
+
+            <!-- TOTAL TRAINERS -->
+
+            <article class="stackly-sport-coachhub-stat-card"
+                     data-aos="zoom-in"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-coachhub-stat-icon">
+
+                    <i class="fa-solid fa-people-group"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL TRAINERS
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <small>
+                        Coaching professionals
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ACTIVE -->
+
+            <article class="stackly-sport-coachhub-stat-card"
+                     data-aos="zoom-in"
+                     data-aos-delay="180">
+
+                <div class="stackly-sport-coachhub-stat-icon">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        ACTIVE COACHES
+                    </span>
+
+                    <strong>
+                        10
+                    </strong>
+
+                    <small>
+                        Currently available
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SESSIONS -->
+
+            <article class="stackly-sport-coachhub-stat-card"
+                     data-aos="zoom-in"
+                     data-aos-delay="260">
+
+                <div class="stackly-sport-coachhub-stat-icon">
+
+                    <i class="fa-solid fa-person-running"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        SESSIONS THIS MONTH
+                    </span>
+
+                    <strong>
+                        486
+                    </strong>
+
+                    <small>
+                        +16.4% from last month
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- RATING -->
+
+            <article class="stackly-sport-coachhub-stat-card"
+                     data-aos="zoom-in"
+                     data-aos-delay="340">
+
+                <div class="stackly-sport-coachhub-stat-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TEAM RATING
+                    </span>
+
+                    <strong>
+                        4.9
+                    </strong>
+
+                    <small>
+                        Based on member feedback
+                    </small>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRAINER DIRECTORY
+    ====================================================== -->
+
+    <section class="stackly-sport-coachhub-directory"
+             data-aos="fade-up">
+
+
+        <div class="stackly-sport-coachhub-section-head">
+
+            <div>
+
+                <span>
+                    OUR COACHING TEAM
+                </span>
+
+                <h3>
+                    Trainer Directory
+                </h3>
+
+                <p>
+                    Explore coaches by sport, specialization and
+                    current availability.
+                </p>
+
+            </div>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-coachhub-view-link">
+
+                View All Trainers
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="stackly-sport-coachhub-trainer-grid">
+
+
+            <!-- =================================================
+                 TRAINER 01
+            ================================================== -->
+
+            <article class="stackly-sport-coachhub-trainer-card"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-coachhub-trainer-image">
+
+                    <img src="team-2.webp"
+                         alt="Arjun Mehta Football Coach">
+
+                    <span class="coachhub-online">
+                        Available
+                    </span>
+
+                    <button type="button"
+                            class="stackly-sport-coachhub-favorite"
+                            aria-label="Favorite trainer">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-trainer-content">
+
+                    <div class="stackly-sport-coachhub-trainer-meta">
+
+                        <span>
+                            FOOTBALL
+                        </span>
+
+                        <strong>
+                            8 YRS
+                        </strong>
+
+                    </div>
+
+                    <h4>
+                        Arjun Mehta
+                    </h4>
+
+                    <p>
+                        Football Performance Coach
+                    </p>
+
+
+                    <div class="stackly-sport-coachhub-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4.9
+                        </strong>
+
+                        <span>
+                            86 reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-sport-coachhub-trainer-footer">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            38 Members
+                        </span>
+
+                        <a href="404-admin.html"
+                           aria-label="View Arjun Mehta">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 TRAINER 02
+            ================================================== -->
+
+            <article class="stackly-sport-coachhub-trainer-card"
+                     data-aos="fade-up"
+                     data-aos-delay="160">
+
+                <div class="stackly-sport-coachhub-trainer-image">
+
+                    <img src="team-3.webp"
+                         alt="Sneha Kapoor Tennis Coach">
+
+                    <span class="coachhub-online">
+                        Available
+                    </span>
+
+                    <button type="button"
+                            class="stackly-sport-coachhub-favorite"
+                            aria-label="Favorite trainer">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-trainer-content">
+
+                    <div class="stackly-sport-coachhub-trainer-meta">
+
+                        <span>
+                            TENNIS
+                        </span>
+
+                        <strong>
+                            6 YRS
+                        </strong>
+
+                    </div>
+
+                    <h4>
+                        Sneha Kapoor
+                    </h4>
+
+                    <p>
+                        Tennis Technique Specialist
+                    </p>
+
+
+                    <div class="stackly-sport-coachhub-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4.8
+                        </strong>
+
+                        <span>
+                            74 reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-sport-coachhub-trainer-footer">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            31 Members
+                        </span>
+
+                        <a href="404-admin.html"
+                           aria-label="View Sneha Kapoor">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 TRAINER 03
+            ================================================== -->
+
+            <article class="stackly-sport-coachhub-trainer-card"
+                     data-aos="fade-up"
+                     data-aos-delay="220">
+
+                <div class="stackly-sport-coachhub-trainer-image">
+
+                    <img src="team-6.webp"
+                         alt="Rahul Sharma Cricket Coach">
+
+                    <span class="coachhub-busy">
+                        In Session
+                    </span>
+
+                    <button type="button"
+                            class="stackly-sport-coachhub-favorite"
+                            aria-label="Favorite trainer">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-trainer-content">
+
+                    <div class="stackly-sport-coachhub-trainer-meta">
+
+                        <span>
+                            CRICKET
+                        </span>
+
+                        <strong>
+                            10 YRS
+                        </strong>
+
+                    </div>
+
+                    <h4>
+                        Rahul Sharma
+                    </h4>
+
+                    <p>
+                        Cricket Skills &amp; Fitness Coach
+                    </p>
+
+
+                    <div class="stackly-sport-coachhub-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4.9
+                        </strong>
+
+                        <span>
+                            102 reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-sport-coachhub-trainer-footer">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            42 Members
+                        </span>
+
+                        <a href="404-admin.html"
+                           aria-label="View Rahul Sharma">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 TRAINER 04
+            ================================================== -->
+
+            <article class="stackly-sport-coachhub-trainer-card"
+                     data-aos="fade-up"
+                     data-aos-delay="280">
+
+                <div class="stackly-sport-coachhub-trainer-image">
+
+                    <img src="trainer-04.webp"
+                         alt="Priya Nair Fitness Coach">
+
+                    <span class="coachhub-online">
+                        Available
+                    </span>
+
+                    <button type="button"
+                            class="stackly-sport-coachhub-favorite"
+                            aria-label="Favorite trainer">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-trainer-content">
+
+                    <div class="stackly-sport-coachhub-trainer-meta">
+
+                        <span>
+                            FITNESS
+                        </span>
+
+                        <strong>
+                            7 YRS
+                        </strong>
+
+                    </div>
+
+                    <h4>
+                        Priya Nair
+                    </h4>
+
+                    <p>
+                        Strength &amp; Conditioning Coach
+                    </p>
+
+
+                    <div class="stackly-sport-coachhub-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            5.0
+                        </strong>
+
+                        <span>
+                            91 reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-sport-coachhub-trainer-footer">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            35 Members
+                        </span>
+
+                        <a href="404-admin.html"
+                           aria-label="View Priya Nair">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 TRAINER 05
+            ================================================== -->
+
+            <article class="stackly-sport-coachhub-trainer-card"
+                     data-aos="fade-up"
+                     data-aos-delay="340">
+
+                <div class="stackly-sport-coachhub-trainer-image">
+
+                    <img src="trainer-05.webp"
+                         alt="Vikram Rao Athletics Coach">
+
+                    <span class="coachhub-online">
+                        Available
+                    </span>
+
+                    <button type="button"
+                            class="stackly-sport-coachhub-favorite"
+                            aria-label="Favorite trainer">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-trainer-content">
+
+                    <div class="stackly-sport-coachhub-trainer-meta">
+
+                        <span>
+                            ATHLETICS
+                        </span>
+
+                        <strong>
+                            9 YRS
+                        </strong>
+
+                    </div>
+
+                    <h4>
+                        Vikram Rao
+                    </h4>
+
+                    <p>
+                        Speed &amp; Agility Performance Coach
+                    </p>
+
+
+                    <div class="stackly-sport-coachhub-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4.9
+                        </strong>
+
+                        <span>
+                            68 reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-sport-coachhub-trainer-footer">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            27 Members
+                        </span>
+
+                        <a href="404-admin.html"
+                           aria-label="View Vikram Rao">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 TRAINER 06
+            ================================================== -->
+
+            <article class="stackly-sport-coachhub-trainer-card"
+                     data-aos="fade-up"
+                     data-aos-delay="400">
+
+                <div class="stackly-sport-coachhub-trainer-image">
+
+                    <img src="team-7.webp"
+                         alt="Meera Joseph Yoga Coach">
+
+                    <span class="coachhub-busy">
+                        In Session
+                    </span>
+
+                    <button type="button"
+                            class="stackly-sport-coachhub-favorite"
+                            aria-label="Favorite trainer">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-trainer-content">
+
+                    <div class="stackly-sport-coachhub-trainer-meta">
+
+                        <span>
+                            WELLNESS
+                        </span>
+
+                        <strong>
+                            5 YRS
+                        </strong>
+
+                    </div>
+
+                    <h4>
+                        Meera Joseph
+                    </h4>
+
+                    <p>
+                        Mobility &amp; Wellness Coach
+                    </p>
+
+
+                    <div class="stackly-sport-coachhub-rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            4.8
+                        </strong>
+
+                        <span>
+                            59 reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-sport-coachhub-trainer-footer">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            24 Members
+                        </span>
+
+                        <a href="404-admin.html"
+                           aria-label="View Meera Joseph">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COACHING SPECIALIZATIONS
+    ====================================================== -->
+
+    <section class="stackly-sport-coachhub-specialties"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-coachhub-section-head">
+
+            <div>
+
+                <span>
+                    COACHING EXPERTISE
+                </span>
+
+                <h3>
+                    What Our Coaches Do Best
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-coachhub-specialty-grid">
+
+
+            <article class="stackly-sport-coachhub-specialty-card"
+                     data-aos="fade-right"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-coachhub-specialty-icon">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Performance Training
+                    </h4>
+
+                    <p>
+                        Speed, power, endurance, athletic performance 
+                        and overall fitness skill development.
+                    </p>
+
+                    <strong>
+                        05 Coaches
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="stackly-sport-coachhub-specialty-card"
+                     data-aos="fade-up"
+                     data-aos-delay="180">
+
+                <div class="stackly-sport-coachhub-specialty-icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Strength &amp; Conditioning
+                    </h4>
+
+                    <p>
+                        Structured strength programs designed
+                        for consistent athletic progress.
+                    </p>
+
+                    <strong>
+                        04 Coaches
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="stackly-sport-coachhub-specialty-card"
+                     data-aos="fade-left"
+                     data-aos-delay="260">
+
+                <div class="stackly-sport-coachhub-specialty-icon">
+
+                    <i class="fa-solid fa-person-running"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Skill Development Programs
+                    </h4>
+
+                    <p>
+                        Sport-specific coaching focused on
+                        technique, movement and confidence.
+                    </p>
+
+                    <strong>
+                        07 Coaches
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TODAY'S COACHING SCHEDULE
+    ====================================================== -->
+
+    <section class="stackly-sport-coachhub-schedule"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-coachhub-section-head">
+
+            <div>
+
+                <span>
+                    TODAY'S SCHEDULE
+                </span>
+
+                <h3>
+                    Coaching Sessions
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html"
+               class="stackly-sport-coachhub-view-link">
+
+                Full Schedule
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-sport-coachhub-schedule-list">
+
+
+            <!-- SESSION 01 -->
+
+            <article class="stackly-sport-coachhub-session"
+                     data-aos="fade-right"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-coachhub-session-time">
+
+                    <strong>
+                        07:00
+                    </strong>
+
+                    <span>
+                        AM
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-session-line"></div>
+
+
+                <div class="stackly-sport-coachhub-session-coach">
+
+                    <img src="team-2.webp"
+                         alt="Arjun Mehta">
+
+                    <div>
+
+                        <strong>
+                            Arjun Mehta
+                        </strong>
+
+                        <span>
+                            Football Performance
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-session-members">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    18 Members
+
+                </div>
+
+
+                <span class="stackly-sport-coachhub-session-status">
+                    Confirmed
+                </span>
+
+            </article>
+
+
+
+            <!-- SESSION 02 -->
+
+            <article class="stackly-sport-coachhub-session"
+                     data-aos="fade-right"
+                     data-aos-delay="180">
+
+                <div class="stackly-sport-coachhub-session-time">
+
+                    <strong>
+                        09:30
+                    </strong>
+
+                    <span>
+                        AM
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-session-line"></div>
+
+
+                <div class="stackly-sport-coachhub-session-coach">
+
+                    <img src="team-3.webp"
+                         alt="Sneha Kapoor">
+
+                    <div>
+
+                        <strong>
+                            Sneha Kapoor
+                        </strong>
+
+                        <span>
+                            Tennis Skills
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-session-members">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    12 Members
+
+                </div>
+
+
+                <span class="stackly-sport-coachhub-session-status">
+                    Confirmed
+                </span>
+
+            </article>
+
+
+
+            <!-- SESSION 03 -->
+
+            <article class="stackly-sport-coachhub-session"
+                     data-aos="fade-right"
+                     data-aos-delay="260">
+
+                <div class="stackly-sport-coachhub-session-time">
+
+                    <strong>
+                        05:30
+                    </strong>
+
+                    <span>
+                        PM
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-session-line"></div>
+
+
+                <div class="stackly-sport-coachhub-session-coach">
+
+                    <img src="trainer-04.webp"
+                         alt="Priya Nair">
+
+                    <div>
+
+                        <strong>
+                            Priya Nair
+                        </strong>
+
+                        <span>
+                            Strength &amp; Conditioning
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-session-members">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    20 Members
+
+                </div>
+
+
+                <span class="stackly-sport-coachhub-session-status">
+                    Confirmed
+                </span>
+
+            </article>
+
+
+
+            <!-- SESSION 04 -->
+
+            <article class="stackly-sport-coachhub-session"
+                     data-aos="fade-right"
+                     data-aos-delay="340">
+
+                <div class="stackly-sport-coachhub-session-time">
+
+                    <strong>
+                        07:00
+                    </strong>
+
+                    <span>
+                        PM
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-session-line"></div>
+
+
+                <div class="stackly-sport-coachhub-session-coach">
+
+                    <img src="team-7.webp"
+                         alt="Meera Joseph">
+
+                    <div>
+
+                        <strong>
+                            Meera Joseph
+                        </strong>
+
+                        <span>
+                            Mobility &amp; Wellness
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-coachhub-session-members">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    15 Members
+
+                </div>
+
+
+                <span class="stackly-sport-coachhub-session-status">
+                    Confirmed
+                </span>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRAINER PERFORMANCE
+    ====================================================== -->
+
+    <section class="stackly-sport-coachhub-performance"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-coachhub-performance-heading">
+
+            <div>
+
+                <span>
+                    COACHING INSIGHTS
+                </span>
+
+                <h3>
+                    Trainer Performance
+                </h3>
+
+                <p>
+                    A quick view of coaching activity and
+                    member engagement this month.
+                </p>
+
+            </div>
+
+            <div class="stackly-sport-coachhub-performance-badge">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                +12.6%
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-sport-coachhub-performance-grid">
+
+
+            <!-- SESSION COMPLETION -->
+
+            <div class="stackly-sport-coachhub-performance-item">
+
+                <div class="stackly-sport-coachhub-performance-top">
+
+                    <span>
+                        Session Completion
+                    </span>
+
+                    <strong>
+                        94%
+                    </strong>
+
+                </div>
+
+                <div class="stackly-sport-coachhub-meter">
+
+                    <span style="width:94%;"></span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MEMBER SATISFACTION -->
+
+            <div class="stackly-sport-coachhub-performance-item">
+
+                <div class="stackly-sport-coachhub-performance-top">
+
+                    <span>
+                        Member Satisfaction
+                    </span>
+
+                    <strong>
+                        91%
+                    </strong>
+
+                </div>
+
+                <div class="stackly-sport-coachhub-meter">
+
+                    <span style="width:91%;"></span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ATTENDANCE -->
+
+            <div class="stackly-sport-coachhub-performance-item">
+
+                <div class="stackly-sport-coachhub-performance-top">
+
+                    <span>
+                        Average Attendance
+                    </span>
+
+                    <strong>
+                        88%
+                    </strong>
+
+                </div>
+
+                <div class="stackly-sport-coachhub-meter">
+
+                    <span style="width:88%;"></span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RETENTION -->
+
+            <div class="stackly-sport-coachhub-performance-item">
+
+                <div class="stackly-sport-coachhub-performance-top">
+
+                    <span>
+                        Member Retention
+                    </span>
+
+                    <strong>
+                        96%
+                    </strong>
+
+                </div>
+
+                <div class="stackly-sport-coachhub-meter">
+
+                    <span style="width:96%;"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRAINER AVAILABILITY
+    ====================================================== -->
+
+    <section class="stackly-sport-coachhub-availability"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-coachhub-section-head">
+
+            <div>
+
+                <span>
+                    LIVE TEAM STATUS
+                </span>
+
+                <h3>
+                    Trainer Availability
+                </h3>
+
+            </div>
+
+            <span class="stackly-sport-coachhub-live-label">
+
+                <i class="fa-solid fa-circle"></i>
+
+                Updated just now
+
+            </span>
+
+        </div>
+
+
+        <div class="stackly-sport-coachhub-availability-grid">
+
+
+            <article class="stackly-sport-coachhub-availability-card">
+
+                <div class="stackly-sport-coachhub-availability-avatar">
+
+                    <img src="team-2.webp"
+                         alt="Arjun Mehta">
+
+                    <span></span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Arjun Mehta
+                    </strong>
+
+                    <small>
+                        Football Coach
+                    </small>
+
+                </div>
+
+                <b>
+                    Available
+                </b>
+
+            </article>
+
+
+
+            <article class="stackly-sport-coachhub-availability-card">
+
+                <div class="stackly-sport-coachhub-availability-avatar">
+
+                    <img src="team-3.webp"
+                         alt="Sneha Kapoor">
+
+                    <span></span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Sneha Kapoor
+                    </strong>
+
+                    <small>
+                        Tennis Coach
+                    </small>
+
+                </div>
+
+                <b>
+                    Available
+                </b>
+
+            </article>
+
+
+
+            <article class="stackly-sport-coachhub-availability-card busy">
+
+                <div class="stackly-sport-coachhub-availability-avatar">
+
+                    <img src="team-6.webp"
+                         alt="Rahul Sharma">
+
+                    <span></span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Rahul Sharma
+                    </strong>
+
+                    <small>
+                        Cricket Coach
+                    </small>
+
+                </div>
+
+                <b>
+                    In Session
+                </b>
+
+            </article>
+
+
+
+            <article class="stackly-sport-coachhub-availability-card">
+
+                <div class="stackly-sport-coachhub-availability-avatar">
+
+                    <img src="trainer-04.webp"
+                         alt="Priya Nair">
+
+                    <span></span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Priya Nair
+                    </strong>
+
+                    <small>
+                        Fitness Coach
+                    </small>
+
+                </div>
+
+                <b>
+                    Available
+                </b>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRAINER MANAGEMENT CTA
+    ====================================================== -->
+
+    <section class="stackly-sport-coachhub-cta"
+             data-aos="zoom-in">
+
+        <div class="stackly-sport-coachhub-cta-icon">
+
+            <i class="fa-solid fa-medal"></i>
+
+        </div>
+
+
+        <div class="stackly-sport-coachhub-cta-content">
+
+            <span>
+                COACHING MANAGEMENT
+            </span>
+
+            <h3>
+                Build A Stronger Coaching Team.
+            </h3>
+
+            <p>
+                Add coaches, manage specialties, organize schedules
+                and keep your entire training team aligned.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-sport-coachhub-cta-actions">
+
+            <a href="404-admin.html"
+               class="stackly-sport-coachhub-cta-primary">
+
+                Manage Trainers
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+            <a href="404-admin.html"
+               class="stackly-sport-coachhub-cta-secondary">
+
+                Trainer Reports
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     AOS JS
+========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JS
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+ 

@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Admin Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Sports Dashboard, Admin Dashboard">
+
+    <title>Stackly Sport Club | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+
+<body class="stackly-sport-admin-body">
+
+
+<!-- =========================================================
+     MOBILE OVERLAY
+========================================================= -->
+
+<div class="stackly-sport-admin-overlay"
+     id="sportAdminOverlay">
+</div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="stackly-sport-admin-sidebar"
+       id="sportAdminSidebar">
+
+
+    <!-- =====================================================
+         SIDEBAR TOP
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-top">
+
+        <a href="admin.html"
+           class="stackly-sport-admin-logo"
+           aria-label="Stackly Sport Club Home">
+
+            <img src="Stackly-logo-Blue.webp"
+                 alt="Stackly Sport Club Logo">
+
+        </a>
+
+
+        <!-- MOBILE CLOSE BUTTON -->
+
+        <button type="button"
+                class="stackly-sport-admin-close"
+                id="sportAdminClose"
+                aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN PROFILE
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-profile">
+
+        <div class="stackly-sport-admin-avatar">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+        <div class="stackly-sport-admin-profile-info">
+
+            <strong>Administrator</strong>
+
+            <span>Sports Club Admin</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR NAVIGATION
+    ====================================================== -->
+
+    <nav class="stackly-sport-admin-nav"
+         aria-label="Admin Dashboard Navigation">
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MAIN MENU
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="admin.html"
+           class="stackly-sport-admin-nav-link active">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- MEMBERS -->
+
+        <a href="admin-members.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Members
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                248
+            </span>
+
+        </a>
+
+
+        <!-- TRAINERS -->
+
+        <a href="admin-trainers.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Trainers
+            </span>
+
+        </a>
+
+
+        <!-- PROGRAMS -->
+
+        <a href="admin-programs.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Programs
+            </span>
+
+        </a>
+
+
+        <!-- BOOKINGS -->
+
+        <a href="admin-bookings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Bookings
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                18
+            </span>
+
+        </a>
+
+
+        <!-- PAYMENTS -->
+
+        <a href="admin-payments.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Payments
+            </span>
+
+        </a>
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MANAGEMENT
+        </div>
+
+
+        <!-- SPORTS -->
+
+        <a href="admin-sports.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Sports
+            </span>
+
+        </a>
+
+
+        <!-- EVENTS -->
+
+        <a href="admin-events.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-flag-checkered"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Events
+            </span>
+
+        </a>
+
+ 
+        <!-- SETTINGS -->
+
+        <a href="admin-settings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         SIDEBAR BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-bottom">
+
+        <button type="button"
+                class="stackly-sport-admin-logout"
+                id="sportAdminLogout">
+
+            <span>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </span>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN AREA
+========================================================= -->
+
+<main class="stackly-sport-admin-main">
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <header class="stackly-sport-admin-header">
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button type="button"
+                class="stackly-sport-admin-menu"
+                id="sportAdminMenu"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="stackly-sport-admin-header-title">
+
+            <span class="stackly-sport-admin-header-eyebrow">
+                STACKLY SPORT CLUB
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+        </div>
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="stackly-sport-admin-header-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <a href="404-admin.html"><button type="button"
+                    class="stackly-sport-admin-notification"
+                    aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button></a>
+
+
+            <!-- EMAIL DISPLAY -->
+
+            <div class="stackly-sport-admin-email-box">
+
+                <div class="stackly-sport-admin-email-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-sport-admin-email-content">
+
+                    <span>
+                        Signed in as
+                    </span>
+
+                    <strong id="sportAdminEmail">
+                        admin@stacklysport.com
+                    </strong>
+
+                </div>
+
+            </div>
+ 
+
+        </div>
+
+    </header>
+
+<!-- =========================================================
+     STACKLY SPORT CLUB
+     SPORTS MANAGEMENT PAGE CONTENT
+========================================================= -->
+
+<section class="stackly-sport-management-page">
+
+
+    <!-- =====================================================
+         SPORTS HERO / INTRO
+    ====================================================== -->
+
+    <section class="stackly-sport-management-hero"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-management-hero-content">
+
+            <span class="stackly-sport-management-eyebrow">
+                <i class="fa-solid fa-trophy"></i>
+                SPORTS MANAGEMENT
+            </span>
+
+            <h2>
+                Manage Every Sport.
+                <span>Build Better Athletes.</span>
+            </h2>
+
+            <p>
+                Monitor sports programs, participation, facilities
+                and athlete engagement from one powerful dashboard.
+            </p>
+
+            <div class="stackly-sport-management-hero-actions">
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-primary-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+                    Add New Sport
+
+                </a>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-outline-btn">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+                    View Analytics
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="stackly-sport-management-hero-visual"
+             data-aos="zoom-in"
+             data-aos-delay="150">
+
+            <div class="stackly-sport-management-orbit orbit-one"></div>
+            <div class="stackly-sport-management-orbit orbit-two"></div>
+
+            <div class="stackly-sport-management-trophy">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </div>
+
+            <div class="stackly-sport-management-floating-card floating-top">
+
+                <i class="fa-solid fa-users"></i>
+
+                <div>
+                    <strong>248</strong>
+                    <span>Active Players</span>
+                </div>
+
+            </div>
+
+            <div class="stackly-sport-management-floating-card floating-bottom">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <div>
+                    <strong>12</strong>
+                    <span>Sports Active</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SPORTS OVERVIEW
+    ====================================================== -->
+
+    <section class="stackly-sport-management-overview"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-management-section-heading">
+
+            <div>
+
+                <span>
+                    <i class="fa-solid fa-gauge-high"></i>
+                    SPORTS OVERVIEW
+                </span>
+
+                <h3>
+                    Club Performance Snapshot
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html">
+                Detailed Report
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-sport-management-metrics-grid">
+
+
+            <!-- METRIC 01 -->
+
+            <article class="stackly-sport-management-metric-card"
+                     data-aos="fade-up"
+                     data-aos-delay="50">
+
+                <div class="stackly-sport-management-metric-icon">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                </div>
+
+                <div class="stackly-sport-management-metric-info">
+
+                    <span>Total Sports</span>
+
+                    <strong>12</strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        3 added this season
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- METRIC 02 -->
+
+            <article class="stackly-sport-management-metric-card"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-management-metric-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div class="stackly-sport-management-metric-info">
+
+                    <span>Participants</span>
+
+                    <strong>1,486</strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12.8% this month
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- METRIC 03 -->
+
+            <article class="stackly-sport-management-metric-card"
+                     data-aos="fade-up"
+                     data-aos-delay="150">
+
+                <div class="stackly-sport-management-metric-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div class="stackly-sport-management-metric-info">
+
+                    <span>Active Sessions</span>
+
+                    <strong>86</strong>
+
+                    <small>
+                        <i class="fa-solid fa-circle-check"></i>
+                        92% attendance
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- METRIC 04 -->
+
+            <article class="stackly-sport-management-metric-card"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+
+                <div class="stackly-sport-management-metric-icon">
+
+                    <i class="fa-solid fa-ranking-star"></i>
+
+                </div>
+
+                <div class="stackly-sport-management-metric-info">
+
+                    <span>Competitions</span>
+
+                    <strong>24</strong>
+
+                    <small>
+                        <i class="fa-solid fa-flag-checkered"></i>
+                        8 upcoming
+                    </small>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SPORT CATEGORY CARDS
+    ====================================================== -->
+
+    <section class="stackly-sport-management-categories"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-management-section-heading">
+
+            <div>
+
+                <span>
+                    <i class="fa-solid fa-layer-group"></i>
+                    SPORT CATEGORIES
+                </span>
+
+                <h3>
+                    Active Sports Programs
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html">
+                Manage Categories
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-sport-management-category-grid">
+
+
+            <!-- FOOTBALL -->
+
+            <article class="stackly-sport-management-category-card"
+                     data-aos="fade-right">
+
+                <div class="stackly-sport-management-category-number">
+                    01
+                </div>
+
+                <div class="stackly-sport-management-category-icon">
+
+                    <i class="fa-solid fa-futbol"></i>
+
+                </div>
+
+                <div class="stackly-sport-management-category-content">
+
+                    <h4>Football</h4>
+
+                    <p>
+                        Team training, tactical sessions
+                        and competitive matches.
+                    </p>
+
+                    <div class="stackly-sport-management-category-meta">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            286 Players
+                        </span>
+
+                        <span>
+                            14 Coaches
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-category-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- BASKETBALL -->
+
+            <article class="stackly-sport-management-category-card"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-management-category-number">
+                    02
+                </div>
+
+                <div class="stackly-sport-management-category-icon">
+
+                    <i class="fa-solid fa-basketball"></i>
+
+                </div>
+
+                <div class="stackly-sport-management-category-content">
+
+                    <h4>Basketball</h4>
+
+                    <p>
+                        Skill development, team practice
+                        and league preparation.
+                    </p>
+
+                    <div class="stackly-sport-management-category-meta">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            194 Players
+                        </span>
+
+                        <span>
+                            9 Coaches
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-category-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- TENNIS -->
+
+            <article class="stackly-sport-management-category-card"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-management-category-number">
+                    03
+                </div>
+
+                <div class="stackly-sport-management-category-icon">
+
+                    <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+
+                </div>
+
+                <div class="stackly-sport-management-category-content">
+
+                    <h4>Tennis</h4>
+
+                    <p>
+                        Individual coaching, technique
+                        training and tournaments.
+                    </p>
+
+                    <div class="stackly-sport-management-category-meta">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            142 Players
+                        </span>
+
+                        <span>
+                            7 Coaches
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-category-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- SWIMMING -->
+
+            <article class="stackly-sport-management-category-card"
+                     data-aos="fade-left"
+                     data-aos-delay="150">
+
+                <div class="stackly-sport-management-category-number">
+                    04
+                </div>
+
+                <div class="stackly-sport-management-category-icon">
+
+                    <i class="fa-solid fa-person-swimming"></i>
+
+                </div>
+
+                <div class="stackly-sport-management-category-content">
+
+                    <h4>Swimming</h4>
+
+                    <p>
+                        Technique, endurance and competitive
+                        swimming development.
+                    </p>
+
+                    <div class="stackly-sport-management-category-meta">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                            168 Players
+                        </span>
+
+                        <span>
+                            6 Coaches
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-category-arrow">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PARTICIPATION + FACILITY UTILIZATION
+    ====================================================== -->
+
+    <section class="stackly-sport-management-analytics"
+             data-aos="fade-up">
+
+
+        <!-- PARTICIPATION -->
+
+        <div class="stackly-sport-management-analytics-card">
+
+            <div class="stackly-sport-management-card-heading">
+
+                <div>
+
+                    <span>PARTICIPATION</span>
+
+                    <h3>
+                        Player Engagement
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-chart-column"></i>
+
+            </div>
+
+
+            <div class="stackly-sport-management-progress-list">
+
+
+                <div class="stackly-sport-management-progress-row">
+
+                    <div class="stackly-sport-management-progress-label">
+
+                        <span>Football</span>
+                        <strong>86%</strong>
+
+                    </div>
+
+                    <div class="stackly-sport-management-progress-track">
+
+                        <span style="width:86%;"></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-management-progress-row">
+
+                    <div class="stackly-sport-management-progress-label">
+
+                        <span>Basketball</span>
+                        <strong>74%</strong>
+
+                    </div>
+
+                    <div class="stackly-sport-management-progress-track">
+
+                        <span style="width:74%;"></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-management-progress-row">
+
+                    <div class="stackly-sport-management-progress-label">
+
+                        <span>Tennis</span>
+                        <strong>68%</strong>
+
+                    </div>
+
+                    <div class="stackly-sport-management-progress-track">
+
+                        <span style="width:68%;"></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-management-progress-row">
+
+                    <div class="stackly-sport-management-progress-label">
+
+                        <span>Swimming</span>
+                        <strong>91%</strong>
+
+                    </div>
+
+                    <div class="stackly-sport-management-progress-track">
+
+                        <span style="width:91%;"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FACILITY UTILIZATION -->
+
+        <div class="stackly-sport-management-analytics-card">
+
+            <div class="stackly-sport-management-card-heading">
+
+                <div>
+
+                    <span>FACILITIES</span>
+
+                    <h3>
+                        Facility Utilization
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-building"></i>
+
+            </div>
+
+
+            <div class="stackly-sport-management-facility-list">
+
+
+                <div class="stackly-sport-management-facility-item">
+
+                    <div class="stackly-sport-management-facility-icon">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>Main Football Ground</strong>
+
+                        <span>Peak: 6:00 PM – 8:00 PM</span>
+
+                    </div>
+
+                    <b>94%</b>
+
+                </div>
+
+
+                <div class="stackly-sport-management-facility-item">
+
+                    <div class="stackly-sport-management-facility-icon">
+                        <i class="fa-solid fa-basketball"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>Indoor Court</strong>
+
+                        <span>Peak: 5:00 PM – 7:00 PM</span>
+
+                    </div>
+
+                    <b>81%</b>
+
+                </div>
+
+
+                <div class="stackly-sport-management-facility-item">
+
+                    <div class="stackly-sport-management-facility-icon">
+                        <i class="fa-solid fa-person-swimming"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>Swimming Pool</strong>
+
+                        <span>Peak: 6:30 AM – 9:00 AM</span>
+
+                    </div>
+
+                    <b>88%</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         UPCOMING COMPETITIONS
+    ====================================================== -->
+
+    <section class="stackly-sport-management-competitions"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-management-section-heading">
+
+            <div>
+
+                <span>
+                    <i class="fa-solid fa-flag-checkered"></i>
+                    COMPETITION CALENDAR
+                </span>
+
+                <h3>
+                    Upcoming Competitions
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html">
+                View All Events
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-sport-management-event-list">
+
+
+            <!-- EVENT 01 -->
+
+            <article class="stackly-sport-management-event-card"
+                     data-aos="fade-right">
+
+                <div class="stackly-sport-management-event-date">
+
+                    <strong>12</strong>
+                    <span>OCT</span>
+
+                </div>
+
+                <div class="stackly-sport-management-event-info">
+
+                    <span>FOOTBALL</span>
+
+                    <h4>
+                        Inter Club Championship
+                    </h4>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Main Football Ground
+                    </p>
+
+                </div>
+
+                <div class="stackly-sport-management-event-status">
+                    16 Teams
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-event-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- EVENT 02 -->
+
+            <article class="stackly-sport-management-event-card"
+                     data-aos="fade-right"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-management-event-date">
+
+                    <strong>18</strong>
+                    <span>OCT</span>
+
+                </div>
+
+                <div class="stackly-sport-management-event-info">
+
+                    <span>BASKETBALL</span>
+
+                    <h4>
+                        City League Finals
+                    </h4>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Indoor Arena
+                    </p>
+
+                </div>
+
+                <div class="stackly-sport-management-event-status">
+                    8 Teams
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-event-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- EVENT 03 -->
+
+            <article class="stackly-sport-management-event-card"
+                     data-aos="fade-right"
+                     data-aos-delay="200">
+
+                <div class="stackly-sport-management-event-date">
+
+                    <strong>26</strong>
+                    <span>OCT</span>
+
+                </div>
+
+                <div class="stackly-sport-management-event-info">
+
+                    <span>SWIMMING</span>
+
+                    <h4>
+                        Open Aquatic Meet
+                    </h4>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Olympic Pool
+                    </p>
+
+                </div>
+
+                <div class="stackly-sport-management-event-status">
+                    124 Athletes
+                </div>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-management-event-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         POPULAR SPORTS
+    ====================================================== -->
+
+    <section class="stackly-sport-management-popular"
+             data-aos="zoom-in">
+
+        <div class="stackly-sport-management-popular-copy">
+
+            <span>
+                <i class="fa-solid fa-fire"></i>
+                MOST ACTIVE
+            </span>
+
+            <h3>
+                What's Trending
+                Across The Club?
+            </h3>
+
+            <p>
+                Track the sports generating the highest
+                participation and engagement this month.
+            </p>
+
+            <a href="404-admin.html"
+               class="stackly-sport-management-popular-btn">
+
+                Explore Insights
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-sport-management-popular-sport">
+
+            <div class="stackly-sport-management-popular-icon">
+
+                <i class="fa-solid fa-person-swimming"></i>
+
+            </div>
+
+            <span>#01 TRENDING SPORT</span>
+
+            <strong>Swimming</strong>
+
+            <small>
+                91% participation
+            </small>
+
+        </div>
+
+
+        <div class="stackly-sport-management-popular-stat">
+
+            <strong>+18.6%</strong>
+
+            <span>
+                Engagement Growth
+            </span>
+
+            <i class="fa-solid fa-arrow-trend-up"></i>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK ACTIONS
+    ====================================================== -->
+
+    <section class="stackly-sport-management-actions"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-management-action-heading">
+
+            <span>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                QUICK ACTIONS
+            </span>
+
+            <h3>
+                Keep Your Sports Hub Moving
+            </h3>
+
+        </div>
+
+
+        <div class="stackly-sport-management-action-grid">
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-management-action-card">
+
+                <div>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+                <span>Add Sport</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-management-action-card">
+
+                <div>
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <span>Assign Coach</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-management-action-card">
+
+                <div>
+                    <i class="fa-solid fa-calendar-plus"></i>
+                </div>
+
+                <span>Schedule Session</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-management-action-card">
+
+                <div>
+                    <i class="fa-solid fa-file-export"></i>
+                </div>
+
+                <span>Export Report</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     AOS JS
+========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JS
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+ 

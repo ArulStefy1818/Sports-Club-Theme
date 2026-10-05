@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Client Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Client Dashboard, Sports Club, Fitness Dashboard">
+
+    <meta name="author"
+          content="Stackly Sport Club">
+
+    <title>Stackly Sport Club | Client Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="client.css">
+
+</head>
+
+
+<body class="stackly-sport-client-body">
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="stackly-sport-client-overlay"
+         id="clientSidebarOverlay"></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="stackly-sport-client-sidebar"
+           id="clientSidebar">
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-top">
+
+
+            <!-- LOGO -->
+            <a href="client.html"
+               class="stackly-sport-client-logo"
+               aria-label="Stackly Sport Club Home">
+
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Sport Club">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+            <button type="button"
+                    class="stackly-sport-client-sidebar-close"
+                    id="clientSidebarClose"
+                    aria-label="Close navigation">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR PROFILE
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-profile">
+
+            <div class="stackly-sport-client-profile-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-sport-client-profile-info">
+
+                <strong id="clientSidebarName">
+                    Sport Member
+                </strong>
+
+                <span>
+                    Active Member
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="stackly-sport-client-navigation"
+             aria-label="Client Dashboard Navigation">
+
+
+            <p class="stackly-sport-client-nav-label">
+                MAIN MENU
+            </p>
+
+
+            <!-- DASHBOARD -->
+            <a href="client.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- MY MEMBERSHIP -->
+            <a href="client-membership.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <span>My Membership</span>
+
+            </a>
+
+
+            <!-- PROGRAMS -->
+            <a href="client-programs.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+                <span>Programs</span>
+
+            </a>
+
+
+            <!-- BOOKINGS -->
+            <a href="client-bookings.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>My Bookings</span>
+
+            </a>
+
+
+            <!-- TRAINERS -->
+            <a href="client-trainers.html"
+               class="stackly-sport-client-nav-link active">
+
+                <i class="fa-solid fa-person-running"></i>
+
+                <span>Trainers</span>
+
+            </a>
+
+
+            <!-- PAYMENTS -->
+            <a href="client-payments.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Payments</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 ACCOUNT
+            ================================================== -->
+
+            <p class="stackly-sport-client-nav-label account-label">
+                ACCOUNT
+            </p>
+
+
+            <!-- PROFILE -->
+            <a href="client-profile.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-bottom">
+
+ 
+            <!-- LOGOUT -->
+            <button type="button"
+                    class="stackly-sport-client-logout"
+                    id="clientLogoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="stackly-sport-client-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-sport-client-header">
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button type="button"
+                    class="stackly-sport-client-menu-toggle"
+                    id="clientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-sport-client-header-title">
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-sport-client-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-client.html"><button type="button"
+                        class="stackly-sport-client-notification"
+                        aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="stackly-sport-client-notification-dot"></span>
+
+                </button></a>
+
+
+                <!-- EMAIL -->
+
+                <div class="stackly-sport-client-email-box">
+
+                    <div class="stackly-sport-client-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-sport-client-email-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong id="clientEmailDisplay">
+                            client@stacklysport.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =====================================================
+             TRAINERS PAGE CONTENT
+        ====================================================== -->
+
+        <div class="stackly-sport-client-trainers-content">
+
+
+            <!-- =================================================
+                 TRAINERS HERO
+            ================================================== -->
+
+            <section class="stackly-sport-client-trainers-hero">
+
+                <div class="stackly-sport-client-trainers-hero-content"
+                     data-aos="fade-right">
+
+                    <span class="stackly-sport-client-trainers-kicker">
+                        <i class="fa-solid fa-users"></i>
+                        YOUR PERFORMANCE TEAM
+                    </span>
+
+                    <h2>
+                        Train With Coaches
+                        <span>Who Push You Further.</span>
+                    </h2>
+
+                    <p>
+                        Meet our experienced coaches and find the right
+                        training expert to help you build strength, improve
+                        skills, and reach your fitness goals.
+                    </p>
+
+                    <div class="stackly-sport-client-trainers-hero-actions">
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-trainers-primary-btn">
+                            <span>Find My Trainer</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-trainers-secondary-btn">
+                            View Programs
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainers-hero-visual"
+                     data-aos="fade-left">
+
+                    <div class="stackly-sport-client-trainers-hero-image">
+
+                        <img src="trainer-hero.webp"
+                             alt="Stackly Sport Club Trainer">
+
+                        <div class="stackly-sport-client-trainers-hero-badge">
+
+                            <strong>15+</strong>
+
+                            <span>
+                                Expert<br>
+                                Coaches
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRAINER STATS
+            ================================================== -->
+
+            <section class="stackly-sport-client-trainers-stats">
+
+                <div class="stackly-sport-client-trainer-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                    <div class="stackly-sport-client-trainer-stat-icon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+
+                    <div>
+                        <strong>15+</strong>
+                        <span>Expert Trainers</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainer-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+
+                    <div class="stackly-sport-client-trainer-stat-icon">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+
+                    <div>
+                        <strong>25+</strong>
+                        <span>Years Experience</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainer-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="300">
+
+                    <div class="stackly-sport-client-trainer-stat-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <div>
+                        <strong>40+</strong>
+                        <span>Championships</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainer-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="400">
+
+                    <div class="stackly-sport-client-trainer-stat-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Member Rating</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FIND YOUR COACH
+            ================================================== -->
+
+            <section class="stackly-sport-client-trainer-discovery">
+
+                <div class="stackly-sport-client-trainers-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            CHOOSE YOUR SPECIALIST
+                        </span>
+
+                        <h2>
+                            Find Your Perfect Coach
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Every goal needs the right guidance.
+                        Choose a trainer based on your sport,
+                        fitness level, and performance goals.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainer-specialties">
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-trainer-specialty-card"
+                       data-aos="zoom-in"
+                       data-aos-delay="100">
+
+                        <div class="stackly-sport-client-trainer-specialty-icon">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+
+                        <div>
+                            <h3>Strength & Fitness</h3>
+                            <p>
+                                Build power, strength and endurance.
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-trainer-specialty-card"
+                       data-aos="zoom-in"
+                       data-aos-delay="200">
+
+                        <div class="stackly-sport-client-trainer-specialty-icon">
+                            <i class="fa-solid fa-futbol"></i>
+                        </div>
+
+                        <div>
+                            <h3>Football Coaching</h3>
+                            <p>
+                                Improve skills, speed and game awareness.
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-trainer-specialty-card"
+                       data-aos="zoom-in"
+                       data-aos-delay="300">
+
+                        <div class="stackly-sport-client-trainer-specialty-icon">
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                        </div>
+
+                        <div>
+                            <h3>Tennis Training</h3>
+                            <p>
+                                Sharpen technique, movement and control.
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-trainer-specialty-card"
+                       data-aos="zoom-in"
+                       data-aos-delay="400">
+
+                        <div class="stackly-sport-client-trainer-specialty-icon">
+                            <i class="fa-solid fa-person-swimming"></i>
+                        </div>
+
+                        <div>
+                            <h3>Swimming Coaching</h3>
+                            <p>
+                                Develop technique, stamina and confidence.
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FEATURED TRAINERS
+            ================================================== -->
+
+            <section class="stackly-sport-client-featured-trainers">
+
+                <div class="stackly-sport-client-trainers-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            MEET THE TEAM
+                        </span>
+
+                        <h2>
+                            Coaches Behind Your Progress
+                        </h2>
+
+                    </div>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-trainers-view-all">
+                        View All Trainers
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainers-grid">
+
+
+                    <!-- TRAINER 01 -->
+
+                    <article class="stackly-sport-client-trainer-card"
+                             data-aos="fade-up"
+                             data-aos-delay="100">
+
+                        <div class="stackly-sport-client-trainer-image">
+
+                            <img src="team-8.webp"
+                                 alt="Alex Morgan">
+
+                            <span class="stackly-sport-client-trainer-status">
+                                Available
+                            </span>
+
+                            <div class="stackly-sport-client-trainer-social">
+
+                                <a href="404-client.html"
+                                   aria-label="Trainer profile">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-sport-client-trainer-body">
+
+                            <span class="stackly-sport-client-trainer-role">
+                                Strength Coach
+                            </span>
+
+                            <h3>
+                                Alex Morgan
+                            </h3>
+
+                            <p>
+                                Strength, conditioning and athletic
+                                performance specialist.
+                            </p>
+
+                            <div class="stackly-sport-client-trainer-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-award"></i>
+                                    8 Years
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    4.9
+                                </span>
+
+                            </div>
+
+                            <a href="404-client.html"
+                               class="stackly-sport-client-trainer-profile-btn">
+                                View Profile
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- TRAINER 02 -->
+
+                    <article class="stackly-sport-client-trainer-card"
+                             data-aos="fade-up"
+                             data-aos-delay="200">
+
+                        <div class="stackly-sport-client-trainer-image">
+
+                            <img src="football-coach.webp"
+                                 alt="Daniel Carter">
+
+                            <span class="stackly-sport-client-trainer-status">
+                                Available
+                            </span>
+
+                            <div class="stackly-sport-client-trainer-social">
+
+                                <a href="404-client.html"
+                                   aria-label="Trainer profile">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-sport-client-trainer-body">
+
+                            <span class="stackly-sport-client-trainer-role">
+                                Football Coach
+                            </span>
+
+                            <h3>
+                                Daniel Carter
+                            </h3>
+
+                            <p>
+                                Football development, speed and
+                                tactical performance coach.
+                            </p>
+
+                            <div class="stackly-sport-client-trainer-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-award"></i>
+                                    10 Years
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    4.8
+                                </span>
+
+                            </div>
+
+                            <a href="404-client.html"
+                               class="stackly-sport-client-trainer-profile-btn">
+                                View Profile
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- TRAINER 03 -->
+
+                    <article class="stackly-sport-client-trainer-card"
+                             data-aos="fade-up"
+                             data-aos-delay="300">
+
+                        <div class="stackly-sport-client-trainer-image">
+
+                            <img src="tennis-coach.webp"
+                                 alt="Sophia Williams">
+
+                            <span class="stackly-sport-client-trainer-status">
+                                Available
+                            </span>
+
+                            <div class="stackly-sport-client-trainer-social">
+
+                                <a href="404-client.html"
+                                   aria-label="Trainer profile">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-sport-client-trainer-body">
+
+                            <span class="stackly-sport-client-trainer-role">
+                                Tennis Coach
+                            </span>
+
+                            <h3>
+                                Sophia Williams
+                            </h3>
+
+                            <p>
+                                Tennis technique, agility and
+                                competitive performance coach.
+                            </p>
+
+                            <div class="stackly-sport-client-trainer-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-award"></i>
+                                    7 Years
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    5.0
+                                </span>
+
+                            </div>
+
+                            <a href="404-client.html"
+                               class="stackly-sport-client-trainer-profile-btn">
+                                View Profile
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- TRAINER 04 -->
+
+                    <article class="stackly-sport-client-trainer-card"
+                             data-aos="fade-up"
+                             data-aos-delay="400">
+
+                        <div class="stackly-sport-client-trainer-image">
+
+                            <img src="swimming-coach.webp"
+                                 alt="Ryan Thomas">
+
+                            <span class="stackly-sport-client-trainer-status">
+                                Available
+                            </span>
+
+                            <div class="stackly-sport-client-trainer-social">
+
+                                <a href="404-client.html"
+                                   aria-label="Trainer profile">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-sport-client-trainer-body">
+
+                            <span class="stackly-sport-client-trainer-role">
+                                Swimming Coach
+                            </span>
+
+                            <h3>
+                                Ryan Thomas
+                            </h3>
+
+                            <p>
+                                Swimming technique, endurance and
+                                aquatic performance specialist.
+                            </p>
+
+                            <div class="stackly-sport-client-trainer-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-award"></i>
+                                    9 Years
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    4.9
+                                </span>
+
+                            </div>
+
+                            <a href="404-client.html"
+                               class="stackly-sport-client-trainer-profile-btn">
+                                View Profile
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRAINING PHILOSOPHY
+            ================================================== -->
+
+            <section class="stackly-sport-client-trainer-philosophy">
+
+                <div class="stackly-sport-client-trainer-philosophy-visual"
+                     data-aos="fade-right">
+
+                    <div class="stackly-sport-client-trainer-philosophy-image">
+
+                        <img src="bookings-hero.webp"
+                             alt="Personal training session">
+
+                        <div class="stackly-sport-client-trainer-philosophy-number">
+                            01
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainer-philosophy-content"
+                     data-aos="fade-left">
+
+                    <span class="stackly-sport-client-trainers-kicker">
+                        OUR COACHING METHOD
+                    </span>
+
+                    <h2>
+                        More Than Training.
+                        <span>A Complete Approach.</span>
+                    </h2>
+
+                    <p>
+                        Our coaches focus on the complete athlete.
+                        Every session combines smart programming,
+                        technical guidance, performance tracking,
+                        and recovery.
+                    </p>
+
+
+                    <div class="stackly-sport-client-trainer-method-list">
+
+                        <div class="stackly-sport-client-trainer-method">
+
+                            <span>01</span>
+
+                            <div>
+                                <h3>Assess</h3>
+                                <p>
+                                    Understand your current fitness
+                                    and performance level.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-sport-client-trainer-method">
+
+                            <span>02</span>
+
+                            <div>
+                                <h3>Build</h3>
+                                <p>
+                                    Create a focused plan around
+                                    your individual goals.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-sport-client-trainer-method">
+
+                            <span>03</span>
+
+                            <div>
+                                <h3>Perform</h3>
+                                <p>
+                                    Track progress and continuously
+                                    improve your performance.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRAINER AVAILABILITY
+            ================================================== -->
+
+            <section class="stackly-sport-client-trainer-availability">
+
+                <div class="stackly-sport-client-trainers-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            COACHING SCHEDULE
+                        </span>
+
+                        <h2>
+                            When Our Coaches Are Available
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Find a convenient training time and
+                        stay consistent with your coaching plan.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainer-schedule"
+                     data-aos="fade-up">
+
+                    <div class="stackly-sport-client-trainer-schedule-day">
+
+                        <span>MON</span>
+
+                        <strong>06:00 AM</strong>
+
+                        <small>
+                            Strength
+                        </small>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-trainer-schedule-day">
+
+                        <span>TUE</span>
+
+                        <strong>07:30 AM</strong>
+
+                        <small>
+                            Football
+                        </small>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-trainer-schedule-day active">
+
+                        <span>WED</span>
+
+                        <strong>06:30 PM</strong>
+
+                        <small>
+                            Tennis
+                        </small>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-trainer-schedule-day">
+
+                        <span>THU</span>
+
+                        <strong>07:00 AM</strong>
+
+                        <small>
+                            Fitness
+                        </small>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-trainer-schedule-day">
+
+                        <span>FRI</span>
+
+                        <strong>05:30 PM</strong>
+
+                        <small>
+                            Swimming
+                        </small>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-trainer-schedule-day">
+
+                        <span>SAT</span>
+
+                        <strong>08:00 AM</strong>
+
+                        <small>
+                            Performance
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MEMBER SUCCESS STORY
+            ================================================== -->
+
+            <section class="stackly-sport-client-trainer-success">
+
+                <div class="stackly-sport-client-trainer-success-content"
+                     data-aos="fade-right">
+
+                    <span class="stackly-sport-client-trainers-kicker">
+                        MEMBER SUCCESS
+                    </span>
+
+                    <div class="stackly-sport-client-trainer-quote-icon">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <blockquote>
+                        “The right coach completely changed the way
+                        I train. I feel stronger, faster and much
+                        more confident every week.”
+                    </blockquote>
+
+                    <div class="stackly-sport-client-trainer-member">
+
+                        <div class="stackly-sport-client-trainer-member-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Jordan Lee
+                            </strong>
+
+                            <span>
+                                Performance Program Member
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainer-success-result"
+                     data-aos="fade-left">
+
+                    <div class="stackly-sport-client-trainer-result-circle">
+
+                        <strong>
+                            +32%
+                        </strong>
+
+                        <span>
+                            Performance
+                            Improvement
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRAINER TIPS
+            ================================================== -->
+
+            <section class="stackly-sport-client-trainer-tips">
+
+                <div class="stackly-sport-client-trainers-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            COACH'S CORNER
+                        </span>
+
+                        <h2>
+                            Small Habits. Better Results.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-trainer-tips-grid">
+
+
+                    <article class="stackly-sport-client-trainer-tip"
+                             data-aos="fade-up"
+                             data-aos-delay="100">
+
+                        <span>01</span>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <h3>
+                            Arrive Early Today
+                        </h3>
+
+                        <p>
+                            Give yourself time to warm up,
+                            prepare mentally, and start your
+                            session focused.
+                        </p>
+
+                    </article>
+
+
+                    <article class="stackly-sport-client-trainer-tip"
+                             data-aos="fade-up"
+                             data-aos-delay="200">
+
+                        <span>02</span>
+
+                        <i class="fa-solid fa-droplet"></i>
+
+                        <h3>
+                            Stay Hydrated Always
+                        </h3>
+
+                        <p>
+                            Keep water with you throughout training
+                            and maintain hydration during sessions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="stackly-sport-client-trainer-tip"
+                             data-aos="fade-up"
+                             data-aos-delay="300">
+
+                        <span>03</span>
+
+                        <i class="fa-solid fa-bed"></i>
+
+                        <h3>
+                            Recover Well Every Day
+                        </h3>
+
+                        <p>
+                            Give your body enough rest so you
+                            can train stronger and perform better.
+                        </p>
+
+                    </article>
+
+
+                    <article class="stackly-sport-client-trainer-tip"
+                             data-aos="fade-up"
+                             data-aos-delay="400">
+
+                        <span>04</span>
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                        <h3>
+                            Stay Consistent Always
+                        </h3>
+
+                        <p>
+                            Consistent training and small daily
+                            improvements create lasting results.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRAINER CTA
+            ================================================== -->
+
+            <section class="stackly-sport-client-trainers-cta"
+                     data-aos="zoom-in">
+
+                <div class="stackly-sport-client-trainers-cta-shape"></div>
+
+                <div class="stackly-sport-client-trainers-cta-content">
+
+                    <span>
+                        READY TO LEVEL UP?
+                    </span>
+
+                    <h2>
+                        Find The Coach
+                        Who Gets You Moving.
+                    </h2>
+
+                    <p>
+                        Connect with an expert trainer and
+                        turn your goals into measurable progress.
+                    </p>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-trainers-cta-btn">
+
+                        <span>Choose Your Trainer</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD JAVASCRIPT
+    ====================================================== -->
+
+    <script src="client.js"></script>
+
+
+
+</body>
+
+</html>
+

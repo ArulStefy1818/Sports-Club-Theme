@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Admin Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Sports Dashboard, Admin Dashboard">
+
+    <title>Stackly Sport Club | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+
+<body class="stackly-sport-admin-body">
+
+
+<!-- =========================================================
+     MOBILE OVERLAY
+========================================================= -->
+
+<div class="stackly-sport-admin-overlay"
+     id="sportAdminOverlay">
+</div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="stackly-sport-admin-sidebar"
+       id="sportAdminSidebar">
+
+
+    <!-- =====================================================
+         SIDEBAR TOP
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-top">
+
+        <a href="admin.html"
+           class="stackly-sport-admin-logo"
+           aria-label="Stackly Sport Club Home">
+
+            <img src="Stackly-logo-Blue.webp"
+                 alt="Stackly Sport Club Logo">
+
+        </a>
+
+
+        <!-- MOBILE CLOSE BUTTON -->
+
+        <button type="button"
+                class="stackly-sport-admin-close"
+                id="sportAdminClose"
+                aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN PROFILE
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-profile">
+
+        <div class="stackly-sport-admin-avatar">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+        <div class="stackly-sport-admin-profile-info">
+
+            <strong>Administrator</strong>
+
+            <span>Sports Club Admin</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR NAVIGATION
+    ====================================================== -->
+
+    <nav class="stackly-sport-admin-nav"
+         aria-label="Admin Dashboard Navigation">
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MAIN MENU
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="admin.html"
+           class="stackly-sport-admin-nav-link active">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- MEMBERS -->
+
+        <a href="admin-members.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Members
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                248
+            </span>
+
+        </a>
+
+
+        <!-- TRAINERS -->
+
+        <a href="admin-trainers.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Trainers
+            </span>
+
+        </a>
+
+
+        <!-- PROGRAMS -->
+
+        <a href="admin-programs.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Programs
+            </span>
+
+        </a>
+
+
+        <!-- BOOKINGS -->
+
+        <a href="admin-bookings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Bookings
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                18
+            </span>
+
+        </a>
+
+
+        <!-- PAYMENTS -->
+
+        <a href="admin-payments.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Payments
+            </span>
+
+        </a>
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MANAGEMENT
+        </div>
+
+
+        <!-- SPORTS -->
+
+        <a href="admin-sports.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Sports
+            </span>
+
+        </a>
+
+
+        <!-- EVENTS -->
+
+        <a href="admin-events.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-flag-checkered"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Events
+            </span>
+
+        </a>
+
+ 
+        <!-- SETTINGS -->
+
+        <a href="admin-settings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         SIDEBAR BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-bottom">
+
+        <button type="button"
+                class="stackly-sport-admin-logout"
+                id="sportAdminLogout">
+
+            <span>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </span>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN AREA
+========================================================= -->
+
+<main class="stackly-sport-admin-main">
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <header class="stackly-sport-admin-header">
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button type="button"
+                class="stackly-sport-admin-menu"
+                id="sportAdminMenu"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="stackly-sport-admin-header-title">
+
+            <span class="stackly-sport-admin-header-eyebrow">
+                STACKLY SPORT CLUB
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+        </div>
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="stackly-sport-admin-header-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <a href="404-admin.html"><button type="button"
+                    class="stackly-sport-admin-notification"
+                    aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button></a>
+
+
+            <!-- EMAIL DISPLAY -->
+
+            <div class="stackly-sport-admin-email-box">
+
+                <div class="stackly-sport-admin-email-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-sport-admin-email-content">
+
+                    <span>
+                        Signed in as
+                    </span>
+
+                    <strong id="sportAdminEmail">
+                        admin@stacklysport.com
+                    </strong>
+
+                </div>
+
+            </div>
+ 
+
+        </div>
+
+    </header>
+
+ 
+
+    <!-- =====================================================
+         MEMBER PAGE CONTENT
+    ====================================================== -->
+
+    <section class="stackly-sport-memberhub-page"
+             id="memberhub-page">
+
+
+        <!-- =================================================
+             HERO / INTRO
+        ================================================== -->
+
+        <div class="stackly-sport-memberhub-intro"
+             data-aos="fade-up">
+
+            <div class="stackly-sport-memberhub-intro-content">
+
+                <span class="stackly-sport-memberhub-eyebrow">
+                    <i class="fa-solid fa-users"></i>
+                    MEMBER COMMUNITY
+                </span>
+
+                <h2>
+                    Manage Your
+                    <span>Club Members.</span>
+                </h2>
+
+                <p>
+                    Track member activity, memberships, attendance,
+                    renewals and engagement from one centralized
+                    sports club workspace.
+                </p>
+
+            </div>
+
+
+            <div class="stackly-sport-memberhub-intro-actions">
+
+                <a href="404-admin.html"
+                   class="stackly-sport-memberhub-btn stackly-sport-memberhub-btn-primary">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Add New Member
+
+                </a>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-memberhub-btn stackly-sport-memberhub-btn-light">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Export Members
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUICK MEMBER STATS
+        ================================================== -->
+
+        <div class="stackly-sport-memberhub-stats">
+
+
+            <!-- TOTAL MEMBERS -->
+
+            <article class="stackly-sport-memberhub-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-memberhub-stat-top">
+
+                    <div class="stackly-sport-memberhub-stat-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <span class="stackly-sport-memberhub-stat-badge positive">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        8.4%
+
+                    </span>
+
+                </div>
+
+                <span class="stackly-sport-memberhub-stat-label">
+                    Total Members
+                </span>
+
+                <strong class="stackly-sport-memberhub-stat-number">
+                    248
+                </strong>
+
+                <small>
+                    Compared with last month
+                </small>
+
+            </article>
+
+
+            <!-- ACTIVE MEMBERS -->
+
+            <article class="stackly-sport-memberhub-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="150">
+
+                <div class="stackly-sport-memberhub-stat-top">
+
+                    <div class="stackly-sport-memberhub-stat-icon">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+                    <span class="stackly-sport-memberhub-stat-badge positive">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        5.2%
+
+                    </span>
+
+                </div>
+
+                <span class="stackly-sport-memberhub-stat-label">
+                    Active Members
+                </span>
+
+                <strong class="stackly-sport-memberhub-stat-number">
+                    216
+                </strong>
+
+                <small>
+                    87% of total members
+                </small>
+
+            </article>
+
+
+            <!-- NEW MEMBERS -->
+
+            <article class="stackly-sport-memberhub-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+
+                <div class="stackly-sport-memberhub-stat-top">
+
+                    <div class="stackly-sport-memberhub-stat-icon">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <span class="stackly-sport-memberhub-stat-badge positive">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        12.8%
+
+                    </span>
+
+                </div>
+
+                <span class="stackly-sport-memberhub-stat-label">
+                    New This Month
+                </span>
+
+                <strong class="stackly-sport-memberhub-stat-number">
+                    32
+                </strong>
+
+                <small>
+                    New registrations
+                </small>
+
+            </article>
+
+
+            <!-- RENEWALS -->
+
+            <article class="stackly-sport-memberhub-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="250">
+
+                <div class="stackly-sport-memberhub-stat-top">
+
+                    <div class="stackly-sport-memberhub-stat-icon warning">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+                    <span class="stackly-sport-memberhub-stat-badge warning">
+                        Attention
+                    </span>
+
+                </div>
+
+                <span class="stackly-sport-memberhub-stat-label">
+                    Renewals Due
+                </span>
+
+                <strong class="stackly-sport-memberhub-stat-number">
+                    14
+                </strong>
+
+                <small>
+                    Within the next 30 days
+                </small>
+
+            </article>
+
+        </div>
+
+ 
+
+        <!-- =================================================
+             MEMBER PERFORMANCE + MEMBERSHIP DISTRIBUTION
+        ================================================== -->
+
+        <div class="stackly-sport-memberhub-analysis">
+
+
+            <!-- MEMBER GROWTH -->
+
+            <article class="stackly-sport-memberhub-panel stackly-sport-memberhub-growth-panel"
+                     data-aos="fade-right">
+
+                <div class="stackly-sport-memberhub-panel-head">
+
+                    <div>
+
+                        <span>
+                            MEMBER ANALYTICS
+                        </span>
+
+                        <h3>
+                            Membership Growth
+                        </h3>
+
+                    </div>
+
+                    <button type="button"
+                            class="stackly-sport-memberhub-period">
+
+                        Last 6 Months
+
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-sport-memberhub-growth-summary">
+
+                    <strong>
+                        248
+                    </strong>
+
+                    <span>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        18.6%
+                    </span>
+
+                    <p>
+                        Total active community growth
+                    </p>
+
+                </div>
+
+
+                <!-- CHART -->
+
+                <div class="stackly-sport-memberhub-chart">
+
+                    <div class="stackly-sport-memberhub-chart-lines">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="stackly-sport-memberhub-chart-bars">
+
+                        <div style="height:35%;">
+                            <span></span>
+                        </div>
+
+                        <div style="height:45%;">
+                            <span></span>
+                        </div>
+
+                        <div style="height:53%;">
+                            <span></span>
+                        </div>
+
+                        <div style="height:67%;">
+                            <span></span>
+                        </div>
+
+                        <div style="height:78%;">
+                            <span></span>
+                        </div>
+
+                        <div style="height:94%;">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-memberhub-chart-labels">
+
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Oct</span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- MEMBERSHIP MIX -->
+
+            <article class="stackly-sport-memberhub-panel stackly-sport-memberhub-mix-panel"
+                     data-aos="fade-left">
+
+                <div class="stackly-sport-memberhub-panel-head">
+
+                    <div>
+
+                        <span>
+                            MEMBERSHIP MIX
+                        </span>
+
+                        <h3>
+                            Plan Distribution
+                        </h3>
+
+                    </div>
+
+                    <a href="404-admin.html">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-sport-memberhub-donut-wrap">
+
+                    <div class="stackly-sport-memberhub-donut">
+
+                        <div class="stackly-sport-memberhub-donut-center">
+
+                            <strong>
+                                248
+                            </strong>
+
+                            <span>
+                                Members
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-memberhub-plan-list">
+
+
+                    <div class="stackly-sport-memberhub-plan">
+
+                        <span class="premium"></span>
+
+                        <div>
+                            <strong>Premium</strong>
+                            <small>96 Members</small>
+                        </div>
+
+                        <b>39%</b>
+
+                    </div>
+
+
+                    <div class="stackly-sport-memberhub-plan">
+
+                        <span class="standard"></span>
+
+                        <div>
+                            <strong>Standard</strong>
+                            <small>112 Members</small>
+                        </div>
+
+                        <b>45%</b>
+
+                    </div>
+
+
+                    <div class="stackly-sport-memberhub-plan">
+
+                        <span class="basic"></span>
+
+                        <div>
+                            <strong>Basic</strong>
+                            <small>40 Members</small>
+                        </div>
+
+                        <b>16%</b>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+
+        <!-- =================================================
+             MEMBER ACTIVITY HIGHLIGHTS
+        ================================================== -->
+
+        <section class="stackly-sport-memberhub-activity"
+                 data-aos="fade-up">
+
+            <div class="stackly-sport-memberhub-section-heading">
+
+                <div>
+
+                    <span>
+                        COMMUNITY PULSE
+                    </span>
+
+                    <h3>
+                        Member Activity Highlights
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    View Activity
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-sport-memberhub-activity-grid">
+
+
+                <!-- CHECK INS -->
+
+                <article class="stackly-sport-memberhub-activity-card">
+
+                    <div class="stackly-sport-memberhub-activity-icon">
+
+                        <i class="fa-solid fa-person-running"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TODAY'S CHECK-INS
+                        </span>
+
+                        <strong>
+                            184
+                        </strong>
+
+                        <small>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            14.2% from yesterday
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ACTIVE NOW -->
+
+                <article class="stackly-sport-memberhub-activity-card">
+
+                    <div class="stackly-sport-memberhub-activity-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ACTIVE RIGHT NOW
+                        </span>
+
+                        <strong>
+                            42
+                        </strong>
+
+                        <small>
+                            Members currently training
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ATTENDANCE -->
+
+                <article class="stackly-sport-memberhub-activity-card">
+
+                    <div class="stackly-sport-memberhub-activity-icon">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            MONTHLY ATTENDANCE
+                        </span>
+
+                        <strong>
+                            86%
+                        </strong>
+
+                        <small>
+                            Above club target
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ENGAGEMENT -->
+
+                <article class="stackly-sport-memberhub-activity-card">
+
+                    <div class="stackly-sport-memberhub-activity-icon">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ENGAGEMENT
+                        </span>
+
+                        <strong>
+                            92%
+                        </strong>
+
+                        <small>
+                            Active member participation
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MEMBERS BY SPORT
+        ================================================== -->
+
+        <section class="stackly-sport-memberhub-sports"
+                 data-aos="fade-up">
+
+            <div class="stackly-sport-memberhub-section-heading">
+
+                <div>
+
+                    <span>
+                        SPORTS COMMUNITY
+                    </span>
+
+                    <h3>
+                        Members By Sport
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    View Reports
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-sport-memberhub-sport-grid">
+
+
+                <!-- FOOTBALL -->
+
+                <article class="stackly-sport-memberhub-sport-card">
+
+                    <div class="stackly-sport-memberhub-sport-top">
+
+                        <div class="stackly-sport-memberhub-sport-icon">
+
+                            <i class="fa-solid fa-futbol"></i>
+
+                        </div>
+
+                        <span>
+                            33%
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Football
+                    </h4>
+
+                    <strong>
+                        82
+                    </strong>
+
+                    <span>
+                        Active members
+                    </span>
+
+                    <div class="stackly-sport-memberhub-progress">
+
+                        <span style="width:82%;"></span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CRICKET -->
+
+                <article class="stackly-sport-memberhub-sport-card">
+
+                    <div class="stackly-sport-memberhub-sport-top">
+
+                        <div class="stackly-sport-memberhub-sport-icon">
+
+                            <i class="fa-solid fa-baseball-bat-ball"></i>
+
+                        </div>
+
+                        <span>
+                            26%
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Cricket
+                    </h4>
+
+                    <strong>
+                        64
+                    </strong>
+
+                    <span>
+                        Active members
+                    </span>
+
+                    <div class="stackly-sport-memberhub-progress">
+
+                        <span style="width:64%;"></span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TENNIS -->
+
+                <article class="stackly-sport-memberhub-sport-card">
+
+                    <div class="stackly-sport-memberhub-sport-top">
+
+                        <div class="stackly-sport-memberhub-sport-icon">
+
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+
+                        </div>
+
+                        <span>
+                            19%
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Tennis
+                    </h4>
+
+                    <strong>
+                        48
+                    </strong>
+
+                    <span>
+                        Active members
+                    </span>
+
+                    <div class="stackly-sport-memberhub-progress">
+
+                        <span style="width:48%;"></span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FITNESS -->
+
+                <article class="stackly-sport-memberhub-sport-card">
+
+                    <div class="stackly-sport-memberhub-sport-top">
+
+                        <div class="stackly-sport-memberhub-sport-icon">
+
+                            <i class="fa-solid fa-dumbbell"></i>
+
+                        </div>
+
+                        <span>
+                            22%
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Fitness
+                    </h4>
+
+                    <strong>
+                        54
+                    </strong>
+
+                    <span>
+                        Active members
+                    </span>
+
+                    <div class="stackly-sport-memberhub-progress">
+
+                        <span style="width:54%;"></span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECENT REGISTRATIONS
+        ================================================== -->
+
+        <section class="stackly-sport-memberhub-registrations"
+                 data-aos="fade-up">
+
+            <div class="stackly-sport-memberhub-section-heading">
+
+                <div>
+
+                    <span>
+                        NEW COMMUNITY MEMBERS
+                    </span>
+
+                    <h3>
+                        Recent Registrations
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    View All Members
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-sport-memberhub-registration-list">
+
+
+                <!-- MEMBER 1 -->
+
+                <article class="stackly-sport-memberhub-registration">
+
+                    <div class="stackly-sport-memberhub-registration-avatar">
+                        AK
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-info">
+
+                        <strong>
+                            Arjun Kumar
+                        </strong>
+
+                        <span>
+                            arjun@example.com
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-details">
+
+                        <span>
+                            Registered
+                        </span>
+
+                        <strong>
+                            01 Oct 2026
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-sport">
+                        Football
+                    </div>
+
+                    <span class="stackly-sport-memberhub-status active">
+                        Active
+                    </span>
+
+                    <a href="404-admin.html"
+                       class="stackly-sport-memberhub-arrow"
+                       aria-label="View Arjun Kumar">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- MEMBER 2 -->
+
+                <article class="stackly-sport-memberhub-registration">
+
+                    <div class="stackly-sport-memberhub-registration-avatar">
+                        SP
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-info">
+
+                        <strong>
+                            Sneha Priya
+                        </strong>
+
+                        <span>
+                            sneha@example.com
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-details">
+
+                        <span>
+                            Registered
+                        </span>
+
+                        <strong>
+                            30 Sep 2026
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-sport">
+                        Tennis
+                    </div>
+
+                    <span class="stackly-sport-memberhub-status pending">
+                        Pending
+                    </span>
+
+                    <a href="404-admin.html"
+                       class="stackly-sport-memberhub-arrow"
+                       aria-label="View Sneha Priya">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- MEMBER 3 -->
+
+                <article class="stackly-sport-memberhub-registration">
+
+                    <div class="stackly-sport-memberhub-registration-avatar">
+                        RV
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-info">
+
+                        <strong>
+                            Rohan Varma
+                        </strong>
+
+                        <span>
+                            rohan@example.com
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-details">
+
+                        <span>
+                            Registered
+                        </span>
+
+                        <strong>
+                            29 Sep 2026
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-sport">
+                        Cricket
+                    </div>
+
+                    <span class="stackly-sport-memberhub-status active">
+                        Active
+                    </span>
+
+                    <a href="404-admin.html"
+                       class="stackly-sport-memberhub-arrow"
+                       aria-label="View Rohan Varma">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- MEMBER 4 -->
+
+                <article class="stackly-sport-memberhub-registration">
+
+                    <div class="stackly-sport-memberhub-registration-avatar">
+                        NS
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-info">
+
+                        <strong>
+                            Nisha Sharma
+                        </strong>
+
+                        <span>
+                            nisha@example.com
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-details">
+
+                        <span>
+                            Registered
+                        </span>
+
+                        <strong>
+                            28 Sep 2026
+                        </strong>
+
+                    </div>
+
+                    <div class="stackly-sport-memberhub-registration-sport">
+                        Fitness
+                    </div>
+
+                    <span class="stackly-sport-memberhub-status active">
+                        Active
+                    </span>
+
+                    <a href="404-admin.html"
+                       class="stackly-sport-memberhub-arrow"
+                       aria-label="View Nisha Sharma">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RENEWAL CENTER
+        ================================================== -->
+
+        <section class="stackly-sport-memberhub-renewals"
+                 data-aos="zoom-in">
+
+            <div class="stackly-sport-memberhub-renewal-heading">
+
+                <div>
+
+                    <span>
+                        MEMBERSHIP CARE
+                    </span>
+
+                    <h3>
+                        Renewal Center
+                    </h3>
+
+                    <p>
+                        Keep members engaged by staying ahead
+                        of upcoming membership expirations.
+                    </p>
+
+                </div>
+
+                <div class="stackly-sport-memberhub-renewal-total">
+
+                    <strong>
+                        14
+                    </strong>
+
+                    <span>
+                        Renewals Due
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-sport-memberhub-renewal-grid">
+
+
+                <!-- RENEWAL 1 -->
+
+                <article class="stackly-sport-memberhub-renewal-card">
+
+                    <div class="stackly-sport-memberhub-renewal-avatar">
+                        AR
+                    </div>
+
+                    <div class="stackly-sport-memberhub-renewal-info">
+
+                        <strong>
+                            Ankit Raj
+                        </strong>
+
+                        <span>
+                            Premium Membership
+                        </span>
+
+                        <small>
+                            Expires in 3 days
+                        </small>
+
+                    </div>
+
+                    <a href="404-admin.html"
+                       aria-label="Renew Ankit Raj">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- RENEWAL 2 -->
+
+                <article class="stackly-sport-memberhub-renewal-card">
+
+                    <div class="stackly-sport-memberhub-renewal-avatar">
+                        PS
+                    </div>
+
+                    <div class="stackly-sport-memberhub-renewal-info">
+
+                        <strong>
+                            Priya Shah
+                        </strong>
+
+                        <span>
+                            Standard Membership
+                        </span>
+
+                        <small>
+                            Expires in 7 days
+                        </small>
+
+                    </div>
+
+                    <a href="404-admin.html"
+                       aria-label="Renew Priya Shah">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- RENEWAL 3 -->
+
+                <article class="stackly-sport-memberhub-renewal-card">
+
+                    <div class="stackly-sport-memberhub-renewal-avatar">
+                        VS
+                    </div>
+
+                    <div class="stackly-sport-memberhub-renewal-info">
+
+                        <strong>
+                            Vikram Shah
+                        </strong>
+
+                        <span>
+                            Premium Membership
+                        </span>
+
+                        <small>
+                            Expires in 10 days
+                        </small>
+
+                    </div>
+
+                    <a href="404-admin.html"
+                       aria-label="Renew Vikram Shah">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MEMBER SPOTLIGHT
+        ================================================== -->
+
+        <section class="stackly-sport-memberhub-spotlight"
+                 data-aos="fade-up">
+
+            <div class="stackly-sport-memberhub-section-heading">
+
+                <div>
+
+                    <span>
+                        MEMBER SPOTLIGHT
+                    </span>
+
+                    <h3>
+                        Top Community Performers
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    Full Performance Report
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-sport-memberhub-spotlight-grid">
+
+
+                <!-- MEMBER -->
+
+                <article class="stackly-sport-memberhub-spotlight-card">
+
+                    <div class="stackly-sport-memberhub-spotlight-top">
+
+                        <div class="stackly-sport-memberhub-spotlight-avatar">
+                            AK
+                        </div>
+
+                        <span class="stackly-sport-memberhub-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Arjun Kumar
+                    </h4>
+
+                    <p>
+                        Football Member
+                    </p>
+
+                    <div class="stackly-sport-memberhub-performance">
+
+                        <div>
+                            <small>
+                                Attendance
+                            </small>
+
+                            <strong>
+                                94%
+                            </strong>
+                        </div>
+
+                        <div>
+                            <small>
+                                Sessions
+                            </small>
+
+                            <strong>
+                                28
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMBER -->
+
+                <article class="stackly-sport-memberhub-spotlight-card">
+
+                    <div class="stackly-sport-memberhub-spotlight-top">
+
+                        <div class="stackly-sport-memberhub-spotlight-avatar">
+                            PM
+                        </div>
+
+                        <span class="stackly-sport-memberhub-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Priya Menon
+                    </h4>
+
+                    <p>
+                        Tennis Member
+                    </p>
+
+                    <div class="stackly-sport-memberhub-performance">
+
+                        <div>
+                            <small>
+                                Attendance
+                            </small>
+
+                            <strong>
+                                91%
+                            </strong>
+                        </div>
+
+                        <div>
+                            <small>
+                                Sessions
+                            </small>
+
+                            <strong>
+                                24
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMBER -->
+
+                <article class="stackly-sport-memberhub-spotlight-card">
+
+                    <div class="stackly-sport-memberhub-spotlight-top">
+
+                        <div class="stackly-sport-memberhub-spotlight-avatar">
+                            RK
+                        </div>
+
+                        <span class="stackly-sport-memberhub-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Rahul Kumar
+                    </h4>
+
+                    <p>
+                        Cricket Member
+                    </p>
+
+                    <div class="stackly-sport-memberhub-performance">
+
+                        <div>
+                            <small>
+                                Attendance
+                            </small>
+
+                            <strong>
+                                89%
+                            </strong>
+                        </div>
+
+                        <div>
+                            <small>
+                                Sessions
+                            </small>
+
+                            <strong>
+                                22
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMBER -->
+
+                <article class="stackly-sport-memberhub-spotlight-card">
+
+                    <div class="stackly-sport-memberhub-spotlight-top">
+
+                        <div class="stackly-sport-memberhub-spotlight-avatar">
+                            VS
+                        </div>
+
+                        <span class="stackly-sport-memberhub-status active">
+                            Active
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Vikram Shah
+                    </h4>
+
+                    <p>
+                        Fitness Member
+                    </p>
+
+                    <div class="stackly-sport-memberhub-performance">
+
+                        <div>
+                            <small>
+                                Attendance
+                            </small>
+
+                            <strong>
+                                96%
+                            </strong>
+                        </div>
+
+                        <div>
+                            <small>
+                                Sessions
+                            </small>
+
+                            <strong>
+                                31
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MEMBER MANAGEMENT CTA
+        ================================================== -->
+
+        <section class="stackly-sport-memberhub-cta"
+                 data-aos="zoom-in">
+
+            <div class="stackly-sport-memberhub-cta-icon">
+
+                <i class="fa-solid fa-people-group"></i>
+
+            </div>
+
+            <div class="stackly-sport-memberhub-cta-content">
+
+                <span>
+                    CLUB COMMUNITY
+                </span>
+
+                <h3>
+                    Build a Stronger Sports Community.
+                </h3>
+
+                <p>
+                    Manage registrations, memberships and
+                    member engagement from one place.
+                </p>
+
+            </div>
+
+            <div class="stackly-sport-memberhub-cta-actions">
+
+                <a href="404-admin.html"
+                   class="stackly-sport-memberhub-cta-primary">
+
+                    Manage Members
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="404-admin.html"
+                   class="stackly-sport-memberhub-cta-secondary">
+
+                    Member Reports
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+
+
+</main>
+
+
+<!-- =========================================================
+     AOS JS
+========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JS
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+ 

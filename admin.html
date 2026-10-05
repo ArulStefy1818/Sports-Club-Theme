@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Admin Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Sports Dashboard, Admin Dashboard">
+
+    <title>Stackly Sport Club | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+
+<body class="stackly-sport-admin-body">
+
+
+<!-- =========================================================
+     MOBILE OVERLAY
+========================================================= -->
+
+<div class="stackly-sport-admin-overlay"
+     id="sportAdminOverlay">
+</div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="stackly-sport-admin-sidebar"
+       id="sportAdminSidebar">
+
+
+    <!-- =====================================================
+         SIDEBAR TOP
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-top">
+
+        <a href="admin.html"
+           class="stackly-sport-admin-logo"
+           aria-label="Stackly Sport Club Home">
+
+            <img src="Stackly-logo-Blue.webp"
+                 alt="Stackly Sport Club Logo">
+
+        </a>
+
+
+        <!-- MOBILE CLOSE BUTTON -->
+
+        <button type="button"
+                class="stackly-sport-admin-close"
+                id="sportAdminClose"
+                aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN PROFILE
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-profile">
+
+        <div class="stackly-sport-admin-avatar">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+        <div class="stackly-sport-admin-profile-info">
+
+            <strong>Administrator</strong>
+
+            <span>Sports Club Admin</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR NAVIGATION
+    ====================================================== -->
+
+    <nav class="stackly-sport-admin-nav"
+         aria-label="Admin Dashboard Navigation">
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MAIN MENU
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="admin.html"
+           class="stackly-sport-admin-nav-link active">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- MEMBERS -->
+
+        <a href="admin-members.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Members
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                248
+            </span>
+
+        </a>
+
+
+        <!-- TRAINERS -->
+
+        <a href="admin-trainers.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Trainers
+            </span>
+
+        </a>
+
+
+        <!-- PROGRAMS -->
+
+        <a href="admin-programs.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Programs
+            </span>
+
+        </a>
+
+
+        <!-- BOOKINGS -->
+
+        <a href="admin-bookings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Bookings
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                18
+            </span>
+
+        </a>
+
+
+        <!-- PAYMENTS -->
+
+        <a href="admin-payments.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Payments
+            </span>
+
+        </a>
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MANAGEMENT
+        </div>
+
+
+        <!-- SPORTS -->
+
+        <a href="admin-sports.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Sports
+            </span>
+
+        </a>
+
+
+        <!-- EVENTS -->
+
+        <a href="admin-events.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-flag-checkered"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Events
+            </span>
+
+        </a>
+
+ 
+        <!-- SETTINGS -->
+
+        <a href="admin-settings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         SIDEBAR BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-bottom">
+
+        <button type="button"
+                class="stackly-sport-admin-logout"
+                id="sportAdminLogout">
+
+            <span>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </span>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN AREA
+========================================================= -->
+
+<main class="stackly-sport-admin-main">
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <header class="stackly-sport-admin-header">
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button type="button"
+                class="stackly-sport-admin-menu"
+                id="sportAdminMenu"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="stackly-sport-admin-header-title">
+
+            <span class="stackly-sport-admin-header-eyebrow">
+                STACKLY SPORT CLUB
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+        </div>
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="stackly-sport-admin-header-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <a href="404-admin.html"><button type="button"
+                    class="stackly-sport-admin-notification"
+                    aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button></a>
+
+
+            <!-- EMAIL DISPLAY -->
+
+            <div class="stackly-sport-admin-email-box">
+
+                <div class="stackly-sport-admin-email-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-sport-admin-email-content">
+
+                    <span>
+                        Signed in as
+                    </span>
+
+                    <strong id="sportAdminEmail">
+                        admin@stacklysport.com
+                    </strong>
+
+                </div>
+
+            </div>
+ 
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         DASHBOARD CONTENT
+    ====================================================== -->
+
+    <section class="stackly-sport-admin-content">
+
+
+        <!-- =================================================
+             WELCOME
+        ================================================== -->
+
+        <div class="stackly-sport-admin-welcome"
+             data-aos="fade-up">
+
+            <div>
+
+                <span class="stackly-sport-admin-section-label">
+                    OVERVIEW
+                </span>
+
+                <h2>
+                    Welcome back, Admin.
+                </h2>
+
+                <p>
+                    Manage your sports club, members,
+                    programs and daily activities from one place.
+                </p>
+
+            </div>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-admin-primary-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Create Event
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+        <div class="stackly-sport-admin-stats-grid">
+
+
+            <!-- TOTAL MEMBERS -->
+
+            <article class="stackly-sport-admin-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-admin-stat-top">
+
+                    <span class="stackly-sport-admin-stat-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </span>
+
+                    <span class="stackly-sport-admin-stat-change positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        8.4%
+
+                    </span>
+
+                </div>
+
+                <span class="stackly-sport-admin-stat-label">
+                    Total Members
+                </span>
+
+                <strong class="stackly-sport-admin-stat-number">
+                    248
+                </strong>
+
+                <p>
+                    Compared with last month
+                </p>
+
+            </article>
+
+
+            <!-- ACTIVE MEMBERS -->
+
+            <article class="stackly-sport-admin-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="150">
+
+                <div class="stackly-sport-admin-stat-top">
+
+                    <span class="stackly-sport-admin-stat-icon">
+
+                        <i class="fa-solid fa-person-running"></i>
+
+                    </span>
+
+                    <span class="stackly-sport-admin-stat-change positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        5.2%
+
+                    </span>
+
+                </div>
+
+                <span class="stackly-sport-admin-stat-label">
+                    Active Members
+                </span>
+
+                <strong class="stackly-sport-admin-stat-number">
+                    216
+                </strong>
+
+                <p>
+                    Currently active members
+                </p>
+
+            </article>
+
+
+            <!-- ACTIVE PROGRAMS -->
+
+            <article class="stackly-sport-admin-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+
+                <div class="stackly-sport-admin-stat-top">
+
+                    <span class="stackly-sport-admin-stat-icon">
+
+                        <i class="fa-solid fa-dumbbell"></i>
+
+                    </span>
+
+                    <span class="stackly-sport-admin-stat-change positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        12.6%
+
+                    </span>
+
+                </div>
+
+                <span class="stackly-sport-admin-stat-label">
+                    Active Programs
+                </span>
+
+                <strong class="stackly-sport-admin-stat-number">
+                    16
+                </strong>
+
+                <p>
+                    Training programs running
+                </p>
+
+            </article>
+
+
+            <!-- MONTHLY REVENUE -->
+
+            <article class="stackly-sport-admin-stat-card"
+                     data-aos="fade-up"
+                     data-aos-delay="250">
+
+                <div class="stackly-sport-admin-stat-top">
+
+                    <span class="stackly-sport-admin-stat-icon">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </span>
+
+                    <span class="stackly-sport-admin-stat-change positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        10.8%
+
+                    </span>
+
+                </div>
+
+                <span class="stackly-sport-admin-stat-label">
+                    Monthly Revenue
+                </span>
+
+                <strong class="stackly-sport-admin-stat-number">
+                    ₹4.82L
+                </strong>
+
+                <p>
+                    Revenue generated this month
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN GRID
+        ================================================== -->
+
+        <div class="stackly-sport-admin-dashboard-grid">
+
+
+            <!-- =================================================
+                 RECENT MEMBERS
+            ================================================== -->
+
+            <section class="stackly-sport-admin-panel stackly-sport-admin-members-panel"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-admin-panel-header">
+
+                    <div>
+
+                        <span class="stackly-sport-admin-panel-label">
+                            MEMBERS
+                        </span>
+
+                        <h3>
+                            Recent Members
+                        </h3>
+
+                    </div>
+
+                    <a href="404-admin.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-sport-admin-table-wrapper">
+
+                    <table class="stackly-sport-admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Member
+                                </th>
+
+                                <th>
+                                    Sport
+                                </th>
+
+                                <th>
+                                    Plan
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="stackly-sport-admin-member">
+
+                                        <span class="member-avatar">
+                                            AS
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Arun Kumar
+                                            </strong>
+
+                                            <span>
+                                                arun@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Football
+                                </td>
+
+                                <td>
+                                    Premium
+                                </td>
+
+                                <td>
+
+                                    <span class="stackly-sport-admin-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="stackly-sport-admin-member">
+
+                                        <span class="member-avatar">
+                                            RK
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Rahul Kumar
+                                            </strong>
+
+                                            <span>
+                                                rahul@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Cricket
+                                </td>
+
+                                <td>
+                                    Standard
+                                </td>
+
+                                <td>
+
+                                    <span class="stackly-sport-admin-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="stackly-sport-admin-member">
+
+                                        <span class="member-avatar">
+                                            PM
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Priya Menon
+                                            </strong>
+
+                                            <span>
+                                                priya@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Tennis
+                                </td>
+
+                                <td>
+                                    Premium
+                                </td>
+
+                                <td>
+
+                                    <span class="stackly-sport-admin-status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="stackly-sport-admin-member">
+
+                                        <span class="member-avatar">
+                                            VK
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Vikram Kumar
+                                            </strong>
+
+                                            <span>
+                                                vikram@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Fitness
+                                </td>
+
+                                <td>
+                                    Standard
+                                </td>
+
+                                <td>
+
+                                    <span class="stackly-sport-admin-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 UPCOMING SESSIONS
+            ================================================== -->
+
+            <section class="stackly-sport-admin-panel stackly-sport-admin-session-panel"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-sport-admin-panel-header">
+
+                    <div>
+
+                        <span class="stackly-sport-admin-panel-label">
+                            SCHEDULE
+                        </span>
+
+                        <h3>
+                            Upcoming Sessions
+                        </h3>
+
+                    </div>
+
+                    <a href="404-admin.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-sport-admin-sessions">
+
+
+                    <!-- SESSION 1 -->
+
+                    <div class="stackly-sport-admin-session">
+
+                        <div class="stackly-sport-admin-session-date">
+
+                            <strong>
+                                02
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-admin-session-info">
+
+                            <strong>
+                                Football Training
+                            </strong>
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                06:30 PM – 08:00 PM
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Main Ground
+                            </span>
+
+                        </div>
+
+                        <span class="stackly-sport-admin-session-count">
+                            24
+                        </span>
+
+                    </div>
+
+
+                    <!-- SESSION 2 -->
+
+                    <div class="stackly-sport-admin-session">
+
+                        <div class="stackly-sport-admin-session-date">
+
+                            <strong>
+                                03
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-admin-session-info">
+
+                            <strong>
+                                Tennis Coaching
+                            </strong>
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                07:00 AM – 08:30 AM
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Court 02
+                            </span>
+
+                        </div>
+
+                        <span class="stackly-sport-admin-session-count">
+                            12
+                        </span>
+
+                    </div>
+
+
+                    <!-- SESSION 3 -->
+
+                    <div class="stackly-sport-admin-session">
+
+                        <div class="stackly-sport-admin-session-date">
+
+                            <strong>
+                                04
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-admin-session-info">
+
+                            <strong>
+                                Strength & Fitness
+                            </strong>
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                05:30 PM – 06:30 PM
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Fitness Studio
+                            </span>
+
+                        </div>
+
+                        <span class="stackly-sport-admin-session-count">
+                            18
+                        </span>
+
+                    </div>
+
+
+                    <!-- SESSION 4 -->
+
+                    <div class="stackly-sport-admin-session">
+
+                        <div class="stackly-sport-admin-session-date">
+
+                            <strong>
+                                05
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-admin-session-info">
+
+                            <strong>
+                                Cricket Practice
+                            </strong>
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                06:00 AM – 08:00 AM
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Cricket Ground
+                            </span>
+
+                        </div>
+
+                        <span class="stackly-sport-admin-session-count">
+                            20
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
+             QUICK ACTIONS
+        ================================================== -->
+
+        <section class="stackly-sport-admin-quick-section"
+                 data-aos="fade-up">
+
+            <div class="stackly-sport-admin-panel-header">
+
+                <div>
+
+                    <span class="stackly-sport-admin-panel-label">
+                        QUICK ACTIONS
+                    </span>
+
+                    <h3>
+                        Manage Your Club
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-sport-admin-actions-grid">
+
+
+                <a href="404-admin.html"
+                   class="stackly-sport-admin-action-card">
+
+                    <span>
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Add Member
+                        </strong>
+
+                        <small>
+                            Register a new club member
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="404-admin.html"
+                   class="stackly-sport-admin-action-card">
+
+                    <span>
+
+                        <i class="fa-solid fa-dumbbell"></i>
+
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Create Program
+                        </strong>
+
+                        <small>
+                            Add a new training program
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="404-admin.html"
+                   class="stackly-sport-admin-action-card">
+
+                    <span>
+
+                        <i class="fa-solid fa-calendar-plus"></i>
+
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Schedule Event
+                        </strong>
+
+                        <small>
+                            Organize an upcoming event
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="404-admin.html"
+                   class="stackly-sport-admin-action-card">
+
+                    <span>
+
+                        <i class="fa-solid fa-file-chart-column"></i>
+
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            View Reports
+                        </strong>
+
+                        <small>
+                            Check club performance
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     AOS JS
+========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JS
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+ 

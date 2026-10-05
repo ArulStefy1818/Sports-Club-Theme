@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Admin Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Sports Dashboard, Admin Dashboard">
+
+    <title>Stackly Sport Club | Admin Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+
+<body class="stackly-sport-admin-body">
+
+
+<!-- =========================================================
+     MOBILE OVERLAY
+========================================================= -->
+
+<div class="stackly-sport-admin-overlay"
+     id="sportAdminOverlay">
+</div>
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="stackly-sport-admin-sidebar"
+       id="sportAdminSidebar">
+
+
+    <!-- =====================================================
+         SIDEBAR TOP
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-top">
+
+        <a href="admin.html"
+           class="stackly-sport-admin-logo"
+           aria-label="Stackly Sport Club Home">
+
+            <img src="Stackly-logo-Blue.webp"
+                 alt="Stackly Sport Club Logo">
+
+        </a>
+
+
+        <!-- MOBILE CLOSE BUTTON -->
+
+        <button type="button"
+                class="stackly-sport-admin-close"
+                id="sportAdminClose"
+                aria-label="Close navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN PROFILE
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-profile">
+
+        <div class="stackly-sport-admin-avatar">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+        </div>
+
+        <div class="stackly-sport-admin-profile-info">
+
+            <strong>Administrator</strong>
+
+            <span>Sports Club Admin</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR NAVIGATION
+    ====================================================== -->
+
+    <nav class="stackly-sport-admin-nav"
+         aria-label="Admin Dashboard Navigation">
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MAIN MENU
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="admin.html"
+           class="stackly-sport-admin-nav-link active">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- MEMBERS -->
+
+        <a href="admin-members.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Members
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                248
+            </span>
+
+        </a>
+
+
+        <!-- TRAINERS -->
+
+        <a href="admin-trainers.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Trainers
+            </span>
+
+        </a>
+
+
+        <!-- PROGRAMS -->
+
+        <a href="admin-programs.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Programs
+            </span>
+
+        </a>
+
+
+        <!-- BOOKINGS -->
+
+        <a href="admin-bookings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Bookings
+            </span>
+
+            <span class="stackly-sport-admin-nav-count">
+                18
+            </span>
+
+        </a>
+
+
+        <!-- PAYMENTS -->
+
+        <a href="admin-payments.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Payments
+            </span>
+
+        </a>
+
+
+        <div class="stackly-sport-admin-nav-label">
+            MANAGEMENT
+        </div>
+
+
+        <!-- SPORTS -->
+
+        <a href="admin-sports.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Sports
+            </span>
+
+        </a>
+
+
+        <!-- EVENTS -->
+
+        <a href="admin-events.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-flag-checkered"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Events
+            </span>
+
+        </a>
+
+ 
+        <!-- SETTINGS -->
+
+        <a href="admin-settings.html"
+           class="stackly-sport-admin-nav-link">
+
+            <span class="stackly-sport-admin-nav-icon">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </span>
+
+            <span class="stackly-sport-admin-nav-text">
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         SIDEBAR BOTTOM
+    ====================================================== -->
+
+    <div class="stackly-sport-admin-sidebar-bottom">
+
+        <button type="button"
+                class="stackly-sport-admin-logout"
+                id="sportAdminLogout">
+
+            <span>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </span>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================================
+     MAIN AREA
+========================================================= -->
+
+<main class="stackly-sport-admin-main">
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <header class="stackly-sport-admin-header">
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button type="button"
+                class="stackly-sport-admin-menu"
+                id="sportAdminMenu"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="stackly-sport-admin-header-title">
+
+            <span class="stackly-sport-admin-header-eyebrow">
+                STACKLY SPORT CLUB
+            </span>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+        </div>
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="stackly-sport-admin-header-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <a href="404-admin.html"><button type="button"
+                    class="stackly-sport-admin-notification"
+                    aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span></span>
+
+            </button></a>
+
+
+            <!-- EMAIL DISPLAY -->
+
+            <div class="stackly-sport-admin-email-box">
+
+                <div class="stackly-sport-admin-email-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-sport-admin-email-content">
+
+                    <span>
+                        Signed in as
+                    </span>
+
+                    <strong id="sportAdminEmail">
+                        admin@stacklysport.com
+                    </strong>
+
+                </div>
+
+            </div>
+ 
+
+        </div>
+
+    </header>
+
+
+<!-- =========================================================
+     STACKLY SPORT CLUB
+     PROGRAMS MANAGEMENT CONTENT
+========================================================= -->
+
+<section class="stackly-sport-programs-admin-content">
+
+    <!-- =====================================================
+         PROGRAMS HERO / INTRO
+    ====================================================== -->
+
+    <div class="stackly-sport-programs-admin-intro"
+         data-aos="fade-up">
+
+        <div class="stackly-sport-programs-admin-intro-text">
+
+            <span class="stackly-sport-programs-admin-kicker">
+                PROGRAM MANAGEMENT
+            </span>
+
+            <h2>
+                Train Smarter.<br>
+                Perform Stronger.
+            </h2>
+
+            <p>
+                Create, manage and monitor sports programs designed
+                to help every member improve performance, strength
+                and overall fitness.
+            </p>
+
+        </div>
+
+        <div class="stackly-sport-programs-admin-intro-action">
+
+            <a href="404-admin.html"
+               class="stackly-sport-programs-admin-primary-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Create Program
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PROGRAM OVERVIEW STATS
+    ====================================================== -->
+
+    <div class="stackly-sport-programs-admin-stats">
+
+        <!-- ACTIVE PROGRAMS -->
+
+        <article class="stackly-sport-program-stat-card"
+                 data-aos="fade-up"
+                 data-aos-delay="100">
+
+            <div class="stackly-sport-program-stat-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+            <div class="stackly-sport-program-stat-info">
+
+                <span>
+                    Active Programs
+                </span>
+
+                <strong>
+                    24
+                </strong>
+
+                <small>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12% this month
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <!-- PARTICIPANTS -->
+
+        <article class="stackly-sport-program-stat-card"
+                 data-aos="fade-up"
+                 data-aos-delay="180">
+
+            <div class="stackly-sport-program-stat-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div class="stackly-sport-program-stat-info">
+
+                <span>
+                    Total Participants
+                </span>
+
+                <strong>
+                    486
+                </strong>
+
+                <small>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    8.6% this month
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <!-- SESSIONS -->
+
+        <article class="stackly-sport-program-stat-card"
+                 data-aos="fade-up"
+                 data-aos-delay="260">
+
+            <div class="stackly-sport-program-stat-icon">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+            </div>
+
+            <div class="stackly-sport-program-stat-info">
+
+                <span>
+                    Weekly Sessions
+                </span>
+
+                <strong>
+                    68
+                </strong>
+
+                <small>
+                    5 sessions today
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <!-- COMPLETION -->
+
+        <article class="stackly-sport-program-stat-card"
+                 data-aos="fade-up"
+                 data-aos-delay="340">
+
+            <div class="stackly-sport-program-stat-icon">
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+            </div>
+
+            <div class="stackly-sport-program-stat-info">
+
+                <span>
+                    Completion Rate
+                </span>
+
+                <strong>
+                    91%
+                </strong>
+
+                <small>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    4.2% improvement
+                </small>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- =====================================================
+         FEATURED PROGRAMS
+    ====================================================== -->
+
+    <div class="stackly-sport-programs-admin-heading"
+         data-aos="fade-up">
+
+        <div>
+
+            <span>
+                FEATURED PROGRAMS
+            </span>
+
+            <h3>
+                Programs In Action
+            </h3>
+
+        </div>
+
+        <a href="404-admin.html">
+            View All
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-sport-programs-admin-grid">
+
+
+        <!-- PERFORMANCE PROGRAM -->
+
+        <article class="stackly-sport-admin-program-card"
+                 data-aos="zoom-in"
+                 data-aos-delay="100">
+
+            <div class="stackly-sport-admin-program-image">
+
+                <img src="athletics.webp"
+                     alt="Athletic performance training">
+
+                <span class="stackly-sport-admin-program-status">
+                    ACTIVE
+                </span>
+
+            </div>
+
+            <div class="stackly-sport-admin-program-body">
+
+                <span class="stackly-sport-admin-program-category">
+                    PERFORMANCE
+                </span>
+
+                <h4>
+                    Athletic Performance
+                </h4>
+
+                <p>
+                    Speed, power, endurance and athletic performance
+                    development for competitive athletes.
+                </p>
+
+                <div class="stackly-sport-admin-program-meta">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        86 Members
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        5 Days
+                    </span>
+
+                </div>
+
+                <div class="stackly-sport-admin-program-footer">
+
+                    <div class="stackly-sport-admin-progress">
+
+                        <div class="stackly-sport-admin-progress-top">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                84%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-admin-progress-bar">
+
+                            <span style="width:84%;"></span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="404-admin.html"
+                       aria-label="View Athletic Performance">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- STRENGTH PROGRAM -->
+
+        <article class="stackly-sport-admin-program-card"
+                 data-aos="zoom-in"
+                 data-aos-delay="180">
+
+            <div class="stackly-sport-admin-program-image">
+
+                <img src="fitness.webp"
+                     alt="Strength training program">
+
+                <span class="stackly-sport-admin-program-status">
+                    ACTIVE
+                </span>
+
+            </div>
+
+            <div class="stackly-sport-admin-program-body">
+
+                <span class="stackly-sport-admin-program-category">
+                    STRENGTH
+                </span>
+
+                <h4>
+                    Strength & Conditioning
+                </h4>
+
+                <p>
+                    Build functional strength, stability and physical
+                    conditioning through structured training.
+                </p>
+
+                <div class="stackly-sport-admin-program-meta">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        94 Members
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        6 Days
+                    </span>
+
+                </div>
+
+                <div class="stackly-sport-admin-program-footer">
+
+                    <div class="stackly-sport-admin-progress">
+
+                        <div class="stackly-sport-admin-progress-top">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                76%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-admin-progress-bar">
+
+                            <span style="width:76%;"></span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="404-admin.html"
+                       aria-label="View Strength Program">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- SKILL PROGRAM -->
+
+        <article class="stackly-sport-admin-program-card"
+                 data-aos="zoom-in"
+                 data-aos-delay="260">
+
+            <div class="stackly-sport-admin-program-image">
+
+                <img src="badminton.webp"
+                     alt="Sports skill development">
+
+                <span class="stackly-sport-admin-program-status">
+                    ACTIVE
+                </span>
+
+            </div>
+
+            <div class="stackly-sport-admin-program-body">
+
+                <span class="stackly-sport-admin-program-category">
+                    SKILLS
+                </span>
+
+                <h4>
+                    Skill Development
+                </h4>
+
+                <p>
+                    Develop sport-specific techniques, coordination,
+                    confidence and competitive skills.
+                </p>
+
+                <div class="stackly-sport-admin-program-meta">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        98 Members
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        4 Days
+                    </span>
+
+                </div>
+
+                <div class="stackly-sport-admin-program-footer">
+
+                    <div class="stackly-sport-admin-progress">
+
+                        <div class="stackly-sport-admin-progress-top">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                92%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-admin-progress-bar">
+
+                            <span style="width:92%;"></span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="404-admin.html"
+                       aria-label="View Skill Development">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- RECOVERY PROGRAM -->
+
+        <article class="stackly-sport-admin-program-card"
+                 data-aos="zoom-in"
+                 data-aos-delay="340">
+
+            <div class="stackly-sport-admin-program-image">
+
+                <img src="athlete-mindset.webp"
+                     alt="Sports recovery training">
+
+                <span class="stackly-sport-admin-program-status">
+                    ACTIVE
+                </span>
+
+            </div>
+
+            <div class="stackly-sport-admin-program-body">
+
+                <span class="stackly-sport-admin-program-category">
+                    RECOVERY
+                </span>
+
+                <h4>
+                    Recovery & Mobility
+                </h4>
+
+                <p>
+                    Improve flexibility, mobility and recovery with
+                    guided movement and sessions.
+                </p>
+
+                <div class="stackly-sport-admin-program-meta">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        64 Members
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        3 Days
+                    </span>
+
+                </div>
+
+                <div class="stackly-sport-admin-program-footer">
+
+                    <div class="stackly-sport-admin-progress">
+
+                        <div class="stackly-sport-admin-progress-top">
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                88%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-admin-progress-bar">
+
+                            <span style="width:88%;"></span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="404-admin.html"
+                       aria-label="View Recovery Program">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- =====================================================
+         LOWER MANAGEMENT GRID
+    ====================================================== -->
+
+    <div class="stackly-sport-programs-admin-lower-grid">
+
+
+        <!-- =================================================
+             UPCOMING PROGRAM SESSIONS
+        ================================================== -->
+
+        <section class="stackly-sport-program-session-panel"
+                 data-aos="fade-right">
+
+            <div class="stackly-sport-program-panel-head">
+
+                <div>
+
+                    <span>
+                        TODAY'S SCHEDULE
+                    </span>
+
+                    <h3>
+                        Upcoming Sessions
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html"
+                   aria-label="View schedule">
+
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="stackly-sport-program-session-list">
+
+
+                <div class="stackly-sport-program-session-item">
+
+                    <div class="stackly-sport-session-time">
+
+                        <strong>
+                            07:30
+                        </strong>
+
+                        <span>
+                            AM
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-sport-session-line"></div>
+
+                    <div class="stackly-sport-session-details">
+
+                        <strong>
+                            Morning Performance
+                        </strong>
+
+                        <span>
+                            Athletic Performance
+                        </span>
+
+                        <small>
+                            <i class="fa-solid fa-user"></i>
+                            Coach Daniel · 18 members
+                        </small>
+
+                    </div>
+
+                    <span class="stackly-sport-session-live">
+                        LIVE SOON
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-program-session-item">
+
+                    <div class="stackly-sport-session-time">
+
+                        <strong>
+                            10:00
+                        </strong>
+
+                        <span>
+                            AM
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-sport-session-line"></div>
+
+                    <div class="stackly-sport-session-details">
+
+                        <strong>
+                            Strength Circuit
+                        </strong>
+
+                        <span>
+                            Strength & Conditioning
+                        </span>
+
+                        <small>
+                            <i class="fa-solid fa-user"></i>
+                            Coach Alex · 24 members
+                        </small>
+
+                    </div>
+
+                    <span class="stackly-sport-session-open">
+                        OPEN
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-program-session-item">
+
+                    <div class="stackly-sport-session-time">
+
+                        <strong>
+                            05:30
+                        </strong>
+
+                        <span>
+                            PM
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-sport-session-line"></div>
+
+                    <div class="stackly-sport-session-details">
+
+                        <strong>
+                            Skill Development
+                        </strong>
+
+                        <span>
+                            Sports Skills
+                        </span>
+
+                        <small>
+                            <i class="fa-solid fa-user"></i>
+                            Coach Ryan · 16 members
+                        </small>
+
+                    </div>
+
+                    <span class="stackly-sport-session-open">
+                        OPEN
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-sport-program-session-item">
+
+                    <div class="stackly-sport-session-time">
+
+                        <strong>
+                            07:00
+                        </strong>
+
+                        <span>
+                            PM
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-sport-session-line"></div>
+
+                    <div class="stackly-sport-session-details">
+
+                        <strong>
+                            Mobility Flow
+                        </strong>
+
+                        <span>
+                            Recovery & Mobility
+                        </span>
+
+                        <small>
+                            <i class="fa-solid fa-user"></i>
+                            Coach Emma · 12 members
+                        </small>
+
+                    </div>
+
+                    <span class="stackly-sport-session-open">
+                        OPEN
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROGRAM PERFORMANCE
+        ================================================== -->
+
+        <section class="stackly-sport-program-performance-panel"
+                 data-aos="fade-left">
+
+            <div class="stackly-sport-program-panel-head">
+
+                <div>
+
+                    <span>
+                        PROGRAM INSIGHTS
+                    </span>
+
+                    <h3>
+                        Performance Overview
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+            </div>
+
+
+            <div class="stackly-sport-performance-main">
+
+                <div class="stackly-sport-performance-ring">
+
+                    <div class="stackly-sport-performance-ring-inner">
+
+                        <strong>
+                            87%
+                        </strong>
+
+                        <span>
+                            Overall
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="stackly-sport-performance-copy">
+
+                    <strong>
+                        Program Engagement
+                    </strong>
+
+                    <p>
+                        Member participation is trending upward
+                        across active training programs.
+                    </p>
+
+                    <span>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        6.8% increase
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-sport-performance-bars">
+
+
+                <div class="stackly-sport-performance-row">
+
+                    <div>
+                        <span>
+                            Athletic Performance
+                        </span>
+
+                        <strong>
+                            84%
+                        </strong>
+                    </div>
+
+                    <div class="stackly-sport-performance-track">
+                        <span style="width:84%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-performance-row">
+
+                    <div>
+                        <span>
+                            Strength Training
+                        </span>
+
+                        <strong>
+                            76%
+                        </strong>
+                    </div>
+
+                    <div class="stackly-sport-performance-track">
+                        <span style="width:76%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-performance-row">
+
+                    <div>
+                        <span>
+                            Skill Development
+                        </span>
+
+                        <strong>
+                            92%
+                        </strong>
+                    </div>
+
+                    <div class="stackly-sport-performance-track">
+                        <span style="width:92%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-performance-row">
+
+                    <div>
+                        <span>
+                            Recovery & Mobility
+                        </span>
+
+                        <strong>
+                            88%
+                        </strong>
+                    </div>
+
+                    <div class="stackly-sport-performance-track">
+                        <span style="width:88%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         QUICK ACTIONS
+    ====================================================== -->
+
+    <section class="stackly-sport-program-quick-actions"
+             data-aos="fade-up">
+
+        <div class="stackly-sport-program-quick-copy">
+
+            <span>
+                QUICK ACTIONS
+            </span>
+
+            <h3>
+                Keep Your Programs Moving.
+            </h3>
+
+            <p>
+                Manage schedules, trainers, members and program
+                activities from one place.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-sport-program-action-list">
+
+            <a href="404-admin.html"
+               class="stackly-sport-program-action-item">
+
+                <span>
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+
+                <strong>
+                    New Program
+                </strong>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-program-action-item">
+
+                <span>
+                    <i class="fa-solid fa-calendar-plus"></i>
+                </span>
+
+                <strong>
+                    Schedule Session
+                </strong>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="404-admin.html"
+               class="stackly-sport-program-action-item">
+
+                <span>
+                    <i class="fa-solid fa-user-plus"></i>
+                </span>
+
+                <strong>
+                    Add Participants
+                </strong>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     AOS JS
+========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JS
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+ 

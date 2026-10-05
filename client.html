@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Client Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Client Dashboard, Sports Club, Fitness Dashboard">
+
+    <meta name="author"
+          content="Stackly Sport Club">
+
+    <title>Stackly Sport Club | Client Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="client.css">
+
+</head>
+
+
+<body class="stackly-sport-client-body">
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="stackly-sport-client-overlay"
+         id="clientSidebarOverlay"></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="stackly-sport-client-sidebar"
+           id="clientSidebar">
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-top">
+
+
+            <!-- LOGO -->
+            <a href="client.html"
+               class="stackly-sport-client-logo"
+               aria-label="Stackly Sport Club Home">
+
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Sport Club">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+            <button type="button"
+                    class="stackly-sport-client-sidebar-close"
+                    id="clientSidebarClose"
+                    aria-label="Close navigation">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR PROFILE
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-profile">
+
+            <div class="stackly-sport-client-profile-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-sport-client-profile-info">
+
+                <strong id="clientSidebarName">
+                    Sport Member
+                </strong>
+
+                <span>
+                    Active Member
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="stackly-sport-client-navigation"
+             aria-label="Client Dashboard Navigation">
+
+
+            <p class="stackly-sport-client-nav-label">
+                MAIN MENU
+            </p>
+
+
+            <!-- DASHBOARD -->
+            <a href="client.html"
+               class="stackly-sport-client-nav-link active">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- MY MEMBERSHIP -->
+            <a href="client-membership.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <span>My Membership</span>
+
+            </a>
+
+
+            <!-- PROGRAMS -->
+            <a href="client-programs.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+                <span>Programs</span>
+
+            </a>
+
+
+            <!-- BOOKINGS -->
+            <a href="client-bookings.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>My Bookings</span>
+
+            </a>
+
+
+            <!-- TRAINERS -->
+            <a href="client-trainers.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-person-running"></i>
+
+                <span>Trainers</span>
+
+            </a>
+
+
+            <!-- PAYMENTS -->
+            <a href="client-payments.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Payments</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 ACCOUNT
+            ================================================== -->
+
+            <p class="stackly-sport-client-nav-label account-label">
+                ACCOUNT
+            </p>
+
+
+            <!-- PROFILE -->
+            <a href="client-profile.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-bottom">
+
+ 
+            <!-- LOGOUT -->
+            <button type="button"
+                    class="stackly-sport-client-logout"
+                    id="clientLogoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="stackly-sport-client-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-sport-client-header">
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button type="button"
+                    class="stackly-sport-client-menu-toggle"
+                    id="clientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-sport-client-header-title">
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-sport-client-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-client.html"><button type="button"
+                        class="stackly-sport-client-notification"
+                        aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="stackly-sport-client-notification-dot"></span>
+
+                </button></a>
+
+
+                <!-- EMAIL -->
+
+                <div class="stackly-sport-client-email-box">
+
+                    <div class="stackly-sport-client-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-sport-client-email-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong id="clientEmailDisplay">
+                            client@stacklysport.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <section class="stackly-sport-client-content">
+
+
+            <!-- =================================================
+                 WELCOME BANNER
+            ================================================== -->
+
+            <div class="stackly-sport-client-welcome"
+                 data-aos="fade-up">
+
+
+                <div class="stackly-sport-client-welcome-content">
+
+                    <span class="stackly-sport-client-welcome-label">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        KEEP MOVING FORWARD
+
+                    </span>
+
+
+                    <h2>
+                        Train Hard.
+                        <br>
+                        Stay Strong.
+                    </h2>
+
+
+                    <p>
+                        Track your fitness journey, manage your
+                        bookings and stay connected with your
+                        sports community.
+                    </p>
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-primary-btn">
+
+                        Explore Programs
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-sport-client-welcome-visual">
+
+                    <div class="stackly-sport-client-welcome-circle">
+
+                        <i class="fa-solid fa-person-running"></i>
+
+                    </div>
+
+                    <span class="welcome-floating-one">
+                        TRAIN
+                    </span>
+
+                    <span class="welcome-floating-two">
+                        PERFORM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STAT CARDS
+            ================================================== -->
+
+            <div class="stackly-sport-client-stats">
+
+
+                <!-- MEMBERSHIP -->
+
+                <article class="stackly-sport-client-stat-card"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                    <div class="stackly-sport-client-stat-icon">
+
+                        <i class="fa-solid fa-id-card"></i>
+
+                    </div>
+
+                    <div class="stackly-sport-client-stat-content">
+
+                        <span>
+                            Membership
+                        </span>
+
+                        <strong>
+                            Premium
+                        </strong>
+
+                        <small>
+                            Active plan
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BOOKINGS -->
+
+                <article class="stackly-sport-client-stat-card"
+                         data-aos="fade-up"
+                         data-aos-delay="150">
+
+                    <div class="stackly-sport-client-stat-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div class="stackly-sport-client-stat-content">
+
+                        <span>
+                            Upcoming
+                        </span>
+
+                        <strong>
+                            08
+                        </strong>
+
+                        <small>
+                            Bookings
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROGRAMS -->
+
+                <article class="stackly-sport-client-stat-card"
+                         data-aos="fade-up"
+                         data-aos-delay="200">
+
+                    <div class="stackly-sport-client-stat-icon">
+
+                        <i class="fa-solid fa-dumbbell"></i>
+
+                    </div>
+
+                    <div class="stackly-sport-client-stat-content">
+
+                        <span>
+                            Programs
+                        </span>
+
+                        <strong>
+                            04
+                        </strong>
+
+                        <small>
+                            Enrolled
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FITNESS -->
+
+                <article class="stackly-sport-client-stat-card"
+                         data-aos="fade-up"
+                         data-aos-delay="250">
+
+                    <div class="stackly-sport-client-stat-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <div class="stackly-sport-client-stat-content">
+
+                        <span>
+                            Progress
+                        </span>
+
+                        <strong>
+                            82%
+                        </strong>
+
+                        <small>
+                            This month
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MAIN GRID
+            ================================================== -->
+
+            <div class="stackly-sport-client-dashboard-grid">
+
+
+                <!-- =================================================
+                     UPCOMING SESSION
+                ================================================== -->
+
+                <section class="stackly-sport-client-panel upcoming-panel"
+                         data-aos="fade-up">
+
+                    <div class="stackly-sport-client-panel-heading">
+
+                        <div>
+
+                            <span>
+                                NEXT SESSION
+                            </span>
+
+                            <h3>
+                                Upcoming Training
+                            </h3>
+
+                        </div>
+
+                        <a href="404-client.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-session-card">
+
+
+                        <div class="stackly-sport-client-session-date">
+
+                            <span>
+                                OCT
+                            </span>
+
+                            <strong>
+                                08
+                            </strong>
+
+                            <small>
+                                THU
+                            </small>
+
+                        </div>
+
+
+                        <div class="stackly-sport-client-session-info">
+
+                            <span class="session-tag">
+                                PERFORMANCE
+                            </span>
+
+                            <h4>
+                                Strength & Conditioning
+                            </h4>
+
+                            <p>
+                                <i class="fa-regular fa-clock"></i>
+                                06:30 PM – 07:30 PM
+                            </p>
+
+                            <p>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Performance Arena
+                            </p>
+
+                        </div>
+
+
+                        <div class="stackly-sport-client-session-trainer">
+
+                            <div class="trainer-avatar">
+
+                                <i class="fa-solid fa-user"></i>
+
+                            </div>
+
+                            <span>
+                                Coach
+                            </span>
+
+                            <strong>
+                                Alex Martin
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-outline-btn">
+
+                        Manage Booking
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     MEMBERSHIP
+                ================================================== -->
+
+                <section class="stackly-sport-client-panel membership-panel"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                    <div class="stackly-sport-client-panel-heading">
+
+                        <div>
+
+                            <span>
+                                YOUR PLAN
+                            </span>
+
+                            <h3>
+                                Premium Membership
+                            </h3>
+
+                        </div>
+
+                        <i class="fa-solid fa-crown panel-heading-icon"></i>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-membership">
+
+                        <div class="membership-plan-top">
+
+                            <strong>
+                                PREMIUM
+                            </strong>
+
+                            <span>
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+
+                        <div class="membership-plan-price">
+
+                            <strong>
+                                ₹4,999
+                            </strong>
+
+                            <span>
+                                / month
+                            </span>
+
+                        </div>
+
+
+                        <div class="membership-progress">
+
+                            <div class="membership-progress-heading">
+
+                                <span>
+                                    Membership period
+                                </span>
+
+                                <strong>
+                                    72%
+                                </strong>
+
+                            </div>
+
+                            <div class="membership-progress-track">
+
+                                <span style="width:72%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="membership-details">
+
+                            <div>
+
+                                <span>
+                                    Started
+                                </span>
+
+                                <strong>
+                                    Sep 01, 2026
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Renews
+                                </span>
+
+                                <strong>
+                                    Nov 01, 2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-membership-btn">
+
+                            View Membership
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOWER GRID
+            ================================================== -->
+
+            <div class="stackly-sport-client-lower-grid">
+
+
+                <!-- =================================================
+                     FITNESS PROGRESS
+                ================================================== -->
+
+                <section class="stackly-sport-client-panel progress-panel"
+                         data-aos="fade-up">
+
+                    <div class="stackly-sport-client-panel-heading">
+
+                        <div>
+
+                            <span>
+                                PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Fitness Progress
+                            </h3>
+
+                        </div>
+
+                        <a href="404-client.html">
+                            Details
+                        </a>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-progress-list">
+
+
+                        <div class="progress-item">
+
+                            <div class="progress-item-top">
+
+                                <span>
+                                    Strength
+                                </span>
+
+                                <strong>
+                                    88%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <span style="width:88%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div class="progress-item-top">
+
+                                <span>
+                                    Endurance
+                                </span>
+
+                                <strong>
+                                    76%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <span style="width:76%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div class="progress-item-top">
+
+                                <span>
+                                    Speed
+                                </span>
+
+                                <strong>
+                                    81%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <span style="width:81%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div class="progress-item-top">
+
+                                <span>
+                                    Flexibility
+                                </span>
+
+                                <strong>
+                                    69%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <span style="width:69%;"></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     RECENT BOOKINGS
+                ================================================== -->
+
+                <section class="stackly-sport-client-panel bookings-panel"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                    <div class="stackly-sport-client-panel-heading">
+
+                        <div>
+
+                            <span>
+                                ACTIVITY
+                            </span>
+
+                            <h3>
+                                Recent Bookings
+                            </h3>
+
+                        </div>
+
+                        <a href="404-client.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-booking-list">
+
+
+                        <div class="booking-row">
+
+                            <div class="booking-icon">
+                                <i class="fa-solid fa-person-running"></i>
+                            </div>
+
+                            <div class="booking-info">
+
+                                <strong>
+                                    HIIT Performance
+                                </strong>
+
+                                <span>
+                                    Oct 06 · 06:00 PM
+                                </span>
+
+                            </div>
+
+                            <span class="booking-status confirmed">
+                                Confirmed
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-row">
+
+                            <div class="booking-icon">
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+
+                            <div class="booking-info">
+
+                                <strong>
+                                    Strength Training
+                                </strong>
+
+                                <span>
+                                    Oct 04 · 07:00 PM
+                                </span>
+
+                            </div>
+
+                            <span class="booking-status completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-row">
+
+                            <div class="booking-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div class="booking-info">
+
+                                <strong>
+                                    Speed Development
+                                </strong>
+
+                                <span>
+                                    Oct 02 · 06:30 PM
+                                </span>
+
+                            </div>
+
+                            <span class="booking-status completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================== -->
+
+            <section class="stackly-sport-client-quick-actions"
+                     data-aos="fade-up">
+
+
+                <div class="stackly-sport-client-quick-heading">
+
+                    <div>
+
+                        <span>
+                            QUICK ACCESS
+                        </span>
+
+                        <h3>
+                            Keep Your Training Moving
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Manage your sports club activities
+                        from one place.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-client-action-grid">
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-action-card">
+
+                        <div class="action-card-icon">
+
+                            <i class="fa-solid fa-dumbbell"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Explore Programs
+                            </strong>
+
+                            <span>
+                                Find your next challenge
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-action-card">
+
+                        <div class="action-card-icon">
+
+                            <i class="fa-solid fa-calendar-plus"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Book a Session
+                            </strong>
+
+                            <span>
+                                Reserve your next workout
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-action-card">
+
+                        <div class="action-card-icon">
+
+                            <i class="fa-solid fa-person-running"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Meet Trainers
+                            </strong>
+
+                            <span>
+                                Connect with expert coaches
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-action-card">
+
+                        <div class="action-card-icon">
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Payment History
+                            </strong>
+
+                            <span>
+                                Review your transactions
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD JAVASCRIPT
+    ====================================================== -->
+
+    <script src="client.js"></script>
+
+
+
+</body>
+
+</html>
+

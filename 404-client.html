@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Page not found - Stackly">
+
+    <meta name="author" content="Stackly">
+
+    <meta name="theme-color" content="#08090a">
+
+    <title>404 | Page Not Found - Stackly</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- AOS Animation -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+    <!-- 404 CSS -->
+    <link rel="stylesheet" href="404.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         STACKLY 404 PAGE
+    ========================================================== -->
+
+    <main class="stackly-404-page">
+
+        <!-- Animated Background -->
+        <div class="stackly-404-bg-grid"></div>
+
+        <div class="stackly-404-glow stackly-404-glow-one"></div>
+        <div class="stackly-404-glow stackly-404-glow-two"></div>
+
+        <!-- Floating Decorative Elements -->
+        <span class="stackly-404-shape stackly-404-shape-one"></span>
+        <span class="stackly-404-shape stackly-404-shape-two"></span>
+        <span class="stackly-404-shape stackly-404-shape-three"></span>
+
+        <!-- Content -->
+        <div class="stackly-404-content">
+
+            <!-- Small Label -->
+            <div
+                class="stackly-404-label"
+                data-aos="fade-down"
+                data-aos-duration="800"
+            >
+                <span></span>
+                ERROR 404
+                <span></span>
+            </div>
+
+            <!-- 404 Number -->
+            <div
+                class="stackly-404-number"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+            >
+                4<span>0</span>4
+            </div>
+
+            <!-- Heading -->
+            <h1
+                class="stackly-404-title"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+                Page Not Found
+            </h1>
+
+            <!-- Description -->
+            <p
+                class="stackly-404-description"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+                Sorry, the page you are looking for doesn't exist,
+                has been moved, or is temporarily unavailable.
+            </p>
+
+            <!-- Buttons -->
+            <div
+                class="stackly-404-actions"
+                data-aos="fade-up"
+                data-aos-delay="400"
+            >
+
+                <!-- Go Home -->
+                <a
+                    href="client.html"
+                    class="stackly-404-btn stackly-404-btn-primary"
+                >
+                    <i class="fa-solid fa-house"></i>
+                    <span>Go Dashboard</span>
+                </a>
+
+                <!-- Go Back -->
+                <button
+                    type="button"
+                    class="stackly-404-btn stackly-404-btn-secondary"
+                    onclick="stackly404GoBack()"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Go Back</span>
+                </button>
+
+            </div>
+
+            <!-- Bottom Message -->
+            <div
+                class="stackly-404-bottom"
+                data-aos="fade-up"
+                data-aos-delay="500"
+            >
+                <i class="fa-solid fa-compass"></i>
+                <span>Let's get you back on the right path.</span>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =========================================================
+         404 JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* AOS */
+        AOS.init({
+            duration: 900,
+            once: true,
+            offset: 80,
+            easing: "ease-out-cubic"
+        });
+
+
+        /* Go Back */
+        function stackly404GoBack() {
+
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "index.html";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+

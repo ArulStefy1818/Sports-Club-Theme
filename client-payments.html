@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stackly Sport Club Client Dashboard">
+
+    <meta name="keywords"
+          content="Stackly Sport Club, Client Dashboard, Sports Club, Fitness Dashboard">
+
+    <meta name="author"
+          content="Stackly Sport Club">
+
+    <title>Stackly Sport Club | Client Dashboard</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         AOS ANIMATION
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="client.css">
+
+</head>
+
+
+<body class="stackly-sport-client-body">
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="stackly-sport-client-overlay"
+         id="clientSidebarOverlay"></div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="stackly-sport-client-sidebar"
+           id="clientSidebar">
+
+
+        <!-- =================================================
+             SIDEBAR TOP
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-top">
+
+
+            <!-- LOGO -->
+            <a href="client.html"
+               class="stackly-sport-client-logo"
+               aria-label="Stackly Sport Club Home">
+
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Sport Club">
+
+            </a>
+
+
+            <!-- MOBILE CLOSE BUTTON -->
+            <button type="button"
+                    class="stackly-sport-client-sidebar-close"
+                    id="clientSidebarClose"
+                    aria-label="Close navigation">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR PROFILE
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-profile">
+
+            <div class="stackly-sport-client-profile-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="stackly-sport-client-profile-info">
+
+                <strong id="clientSidebarName">
+                    Sport Member
+                </strong>
+
+                <span>
+                    Active Member
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="stackly-sport-client-navigation"
+             aria-label="Client Dashboard Navigation">
+
+
+            <p class="stackly-sport-client-nav-label">
+                MAIN MENU
+            </p>
+
+
+            <!-- DASHBOARD -->
+            <a href="client.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- MY MEMBERSHIP -->
+            <a href="client-membership.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <span>My Membership</span>
+
+            </a>
+
+
+            <!-- PROGRAMS -->
+            <a href="client-programs.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+                <span>Programs</span>
+
+            </a>
+
+
+            <!-- BOOKINGS -->
+            <a href="client-bookings.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>My Bookings</span>
+
+            </a>
+
+
+            <!-- TRAINERS -->
+            <a href="client-trainers.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-person-running"></i>
+
+                <span>Trainers</span>
+
+            </a>
+
+
+            <!-- PAYMENTS -->
+            <a href="client-payments.html"
+               class="stackly-sport-client-nav-link active">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Payments</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 ACCOUNT
+            ================================================== -->
+
+            <p class="stackly-sport-client-nav-label account-label">
+                ACCOUNT
+            </p>
+
+
+            <!-- PROFILE -->
+            <a href="client-profile.html"
+               class="stackly-sport-client-nav-link">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="stackly-sport-client-sidebar-bottom">
+
+ 
+            <!-- LOGOUT -->
+            <button type="button"
+                    class="stackly-sport-client-logout"
+                    id="clientLogoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="stackly-sport-client-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="stackly-sport-client-header">
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button type="button"
+                    class="stackly-sport-client-menu-toggle"
+                    id="clientMenuToggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- HEADER TITLE -->
+
+            <div class="stackly-sport-client-header-title">
+
+                <h1>
+                    Client Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================== -->
+
+            <div class="stackly-sport-client-header-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a href="404-client.html"><button type="button"
+                        class="stackly-sport-client-notification"
+                        aria-label="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="stackly-sport-client-notification-dot"></span>
+
+                </button></a>
+
+
+                <!-- EMAIL -->
+
+                <div class="stackly-sport-client-email-box">
+
+                    <div class="stackly-sport-client-email-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div class="stackly-sport-client-email-details">
+
+                        <span>
+                            Signed in as
+                        </span>
+
+                        <strong id="clientEmailDisplay">
+                            client@stacklysport.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =====================================================
+             PAYMENTS PAGE CONTENT
+        ====================================================== -->
+
+        <div class="stackly-sport-client-payment-content">
+
+
+            <!-- =================================================
+                 PAYMENT HERO
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-hero">
+
+                <div class="stackly-sport-client-payment-hero-content"
+                     data-aos="fade-right">
+
+                    <span class="stackly-sport-client-payment-kicker">
+                        <i class="fa-solid fa-wallet"></i>
+                        PAYMENT CENTER
+                    </span>
+
+                    <h2>
+                        Stay On Top Of
+                        <span>Your Club Payments.</span>
+                    </h2>
+
+                    <p>
+                        Manage your membership payments, view invoices,
+                        track transactions, and keep your sports club
+                        account organized in one place.
+                    </p>
+
+                    <div class="stackly-sport-client-payment-hero-actions">
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-payment-primary-btn">
+
+                            <span>View Transactions</span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-payment-secondary-btn">
+
+                            Download Invoice
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-hero-visual"
+                     data-aos="fade-left">
+
+                    <div class="stackly-sport-client-payment-wallet-card">
+
+                        <div class="stackly-sport-client-payment-wallet-top">
+
+                            <span>
+                                CURRENT BALANCE
+                            </span>
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                        </div>
+
+                        <strong>
+                            ₹18,500
+                        </strong>
+
+                        <div class="stackly-sport-client-payment-wallet-bottom">
+
+                            <span>
+                                Membership Account
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Active
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-wallet-shape"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENT SUMMARY
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-summary">
+
+                <div class="stackly-sport-client-payment-summary-card"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                    <div class="stackly-sport-client-payment-summary-icon">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            TOTAL PAID
+                        </span>
+
+                        <strong>
+                            ₹42,800
+                        </strong>
+
+                        <small>
+                            This year
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-summary-card"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+
+                    <div class="stackly-sport-client-payment-summary-icon">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            TRANSACTIONS
+                        </span>
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <small>
+                            Completed payments
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-summary-card"
+                     data-aos="fade-up"
+                     data-aos-delay="300">
+
+                    <div class="stackly-sport-client-payment-summary-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            NEXT PAYMENT
+                        </span>
+
+                        <strong>
+                            ₹3,500
+                        </strong>
+
+                        <small>
+                            Due Oct 15
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-summary-card"
+                     data-aos="fade-up"
+                     data-aos-delay="400">
+
+                    <div class="stackly-sport-client-payment-summary-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            PAYMENT STATUS
+                        </span>
+
+                        <strong>
+                            Active
+                        </strong>
+
+                        <small>
+                            Account in good standing
+                        </small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CURRENT MEMBERSHIP PAYMENT
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-membership">
+
+                <div class="stackly-sport-client-payment-membership-content"
+                     data-aos="fade-right">
+
+                    <span class="stackly-sport-client-payment-section-kicker">
+                        MEMBERSHIP BILLING
+                    </span>
+
+                    <h2>
+                        Your Current
+                        <span>Membership Plan</span>
+                    </h2>
+
+                    <p>
+                        Your membership is active and your next payment
+                        is scheduled automatically according to your
+                        current membership plan.
+                    </p>
+
+                    <div class="stackly-sport-client-payment-membership-meta">
+
+                        <div>
+                            <span>PLAN</span>
+                            <strong>Performance Plus</strong>
+                        </div>
+
+                        <div>
+                            <span>BILLING</span>
+                            <strong>Monthly</strong>
+                        </div>
+
+                        <div>
+                            <span>NEXT DUE</span>
+                            <strong>15 Oct 2026</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-due-card"
+                     data-aos="fade-left">
+
+                    <div class="stackly-sport-client-payment-due-header">
+
+                        <span>
+                            NEXT PAYMENT
+                        </span>
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <strong>
+                        ₹3,500
+                    </strong>
+
+                    <p>
+                        Due on 15 October 2026
+                    </p>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-payment-due-btn">
+
+                        Pay Now
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECENT TRANSACTIONS
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-transactions">
+
+                <div class="stackly-sport-client-payment-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            PAYMENT HISTORY
+                        </span>
+
+                        <h2>
+                            Recent Transactions
+                        </h2>
+
+                    </div>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-payment-view-all">
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-transaction-list">
+
+
+                    <!-- TRANSACTION 01 -->
+
+                    <div class="stackly-sport-client-payment-transaction"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                        <div class="stackly-sport-client-payment-transaction-icon">
+
+                            <i class="fa-solid fa-dumbbell"></i>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-transaction-info">
+
+                            <strong>
+                                Performance Plus Membership
+                            </strong>
+
+                            <span>
+                                15 September 2026 · #SP24091
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-transaction-amount">
+
+                            <strong>
+                                ₹3,500
+                            </strong>
+
+                            <span class="paid">
+                                <i class="fa-solid fa-check"></i>
+                                Paid
+                            </span>
+
+                        </div>
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-payment-transaction-link">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- TRANSACTION 02 -->
+
+                    <div class="stackly-sport-client-payment-transaction"
+                         data-aos="fade-up"
+                         data-aos-delay="200">
+
+                        <div class="stackly-sport-client-payment-transaction-icon">
+
+                            <i class="fa-solid fa-person-running"></i>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-transaction-info">
+
+                            <strong>
+                                Personal Training Session
+                            </strong>
+
+                            <span>
+                                08 September 2026 · #SP23982
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-transaction-amount">
+
+                            <strong>
+                                ₹1,200
+                            </strong>
+
+                            <span class="paid">
+                                <i class="fa-solid fa-check"></i>
+                                Paid
+                            </span>
+
+                        </div>
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-payment-transaction-link">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- TRANSACTION 03 -->
+
+                    <div class="stackly-sport-client-payment-transaction"
+                         data-aos="fade-up"
+                         data-aos-delay="300">
+
+                        <div class="stackly-sport-client-payment-transaction-icon">
+
+                            <i class="fa-solid fa-futbol"></i>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-transaction-info">
+
+                            <strong>
+                                Football Training Program
+                            </strong>
+
+                            <span>
+                                01 September 2026 · #SP23871
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-transaction-amount">
+
+                            <strong>
+                                ₹2,000
+                            </strong>
+
+                            <span class="paid">
+                                <i class="fa-solid fa-check"></i>
+                                Paid
+                            </span>
+
+                        </div>
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-payment-transaction-link">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- TRANSACTION 04 -->
+
+                    <div class="stackly-sport-client-payment-transaction"
+                         data-aos="fade-up"
+                         data-aos-delay="400">
+
+                        <div class="stackly-sport-client-payment-transaction-icon">
+
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-transaction-info">
+
+                            <strong>
+                                Tennis Court Booking
+                            </strong>
+
+                            <span>
+                                27 August 2026 · #SP23744
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-transaction-amount">
+
+                            <strong>
+                                ₹850
+                            </strong>
+
+                            <span class="paid">
+                                <i class="fa-solid fa-check"></i>
+                                Paid
+                            </span>
+
+                        </div>
+
+                        <a href="404-client.html"
+                           class="stackly-sport-client-payment-transaction-link">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENT METHODS
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-methods">
+
+                <div class="stackly-sport-client-payment-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            SECURE PAYMENTS
+                        </span>
+
+                        <h2>
+                            Your Payment Methods
+                        </h2>
+
+                    </div>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-payment-add-method">
+
+                        <i class="fa-solid fa-plus"></i>
+                        Add Method
+
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-method-grid">
+
+
+                    <!-- CARD -->
+
+                    <div class="stackly-sport-client-payment-method-card"
+                         data-aos="zoom-in"
+                         data-aos-delay="100">
+
+                        <div class="stackly-sport-client-payment-method-top">
+
+                            <div class="stackly-sport-client-payment-card-brand">
+                                <i class="fa-brands fa-cc-visa"></i>
+                            </div>
+
+                            <span class="default">
+                                DEFAULT
+                            </span>
+
+                        </div>
+
+                        <strong>
+                            •••• •••• •••• 4826
+                        </strong>
+
+                        <div class="stackly-sport-client-payment-card-bottom">
+
+                            <span>
+                                VISA
+                            </span>
+
+                            <span>
+                                Expires 08/28
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- UPI -->
+
+                    <div class="stackly-sport-client-payment-method-card upi-card"
+                         data-aos="zoom-in"
+                         data-aos-delay="200">
+
+                        <div class="stackly-sport-client-payment-method-top">
+
+                            <div class="stackly-sport-client-payment-card-brand">
+
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                            </div>
+
+                            <span>
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+                        <strong>
+                            ••••@upi
+                        </strong>
+
+                        <div class="stackly-sport-client-payment-card-bottom">
+
+                            <span>
+                                UPI
+                            </span>
+
+                            <span>
+                                Instant Payment
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SPENDING INSIGHTS
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-insights">
+
+                <div class="stackly-sport-client-payment-insights-content"
+                     data-aos="fade-right">
+
+                    <span class="stackly-sport-client-payment-section-kicker">
+                        SPENDING OVERVIEW
+                    </span>
+
+                    <h2>
+                        Where Your
+                        <span>Money Goes.</span>
+                    </h2>
+
+                    <p>
+                        Keep track of how your club spending is distributed
+                        across memberships, training, bookings, and other
+                        sports activities.
+                    </p>
+
+                    <div class="stackly-sport-client-payment-insight-total">
+
+                        <span>
+                            TOTAL THIS MONTH
+                        </span>
+
+                        <strong>
+                            ₹6,250
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-insight-chart"
+                     data-aos="fade-left">
+
+                    <div class="stackly-sport-client-payment-chart-row">
+
+                        <div class="stackly-sport-client-payment-chart-label">
+
+                            <span>
+                                Membership
+                            </span>
+
+                            <strong>
+                                ₹3,500
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-progress">
+
+                            <span style="width: 80%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-payment-chart-row">
+
+                        <div class="stackly-sport-client-payment-chart-label">
+
+                            <span>
+                                Training
+                            </span>
+
+                            <strong>
+                                ₹1,200
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-progress">
+
+                            <span style="width: 55%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-payment-chart-row">
+
+                        <div class="stackly-sport-client-payment-chart-label">
+
+                            <span>
+                                Bookings
+                            </span>
+
+                            <strong>
+                                ₹850
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-progress">
+
+                            <span style="width: 38%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-sport-client-payment-chart-row">
+
+                        <div class="stackly-sport-client-payment-chart-label">
+
+                            <span>
+                                Programs
+                            </span>
+
+                            <strong>
+                                ₹700
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-sport-client-payment-progress">
+
+                            <span style="width: 30%;"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INVOICE CENTER
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-invoices">
+
+                <div class="stackly-sport-client-payment-section-heading"
+                     data-aos="fade-up">
+
+                    <div>
+
+                        <span>
+                            DOCUMENTS
+                        </span>
+
+                        <h2>
+                            Invoice Center
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Quickly access your latest payment documents.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-sport-client-payment-invoice-grid">
+
+
+                    <article class="stackly-sport-client-payment-invoice-card"
+                             data-aos="fade-up"
+                             data-aos-delay="100">
+
+                        <div class="stackly-sport-client-payment-invoice-icon">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                SEP 2026
+                            </span>
+
+                            <h3>
+                                Membership Invoice
+                            </h3>
+
+                            <strong>
+                                ₹3,500
+                            </strong>
+
+                        </div>
+
+                        <a href="404-client.html"
+                           aria-label="View invoice">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="stackly-sport-client-payment-invoice-card"
+                             data-aos="fade-up"
+                             data-aos-delay="200">
+
+                        <div class="stackly-sport-client-payment-invoice-icon">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AUG 2026
+                            </span>
+
+                            <h3>
+                                Training Invoice
+                            </h3>
+
+                            <strong>
+                                ₹2,050
+                            </strong>
+
+                        </div>
+
+                        <a href="404-client.html"
+                           aria-label="View invoice">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="stackly-sport-client-payment-invoice-card"
+                             data-aos="fade-up"
+                             data-aos-delay="300">
+
+                        <div class="stackly-sport-client-payment-invoice-icon">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                JUL 2026
+                            </span>
+
+                            <h3>
+                                Membership Invoice
+                            </h3>
+
+                            <strong>
+                                ₹3,500
+                            </strong>
+
+                        </div>
+
+                        <a href="404-client.html"
+                           aria-label="View invoice">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENT SECURITY
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-security"
+                     data-aos="fade-up">
+
+                <div class="stackly-sport-client-payment-security-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        YOUR PAYMENTS ARE PROTECTED
+                    </span>
+
+                    <h2>
+                        Secure. Simple. Transparent.
+                    </h2>
+
+                    <p>
+                        Your payment information is handled securely,
+                        while every transaction remains easy to review
+                        from your client dashboard.
+                    </p>
+
+                </div>
+
+                <div class="stackly-sport-client-payment-security-badge">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Secure
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENT CTA
+            ================================================== -->
+
+            <section class="stackly-sport-client-payment-cta"
+                     data-aos="zoom-in">
+
+                <div class="stackly-sport-client-payment-cta-shape"></div>
+
+                <div class="stackly-sport-client-payment-cta-content">
+
+                    <span>
+                        KEEP YOUR MEMBERSHIP ACTIVE
+                    </span>
+
+                    <h2>
+                        Ready For Your
+                        Next Training Session?
+                    </h2>
+
+                    <p>
+                        Keep your account up to date and spend less time
+                        managing payments and more time improving your game.
+                    </p>
+
+                    <a href="404-client.html"
+                       class="stackly-sport-client-payment-cta-btn">
+
+                        <span>
+                            Manage Payments
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         AOS
+    ====================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD JAVASCRIPT
+    ====================================================== -->
+
+    <script src="client.js"></script>
+
+
+
+</body>
+
+</html>
+
