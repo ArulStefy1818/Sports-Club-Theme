@@ -1674,6 +1674,10 @@ img {
 ========================================================= */
 
  
+/* =========================================================
+   STACKLY SPORT CLUB ADMIN
+   COMPLETE RESPONSIVE / MOBILE CSS
+   ========================================================= */
 
 
 /* =========================================================
@@ -1749,13 +1753,42 @@ img {
 
 
 /* =========================================================
-   MOBILE SIDEBAR + FIXED TOP BAR
+   DESKTOP SIDEBAR LAYER
+========================================================= */
+
+@media (min-width: 851px) {
+
+    .stackly-sport-admin-sidebar {
+        position: fixed;
+        z-index: 2000;
+    }
+
+    .stackly-sport-admin-header {
+        position: sticky;
+        top: 0;
+        z-index: 900;
+    }
+
+    .stackly-sport-admin-overlay {
+        display: none !important;
+    }
+
+    .stackly-sport-admin-close {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+   850px AND BELOW
 ========================================================= */
 
 @media (max-width: 850px) {
 
     :root {
         --sport-admin-header-height: 76px;
+        --sport-admin-mobile-padding: 16px;
     }
 
 
@@ -1771,98 +1804,58 @@ img {
         overflow-x: hidden !important;
     }
 
-    .stackly-sport-admin-wrapper {
+    body.stackly-sport-admin-menu-open {
+        overflow: hidden !important;
+    }
+
+    .stackly-sport-admin-body {
         width: 100%;
         max-width: 100%;
         min-width: 0;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
-
-
-    /* =====================================================
-       SIDEBAR
-    ===================================================== */
-
-    .stackly-sport-admin-sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-
-        width: min(310px, 88vw);
-        max-width: 88vw;
-
-        transform: translateX(-105%);
-
-        z-index: 3000;
-
-        box-shadow:
-            20px 0 60px rgba(0, 0, 0, 0.25);
-
-        transition:
-            transform 0.35s ease;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .stackly-sport-admin-sidebar.active {
-        transform: translateX(0);
-    }
-
-    .stackly-sport-admin-close {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    /* =====================================================
-       MAIN
-    ===================================================== */
 
     .stackly-sport-admin-main {
         width: 100%;
         max-width: 100%;
         min-width: 0;
-
         margin-left: 0;
-
+        position: relative;
+        z-index: 1;
         overflow-x: hidden;
     }
 
 
     /* =====================================================
-       FIXED TOP BAR
+       MOBILE HEADER
     ===================================================== */
 
     .stackly-sport-admin-header {
-        position: fixed;
-
+        position: fixed !important;
         top: 0;
         left: 0;
         right: 0;
 
         width: 100%;
         max-width: 100%;
-
         height: var(--sport-admin-header-height);
+        min-height: var(--sport-admin-header-height);
 
-        padding: 12px 20px;
+        padding: 10px 18px;
 
         display: flex;
         align-items: center;
 
-        gap: 12px;
-
-        z-index: 2000;
+        gap: 10px;
 
         background: #ffffff;
+
+        z-index: 2000;
 
         box-shadow:
             0 4px 20px rgba(0, 0, 0, 0.08);
 
-        overflow: hidden;
+        overflow: visible;
 
         isolation: isolate;
     }
@@ -1882,7 +1875,19 @@ img {
 
         flex: 0 0 44px;
 
+        position: relative;
+        z-index: 2100;
+
+        border: 0;
         cursor: pointer;
+
+        transition:
+            transform 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .stackly-sport-admin-menu:hover {
+        transform: translateY(-2px);
     }
 
 
@@ -1891,13 +1896,31 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-header-title {
+        display: block;
+
         flex: 1 1 auto;
 
         width: auto;
         min-width: 0;
-        max-width: none;
+        max-width: 100%;
 
         overflow: hidden;
+    }
+
+    .stackly-sport-admin-header-eyebrow {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin-bottom: 2px;
+
+        font-size: 9px;
+        line-height: 1.15;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .stackly-sport-admin-header-title h1 {
@@ -1908,7 +1931,7 @@ img {
 
         margin: 0;
 
-        font-size: 22px;
+        font-size: 20px;
         line-height: 1.15;
 
         white-space: nowrap;
@@ -1917,56 +1940,81 @@ img {
         text-overflow: ellipsis;
     }
 
-    .stackly-sport-admin-header-eyebrow {
-        display: block;
-
-        max-width: 100%;
-
-        font-size: 9px;
-        line-height: 1.2;
-
-        white-space: nowrap;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
 
     /* =====================================================
-       EMAIL
-       FULL AVAILABLE SPACE
+       HEADER RIGHT
     ===================================================== */
 
-    .stackly-sport-admin-email-box {
+    .stackly-sport-admin-header-right {
         display: flex;
-
         align-items: center;
         justify-content: flex-end;
 
         flex: 0 1 auto;
 
+        min-width: 0;
+        max-width: 48%;
+
+        gap: 8px;
+
+        position: relative;
+        z-index: 2100;
+    }
+
+
+    /* =====================================================
+       EMAIL BOX
+    ===================================================== */
+
+    .stackly-sport-admin-email-box {
+        display: flex;
+        align-items: center;
+
+        flex: 0 1 auto;
+
         width: auto;
         min-width: 0;
-
-        max-width: 240px;
+        max-width: 100%;
 
         margin-left: auto;
 
-        overflow: hidden;
+        gap: 8px;
+
+        overflow: visible;
+    }
+
+    .stackly-sport-admin-email-avatar {
+        width: 36px;
+        height: 36px;
+
+        flex: 0 0 36px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .stackly-sport-admin-email-content {
-        width: 100%;
-        max-width: 100%;
         min-width: 0;
+        width: auto;
+        max-width: 100%;
 
-        overflow: hidden;
+        overflow: visible;
+    }
+
+    .stackly-sport-admin-email-content span {
+        display: block;
+
+        font-size: 9px;
+        line-height: 1.15;
+
+        white-space: nowrap;
     }
 
     .stackly-sport-admin-email-content strong {
         display: block;
 
-        width: 100%;
+        width: auto;
         max-width: 100%;
 
         margin: 0;
@@ -1974,36 +2022,190 @@ img {
         font-size: 11px;
         line-height: 1.25;
 
-        white-space: nowrap;
+        color: #101510;
 
-        overflow: hidden;
-        text-overflow: ellipsis;
+        /* FULL EMAIL */
+        white-space: normal;
+
+        overflow: visible;
+
+        text-overflow: clip;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
 
         text-align: right;
     }
 
 
     /* =====================================================
-       HIDE PROFILE ON MOBILE
-    ===================================================== */
-
-    .stackly-sport-admin-profile-button {
-        display: none !important;
-    }
-
-
-    /* =====================================================
-       HIDE NOTIFICATION ON MOBILE
+       NOTIFICATION
+       HIDDEN ON MOBILE
     ===================================================== */
 
     .stackly-sport-admin-notification {
         display: none !important;
-        visibility: hidden !important;
+
         width: 0 !important;
+        height: 0 !important;
+
         min-width: 0 !important;
         max-width: 0 !important;
+
         margin: 0 !important;
         padding: 0 !important;
+
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       SIDEBAR
+    ===================================================== */
+
+    .stackly-sport-admin-sidebar {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: min(330px, 88vw);
+        max-width: 88vw;
+
+        height: 100dvh;
+        min-height: 100vh;
+
+        z-index: 4000;
+
+        transform: translate3d(-105%, 0, 0);
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition:
+            transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.25s ease,
+            visibility 0.38s ease;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        -webkit-overflow-scrolling: touch;
+
+        box-shadow:
+            20px 0 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .stackly-sport-admin-sidebar.active,
+    .stackly-sport-admin-sidebar.open,
+    .stackly-sport-admin-sidebar.show {
+        transform: translate3d(0, 0, 0);
+
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    /* =====================================================
+       SIDEBAR TOP
+    ===================================================== */
+
+    .stackly-sport-admin-sidebar-top {
+        position: sticky;
+
+        top: 0;
+
+        z-index: 20;
+
+        min-height: 82px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background: inherit;
+    }
+
+
+    /* =====================================================
+       SIDEBAR CLOSE BUTTON
+    ===================================================== */
+
+    .stackly-sport-admin-close {
+        position: relative;
+
+        z-index: 30;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        flex: 0 0 42px;
+
+        border: 1px solid rgba(217, 237, 30, 0.18);
+
+        border-radius: 12px;
+
+        cursor: pointer;
+
+        transition:
+            transform 0.3s ease,
+            background 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    .stackly-sport-admin-close:hover {
+        transform: rotate(90deg);
+
+        background: rgba(217, 237, 30, 0.10);
+
+        border-color: rgba(217, 237, 30, 0.45);
+    }
+
+
+    /* =====================================================
+       MOBILE OVERLAY
+    ===================================================== */
+
+    .stackly-sport-admin-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 3900;
+
+        background:
+            rgba(5, 8, 6, 0.72);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+
+    .stackly-sport-admin-overlay.active,
+    .stackly-sport-admin-overlay.show,
+    .stackly-sport-admin-overlay.open {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
     }
 
 
@@ -2013,6 +2215,7 @@ img {
 
     .stackly-sport-admin-content {
         width: calc(100% - 32px);
+
         max-width: 100%;
         min-width: 0;
 
@@ -2020,7 +2223,7 @@ img {
         margin-right: auto;
 
         padding-top:
-            calc(var(--sport-admin-header-height) + 30px);
+            calc(var(--sport-admin-header-height) + 28px);
 
         padding-bottom: 40px;
 
@@ -2040,8 +2243,12 @@ img {
         padding: 28px;
 
         display: flex;
+
         flex-direction: column;
+
         align-items: flex-start;
+
+        gap: 18px;
 
         overflow: hidden;
     }
@@ -2050,7 +2257,8 @@ img {
         width: 100%;
         max-width: 100%;
 
-        font-size: 31px;
+        font-size: 30px;
+        line-height: 1.15;
 
         overflow-wrap: anywhere;
     }
@@ -2059,12 +2267,40 @@ img {
         width: 100%;
         max-width: 100%;
 
+        line-height: 1.55;
+
         overflow-wrap: anywhere;
     }
 
     .stackly-sport-admin-primary-btn {
         width: 100%;
         max-width: 100%;
+
+        min-height: 48px;
+    }
+
+
+    /* =====================================================
+       STATS
+    ===================================================== */
+
+    .stackly-sport-admin-stats-grid {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+    .stackly-sport-admin-stat-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        overflow: hidden;
     }
 
 
@@ -2098,28 +2334,6 @@ img {
 
 
     /* =====================================================
-       STATS
-    ===================================================== */
-
-    .stackly-sport-admin-stats-grid {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-    .stackly-sport-admin-stat-card {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
-        overflow: hidden;
-    }
-
-
-    /* =====================================================
        QUICK ACTIONS
     ===================================================== */
 
@@ -2130,6 +2344,8 @@ img {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
     }
 
     .stackly-sport-admin-action-card {
@@ -2139,11 +2355,40 @@ img {
 
         overflow: hidden;
     }
+
+
+    /* =====================================================
+       GENERAL MOBILE SAFETY
+    ===================================================== */
+
+    img,
+    video,
+    iframe,
+    canvas {
+        max-width: 100%;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        max-width: 100%;
+    }
+
+    .stackly-sport-admin-header-title,
+    .stackly-sport-admin-header-right,
+    .stackly-sport-admin-email-box,
+    .stackly-sport-admin-email-content,
+    .stackly-sport-admin-panel-header,
+    .stackly-sport-admin-session-info {
+        min-width: 0;
+    }
 }
 
 
 /* =========================================================
-   SMALL TABLET / LARGE MOBILE
+   LARGE MOBILE / SMALL TABLET
+   650px AND BELOW
 ========================================================= */
 
 @media (max-width: 650px) {
@@ -2159,17 +2404,16 @@ img {
 
     .stackly-sport-admin-header {
         height: var(--sport-admin-header-height);
+        min-height: var(--sport-admin-header-height);
 
-        padding: 10px 15px;
+        padding: 9px 14px;
 
-        gap: 9px;
-
-        overflow: hidden;
+        gap: 8px;
     }
 
 
     /* =====================================================
-       HAMBURGER
+       MENU
     ===================================================== */
 
     .stackly-sport-admin-menu {
@@ -2187,74 +2431,92 @@ img {
     .stackly-sport-admin-header-title {
         flex: 1 1 auto;
 
-        width: auto;
         min-width: 0;
-        max-width: none;
+        max-width: 135px;
 
         overflow: hidden;
     }
 
-    .stackly-sport-admin-header-title h1 {
-        width: 100%;
-        max-width: 100%;
+    .stackly-sport-admin-header-eyebrow {
+        font-size: 8px;
+    }
 
-        font-size: 18px;
+    .stackly-sport-admin-header-title h1 {
+        font-size: 17px;
+
+        line-height: 1.15;
 
         white-space: nowrap;
 
         overflow: hidden;
+
         text-overflow: ellipsis;
+    }
+
+
+    /* =====================================================
+       HEADER RIGHT
+    ===================================================== */
+
+    .stackly-sport-admin-header-right {
+        flex: 1 1 auto;
+
+        min-width: 0;
+
+        max-width: none;
+
+        gap: 5px;
     }
 
 
     /* =====================================================
        EMAIL
-       USE MORE HEADER SPACE
     ===================================================== */
 
     .stackly-sport-admin-email-box {
-        flex: 0 1 auto;
+        flex: 1 1 auto;
 
-        width: auto;
         min-width: 0;
 
-        max-width: 180px;
+        max-width: 100%;
 
         margin-left: auto;
+    }
 
-        overflow: hidden;
+    .stackly-sport-admin-email-avatar {
+        display: none;
     }
 
     .stackly-sport-admin-email-content {
-        width: 100%;
         min-width: 0;
 
-        overflow: hidden;
+        width: 100%;
+
+        overflow: visible;
     }
 
-    .stackly-sport-admin-email-content strong {
-        display: block;
-
-        width: 100%;
-        max-width: 100%;
-
-        font-size: 9px;
-
-        white-space: nowrap;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .stackly-sport-admin-email-content span {
+        font-size: 8px;
 
         text-align: right;
     }
 
+    .stackly-sport-admin-email-content strong {
+        font-size: 10px;
 
-    /* =====================================================
-       NOTIFICATION REMAINS HIDDEN
-    ===================================================== */
+        line-height: 1.25;
 
-    .stackly-sport-admin-notification {
-        display: none !important;
+        white-space: normal;
+
+        overflow: visible;
+
+        text-overflow: clip;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+
+        text-align: right;
     }
 
 
@@ -2264,17 +2526,11 @@ img {
 
     .stackly-sport-admin-content {
         width: calc(100% - 24px);
-        max-width: 100%;
-
-        margin-left: auto;
-        margin-right: auto;
 
         padding-top:
             calc(var(--sport-admin-header-height) + 22px);
 
         padding-bottom: 35px;
-
-        overflow-x: hidden;
     }
 
 
@@ -2283,23 +2539,15 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-stats-grid {
-        width: 100%;
-
         grid-template-columns: 1fr;
 
         gap: 13px;
     }
 
     .stackly-sport-admin-stat-card {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
         min-height: 175px;
 
         padding: 21px;
-
-        overflow: hidden;
     }
 
     .stackly-sport-admin-stat-number {
@@ -2317,18 +2565,14 @@ img {
 
     .stackly-sport-admin-panel,
     .stackly-sport-admin-quick-section {
-        width: 100%;
-        max-width: 100%;
-
         padding: 20px 16px;
 
         border-radius: 19px;
-
-        overflow: hidden;
     }
 
     .stackly-sport-admin-panel-header {
         width: 100%;
+
         min-width: 0;
 
         display: flex;
@@ -2340,6 +2584,7 @@ img {
 
     .stackly-sport-admin-panel-header h3 {
         min-width: 0;
+
         max-width: 100%;
 
         font-size: 19px;
@@ -2353,45 +2598,20 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-actions-grid {
-        width: 100%;
-
         grid-template-columns: 1fr;
 
         gap: 12px;
     }
 
     .stackly-sport-admin-action-card {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
         min-height: 92px;
-
-        overflow: hidden;
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    .stackly-sport-admin-footer {
-        width: 100%;
-        max-width: 100%;
-
-        padding: 20px 18px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        overflow: hidden;
     }
 }
 
 
 /* =========================================================
    MOBILE PHONE
+   480px AND BELOW
 ========================================================= */
 
 @media (max-width: 480px) {
@@ -2406,16 +2626,14 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-header {
-        width: 100%;
-
         height: var(--sport-admin-header-height);
         min-height: var(--sport-admin-header-height);
 
-        padding: 9px 10px;
+        padding: 8px 10px;
 
-        gap: 7px;
+        gap: 6px;
 
-        overflow: hidden;
+        overflow: visible;
     }
 
 
@@ -2436,87 +2654,115 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-header-title {
-        flex: 1 1 auto;
+        display: block;
+
+        flex: 0 1 auto;
 
         width: auto;
+
         min-width: 0;
-        max-width: none;
+
+        max-width: 120px;
 
         overflow: hidden;
-    }
-
-    .stackly-sport-admin-header-title h1 {
-        width: 100%;
-        max-width: 100%;
-
-        font-size: 16px;
-
-        line-height: 1.15;
-
-        white-space: nowrap;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     .stackly-sport-admin-header-eyebrow {
         display: none;
     }
 
+    .stackly-sport-admin-header-title h1 {
+        display: block;
+
+        width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.15;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* =====================================================
+       HEADER RIGHT
+    ===================================================== */
+
+    .stackly-sport-admin-header-right {
+        flex: 1 1 auto;
+
+        width: auto;
+
+        min-width: 0;
+
+        max-width: none;
+
+        gap: 4px;
+    }
+
 
     /* =====================================================
        EMAIL
-       LARGER AVAILABLE WIDTH
     ===================================================== */
 
     .stackly-sport-admin-email-box {
-        flex: 0 1 145px;
+        flex: 1 1 auto;
 
         width: auto;
+
         min-width: 0;
 
-        max-width: 145px;
+        max-width: 100%;
 
         margin-left: auto;
 
-        overflow: hidden;
+        overflow: visible;
     }
 
     .stackly-sport-admin-email-content {
         width: 100%;
-        max-width: 100%;
+
         min-width: 0;
 
-        overflow: hidden;
+        overflow: visible;
+    }
+
+    .stackly-sport-admin-email-content span {
+        display: block;
+
+        font-size: 7px;
+
+        line-height: 1.1;
+
+        text-align: right;
     }
 
     .stackly-sport-admin-email-content strong {
         display: block;
 
         width: 100%;
+
         max-width: 100%;
 
-        font-size: 8.5px;
+        font-size: 9px;
 
-        line-height: 1.2;
+        line-height: 1.25;
 
-        white-space: nowrap;
+        white-space: normal;
 
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: visible;
+
+        text-overflow: clip;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
 
         text-align: right;
-    }
-
-
-    /* =====================================================
-       NOTIFICATION
-       COMPLETELY HIDDEN
-    ===================================================== */
-
-    .stackly-sport-admin-notification {
-        display: none !important;
-        visibility: hidden !important;
     }
 
 
@@ -2526,18 +2772,11 @@ img {
 
     .stackly-sport-admin-content {
         width: calc(100% - 18px);
-        max-width: 100%;
-        min-width: 0;
-
-        margin-left: auto;
-        margin-right: auto;
 
         padding-top:
             calc(var(--sport-admin-header-height) + 18px);
 
         padding-bottom: 30px;
-
-        overflow-x: hidden;
     }
 
 
@@ -2546,10 +2785,6 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-welcome {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
         padding: 22px 17px;
 
         gap: 18px;
@@ -2557,35 +2792,26 @@ img {
         margin-bottom: 16px;
 
         border-radius: 20px;
-
-        overflow: hidden;
     }
 
     .stackly-sport-admin-welcome h2 {
         width: 100%;
-        max-width: 100%;
 
         font-size: 24px;
 
         line-height: 1.15;
-
-        overflow-wrap: anywhere;
     }
 
     .stackly-sport-admin-welcome p {
         width: 100%;
-        max-width: 100%;
 
         font-size: 13px;
 
         line-height: 1.55;
-
-        overflow-wrap: anywhere;
     }
 
     .stackly-sport-admin-primary-btn {
         width: 100%;
-        max-width: 100%;
 
         min-height: 48px;
 
@@ -2598,15 +2824,9 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-stat-card {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
         min-height: 160px;
 
         padding: 18px;
-
-        overflow: hidden;
     }
 
     .stackly-sport-admin-stat-icon {
@@ -2622,16 +2842,10 @@ img {
         margin-top: 18px;
 
         font-size: 12px;
-
-        overflow-wrap: anywhere;
     }
 
     .stackly-sport-admin-stat-number {
-        max-width: 100%;
-
         font-size: 26px;
-
-        overflow-wrap: anywhere;
     }
 
 
@@ -2641,33 +2855,19 @@ img {
 
     .stackly-sport-admin-panel,
     .stackly-sport-admin-quick-section {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
         padding: 17px 13px;
 
         border-radius: 18px;
-
-        overflow: hidden;
     }
 
     .stackly-sport-admin-panel-header {
-        width: 100%;
-        min-width: 0;
-
         margin-bottom: 16px;
 
         gap: 8px;
     }
 
     .stackly-sport-admin-panel-header h3 {
-        min-width: 0;
-        max-width: 100%;
-
         font-size: 17px;
-
-        overflow-wrap: anywhere;
     }
 
     .stackly-sport-admin-panel-header > a {
@@ -2683,8 +2883,6 @@ img {
 
     .stackly-sport-admin-session {
         width: 100%;
-        max-width: 100%;
-        min-width: 0;
 
         display: grid;
 
@@ -2712,6 +2910,7 @@ img {
 
     .stackly-sport-admin-session-info {
         min-width: 0;
+
         max-width: 100%;
 
         overflow: hidden;
@@ -2727,6 +2926,7 @@ img {
         white-space: nowrap;
 
         overflow: hidden;
+
         text-overflow: ellipsis;
     }
 
@@ -2740,11 +2940,13 @@ img {
         white-space: nowrap;
 
         overflow: hidden;
+
         text-overflow: ellipsis;
     }
 
     .stackly-sport-admin-session-count {
         width: 27px;
+
         min-width: 27px;
 
         height: 26px;
@@ -2760,10 +2962,6 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-action-card {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
         display: grid;
 
         grid-template-columns:
@@ -2775,11 +2973,12 @@ img {
 
         padding: 12px;
 
-        overflow: hidden;
+        min-height: 82px;
     }
 
     .stackly-sport-admin-action-card > span {
         width: 42px;
+
         height: 42px;
 
         flex-shrink: 0;
@@ -2806,38 +3005,12 @@ img {
 
         overflow-wrap: anywhere;
     }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    .stackly-sport-admin-footer {
-        width: 100%;
-        max-width: 100%;
-
-        min-height: 95px;
-
-        padding: 18px 15px;
-
-        gap: 9px;
-
-        overflow: hidden;
-    }
-
-    .stackly-sport-admin-footer div {
-        width: 100%;
-        max-width: 100%;
-
-        gap: 12px;
-
-        flex-wrap: wrap;
-    }
 }
 
 
 /* =========================================================
    EXTRA SMALL PHONES
+   360px AND BELOW
 ========================================================= */
 
 @media (max-width: 360px) {
@@ -2853,9 +3026,10 @@ img {
 
     .stackly-sport-admin-header {
         height: var(--sport-admin-header-height);
+
         min-height: var(--sport-admin-header-height);
 
-        padding: 8px 8px;
+        padding: 7px 8px;
 
         gap: 5px;
     }
@@ -2866,82 +3040,102 @@ img {
     ===================================================== */
 
     .stackly-sport-admin-menu {
-        width: 36px;
-        height: 36px;
+        width: 35px;
 
-        flex: 0 0 36px;
+        height: 35px;
+
+        flex: 0 0 35px;
     }
 
 
     /* =====================================================
        TITLE
+       KEEP VISIBLE
     ===================================================== */
 
     .stackly-sport-admin-header-title {
-        flex: 1 1 auto;
+        display: block;
+
+        flex: 0 1 auto;
 
         min-width: 0;
+
+        max-width: 92px;
 
         overflow: hidden;
     }
 
     .stackly-sport-admin-header-title h1 {
-        font-size: 14px;
+        display: block;
+
+        font-size: 13px;
+
+        line-height: 1.15;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
     }
 
 
     /* =====================================================
        EMAIL
-       USE REMAINING HEADER SPACE
     ===================================================== */
 
-    .stackly-sport-admin-email-box {
-        flex: 0 1 112px;
-
-        width: auto;
-        max-width: 112px;
+    .stackly-sport-admin-header-right {
+        flex: 1 1 auto;
 
         min-width: 0;
 
-        margin-left: auto;
+        max-width: none;
+    }
 
-        overflow: hidden;
+    .stackly-sport-admin-email-box {
+        flex: 1 1 auto;
+
+        min-width: 0;
+
+        max-width: 100%;
+
+        overflow: visible;
     }
 
     .stackly-sport-admin-email-content {
         width: 100%;
+
         min-width: 0;
 
-        overflow: hidden;
+        overflow: visible;
+    }
+
+    .stackly-sport-admin-email-content span {
+        font-size: 6px;
     }
 
     .stackly-sport-admin-email-content strong {
         display: block;
 
         width: 100%;
+
         max-width: 100%;
 
-        font-size: 7px;
+        font-size: 8px;
 
         line-height: 1.2;
 
-        white-space: nowrap;
+        white-space: normal;
 
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: visible;
+
+        text-overflow: clip;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
 
         text-align: right;
-    }
-
-
-    /* =====================================================
-       NOTIFICATION
-       COMPLETELY HIDDEN
-    ===================================================== */
-
-    .stackly-sport-admin-notification {
-        display: none !important;
-        visibility: hidden !important;
     }
 
 
@@ -2951,7 +3145,6 @@ img {
 
     .stackly-sport-admin-content {
         width: calc(100% - 14px);
-        max-width: 100%;
 
         padding-top:
             calc(var(--sport-admin-header-height) + 15px);
@@ -3001,6 +3194,7 @@ img {
     .stackly-sport-admin-panel,
     .stackly-sport-admin-quick-section {
         padding-left: 11px;
+
         padding-right: 11px;
     }
 
@@ -3050,6 +3244,7 @@ img {
 
     .stackly-sport-admin-action-card > span {
         width: 39px;
+
         height: 39px;
     }
 
@@ -3064,68 +3259,60 @@ img {
 
 
 /* =========================================================
-   FINAL MOBILE NOTIFICATION SAFETY
-   ========================================================= */
+   VERY SMALL PHONES
+   330px AND BELOW
+========================================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 330px) {
 
-    .stackly-sport-admin-notification {
-        display: none !important;
-        visibility: hidden !important;
+    .stackly-sport-admin-header {
+        padding-left: 6px;
+        padding-right: 6px;
 
-        width: 0 !important;
-        min-width: 0 !important;
-        max-width: 0 !important;
+        gap: 4px;
+    }
 
-        height: 0 !important;
+    .stackly-sport-admin-menu {
+        width: 33px;
 
-        margin: 0 !important;
-        padding: 0 !important;
+        height: 33px;
 
-        pointer-events: none !important;
+        flex-basis: 33px;
+    }
+
+    .stackly-sport-admin-header-title {
+        max-width: 78px;
+    }
+
+    .stackly-sport-admin-header-title h1 {
+        font-size: 11px;
+    }
+
+    .stackly-sport-admin-email-content strong {
+        font-size: 7px;
     }
 }
 
 
 /* =========================================================
-   EXTRA SAFETY FOR ALL MOBILE DEVICES
+   MOBILE SIDEBAR WIDTHS
 ========================================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 600px) {
 
-    .stackly-sport-admin-header,
-    .stackly-sport-admin-main,
-    .stackly-sport-admin-content,
-    .stackly-sport-admin-welcome,
-    .stackly-sport-admin-panel,
-    .stackly-sport-admin-quick-section,
-    .stackly-sport-admin-stat-card,
-    .stackly-sport-admin-action-card,
-    .stackly-sport-admin-footer {
-        max-width: 100%;
+    .stackly-sport-admin-sidebar {
+        width: min(315px, 88vw);
+
+        max-width: 88vw;
     }
+}
 
-    img,
-    video,
-    iframe,
-    canvas {
-        max-width: 100%;
-    }
+@media (max-width: 400px) {
 
-    input,
-    textarea,
-    select,
-    button {
-        max-width: 100%;
-    }
+    .stackly-sport-admin-sidebar {
+        width: min(300px, 90vw);
 
-    /* Prevent grid/flex children from creating horizontal overflow */
-    .stackly-sport-admin-header-title,
-    .stackly-sport-admin-email-box,
-    .stackly-sport-admin-email-content,
-    .stackly-sport-admin-panel-header,
-    .stackly-sport-admin-session-info {
-        min-width: 0;
+        max-width: 90vw;
     }
 }
 
@@ -3142,7 +3329,8 @@ img {
 .stackly-sport-admin-logout:focus-visible,
 .stackly-sport-admin-action-card:focus-visible {
 
-    outline: 3px solid rgba(239, 255, 53, 0.55);
+    outline:
+        3px solid rgba(217, 237, 30, 0.55);
 
     outline-offset: 3px;
 }
@@ -3160,15 +3348,16 @@ img {
 
         scroll-behavior: auto !important;
 
-        transition-duration: 0.01ms !important;
+        transition-duration:
+            0.01ms !important;
 
-        animation-duration: 0.01ms !important;
+        animation-duration:
+            0.01ms !important;
 
-        animation-iteration-count: 1 !important;
+        animation-iteration-count:
+            1 !important;
     }
 }
-
-
 
 
 /* =========================================================

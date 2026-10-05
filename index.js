@@ -2503,28 +2503,7 @@ document.addEventListener("DOMContentLoaded", () => {
        SMOOTH CTA SCROLL
     ===================================================== */
 
-    const faqAskButton = document.querySelector(
-        ".stackly-sport-contact-faq-cta-btn"
-    );
-
-    if (faqAskButton) {
-
-        faqAskButton.addEventListener("click", (event) => {
-
-            const target = document.querySelector("#contact-form");
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        });
-
-    }
+     
 
 });
 

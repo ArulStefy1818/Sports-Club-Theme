@@ -544,6 +544,10 @@ img {
 /* =========================================================
    VISUAL STATS
 ========================================================= */
+/* =========================================================
+   STACKLY SPORT AUTH
+   VISUAL STATS — HOVER EFFECTS
+========================================================= */
 
 .stackly-sport-auth-visual-stats {
     display: flex;
@@ -552,38 +556,157 @@ img {
     margin-top: 38px;
 }
 
-
 .stackly-sport-auth-stat {
     min-width: 105px;
-    padding-right: 24px;
+    padding: 12px 24px 12px 0;
     margin-right: 24px;
     border-right: 1px solid rgba(255, 255, 255, 0.15);
-}
+    border-radius: 8px;
 
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
 
 .stackly-sport-auth-stat:last-child {
     border-right: 0;
     margin-right: 0;
-    padding-right: 0;
+    padding-right: 12px;
 }
 
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
 
 .stackly-sport-auth-stat strong {
     display: block;
     margin-bottom: 5px;
+
     color: var(--sport-auth-white);
     font-family: var(--sport-auth-font-heading);
     font-size: 24px;
     line-height: 1;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease,
+        text-shadow 0.35s ease;
 }
 
+
+/* =========================================================
+   STAT LABEL
+========================================================= */
 
 .stackly-sport-auth-stat span {
     color: rgba(255, 255, 255, 0.48);
     font-size: 12px;
     font-weight: 600;
+
+    transition:
+        color 0.35s ease,
+        letter-spacing 0.35s ease;
 }
 
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.stackly-sport-auth-stat:hover {
+    transform: translateY(-6px);
+
+    border-right-color: rgba(217, 237, 30, 0.45);
+
+    background: rgba(217, 237, 30, 0.05);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18),
+        0 0 25px rgba(217, 237, 30, 0.05);
+}
+
+
+/* Number hover */
+
+.stackly-sport-auth-stat:hover strong {
+    color: #d9ed1e;
+
+    transform: translateY(-2px);
+
+    text-shadow:
+        0 0 12px rgba(217, 237, 30, 0.35);
+}
+
+
+/* Label hover */
+
+.stackly-sport-auth-stat:hover span {
+    color: rgba(255, 255, 255, 0.82);
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   LAST STAT — NO DIVIDER
+========================================================= */
+
+.stackly-sport-auth-stat:last-child:hover {
+    border-right-color: transparent;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-sport-auth-visual-stats {
+        margin-top: 28px;
+        gap: 0;
+    }
+
+    .stackly-sport-auth-stat {
+        min-width: 0;
+        flex: 1;
+        padding-right: 14px;
+        margin-right: 14px;
+    }
+
+    .stackly-sport-auth-stat strong {
+        font-size: 21px;
+    }
+
+    .stackly-sport-auth-stat span {
+        font-size: 11px;
+    }
+
+    .stackly-sport-auth-stat:hover {
+        transform: translateY(-3px);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .stackly-sport-auth-stat,
+    .stackly-sport-auth-stat strong,
+    .stackly-sport-auth-stat span {
+        transition: none;
+    }
+
+    .stackly-sport-auth-stat:hover,
+    .stackly-sport-auth-stat:hover strong {
+        transform: none;
+    }
+}
 
 /* =========================================================
    VISUAL NUMBER
